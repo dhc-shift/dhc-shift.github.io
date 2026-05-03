@@ -1,11 +1,12 @@
 ---
-title: "공지사항"
+title: "공지"
+subtitle: "모집, 세미나, 프로젝트 안내"
 listing:
   contents: posts
   sort: "date desc"
   type: grid
   grid-columns: 2
-  fields: [date, title, author, reading-time]
+  fields: [date, title, author, categories]
 ---
 
 ## 최신 공지

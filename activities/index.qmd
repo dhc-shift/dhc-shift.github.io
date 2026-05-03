@@ -1,5 +1,6 @@
 ---
-title: "활동기록"
+title: "활동"
+subtitle: "세미나와 프로젝트 아카이브"
 listing:
   contents: posts
   sort: "date desc"

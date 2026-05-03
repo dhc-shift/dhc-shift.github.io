@@ -5,11 +5,10 @@ project:
     - "announcements/**/*.qmd"
     - "activities/**/*.qmd"
     - "events/**/*.qmd"
-    - "resources/**/*.qmd"
 
 website:
   title: "DHC-SHIFT"
-  description: "학과 기반 디지털헬스케어 학술동아리"
+  description: "Digital Healthcare Community, 학과 디지털헬스케어 학술동아리"
   site-url: "https://dhc-shift.github.io"
   favicon: assets/images/favicon.svg
   navbar:
@@ -20,11 +19,11 @@ website:
       - href: index.qmd
         text: 홈
       - href: about.qmd
-        text: 동아리 소개
+        text: 소개
       - href: announcements/index.qmd
-        text: 공지사항
+        text: 공지
       - href: activities/index.qmd
-        text: 활동기록
+        text: 활동
       - href: members.qmd
         text: 멤버
       - href: gallery.qmd
@@ -41,17 +40,13 @@ website:
     left: "DHC-SHIFT"
     center: "Digital Healthcare Community"
     right: "© 2026 DHC-SHIFT"
-  page-navigation: true
   back-to-top-navigation: true
 
 format:
   html:
-    theme:
-      light: [flatly, styles.scss]
-      dark: [darkly, styles.scss]
-    toc: true
-    toc-depth: 3
+    theme: [cosmo, styles.scss]
+    toc: false
     code-copy: true
-    code-fold: false
     smooth-scroll: true
-    anchor-sections: true
+    anchor-sections: false
+    link-external-newwindow: true

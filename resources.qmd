@@ -1,36 +1,30 @@
 ---
 title: "자료실"
+subtitle: "스터디와 프로젝트를 위한 참고 자료"
 ---
 
-## 학습 자료
+## 학습 로드맵
 
-DHC-SHIFT 활동에 필요한 기본 자료와 추천 링크를 모아둡니다. 학기별 스터디 자료는 활동기록 페이지에 함께 정리합니다.
+:::{.card-grid .three}
 
-## 추천 학습 로드맵
-
-:::{.club-grid}
-
-:::{.club-card}
+:::{.feature-card}
 ### 데이터 분석 기초
-
 - Python 문법
 - Pandas와 NumPy
 - 데이터 시각화
 - 기초 통계
 :::
 
-:::{.club-card}
+:::{.feature-card}
 ### 헬스케어 데이터
-
 - 의료 데이터의 특성
 - 개인정보와 비식별화
 - 임상 지표 읽기
 - 공개 데이터셋 탐색
 :::
 
-:::{.club-card}
+:::{.feature-card}
 ### AI와 서비스
-
 - 머신러닝 기본 모델
 - 모델 평가 지표
 - 디지털헬스케어 서비스 사례
@@ -48,7 +42,7 @@ DHC-SHIFT 활동에 필요한 기본 자료와 추천 링크를 모아둡니다.
 | 머신러닝 | [scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html) |
 | 버전 관리 | [GitHub Docs](https://docs.github.com/) |
 
-## 동아리 문서 템플릿
+## 문서 템플릿
 
 - 세미나 발표 템플릿
 - 프로젝트 기획서 템플릿

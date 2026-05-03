@@ -1,134 +1,120 @@
 ---
-page-layout: full
+title: "DHC-SHIFT"
+subtitle: "Digital Healthcare Community"
+body-class: home-page
 format:
   html:
     toc: false
 ---
 
-:::{.club-hero}
+<style>
+#title-block-header {
+  display: none;
+}
+</style>
 
-:::{.club-hero-copy}
-<p class="eyebrow">Digital Healthcare Community</p>
+:::{.shift-hero}
+:::{.hero-copy}
+<p class="eyebrow">학과 디지털헬스케어 학술동아리</p>
 
-# DHC-SHIFT
+<h1>데이터로 건강을 읽고<br>기술로 서비스를 만듭니다.</h1>
 
-데이터, AI, 소프트웨어를 바탕으로 디지털헬스케어를 함께 공부하고 프로젝트로 확장하는 학과 동아리입니다.
+DHC-SHIFT는 의료 데이터, AI, 소프트웨어, 서비스 기획을 함께 공부하고 학기별 프로젝트로 이어가는 학과 기반 커뮤니티입니다.
 
 :::{.hero-actions}
-[공지 확인](announcements/index.qmd){.btn .btn-primary}
-[활동 기록](activities/index.qmd){.btn .btn-outline-primary}
+[이번 학기 공지](announcements/index.qmd){.btn .btn-primary}
+[활동 아카이브](activities/index.qmd){.btn .btn-soft}
 :::
 :::
 
-:::{.club-hero-panel}
-<img src="assets/images/logo.svg" class="hero-logo" alt="DHC-SHIFT 로고">
-
-### 이번 학기 운영
-
-| 구분 | 내용 |
-|---|---|
-| 정기모임 | 매주 수요일 15:00 |
-| 장소 | 학과 세미나실 / 온라인 병행 |
-| 활동 | 세미나, 스터디, 팀 프로젝트 |
-| 대상 | 디지털헬스케어에 관심 있는 학부생 |
-
+:::{.hero-visual}
+<img src="assets/images/hero-dashboard.svg" class="hero-dashboard" alt="Digital healthcare dashboard">
+:::
 :::
 
+:::{.info-strip}
+:::{.info-pill}
+**정기모임**  
+매주 수요일 15:00
 :::
 
-:::{.home-section}
-
-:::{.section-heading}
-## 학과 동아리답게 운영합니다
-
-전공 수업에서 배운 내용을 실제 헬스케어 데이터와 서비스 아이디어에 연결하고, 학기 단위로 결과물을 남기는 것을 목표로 합니다.
+:::{.info-pill}
+**활동 장소**  
+학과 세미나실 / 온라인 병행
 :::
 
-:::{.club-grid}
-
-:::{.club-card}
-### 정기 세미나
-
-논문, 기술 블로그, 실습 자료를 함께 읽고 발표합니다. 처음 참여하는 멤버도 따라올 수 있도록 기초 개념부터 정리합니다.
+:::{.info-pill}
+**운영 방식**  
+세미나, 스터디, 팀 프로젝트
+:::
 :::
 
-:::{.club-card}
+## 이번 학기 활동
+
+:::{.card-grid .three}
+
+:::{.feature-card}
+### 헬스케어 데이터 스터디
+공개 데이터셋, 설문 데이터, 웨어러블 데이터를 다루며 전처리와 시각화의 기본기를 쌓습니다.
+:::
+
+:::{.feature-card}
+### 의료 AI 세미나
+논문과 사례를 읽고, 모델의 가능성과 한계를 학과 수준에서 함께 토론합니다.
+:::
+
+:::{.feature-card}
 ### 팀 프로젝트
-
-의료 데이터 분석, 헬스케어 앱 기획, AI 모델 실험 등 관심사별로 작은 팀을 구성해 학기별 프로젝트를 진행합니다.
-:::
-
-:::{.club-card}
-### 학과 네트워크
-
-선후배가 함께 자료를 공유하고, 프로젝트 경험과 진로 정보를 자연스럽게 나누는 커뮤니티를 지향합니다.
+문제 정의부터 프로토타입, 분석 리포트, 발표 자료까지 학기 말 산출물을 남깁니다.
 :::
 
 :::
+
+## SHIFT 로드맵
+
+:::{.roadmap}
+:::{.road-step}
+**01. Learn**  
+기초 개념과 도구를 함께 익힙니다.
 :::
 
-:::{.home-section .section-muted}
-
-:::{.section-heading}
-## 주요 활동 분야
+:::{.road-step}
+**02. Explore**  
+헬스케어 문제와 데이터를 탐색합니다.
 :::
 
-:::{.focus-grid}
-
-:::{.focus-item}
-**Healthcare Data**  
-공개 의료 데이터, 설문 데이터, 웨어러블 데이터의 정리와 분석
+:::{.road-step}
+**03. Build**  
+팀별 프로젝트를 설계하고 구현합니다.
 :::
 
-:::{.focus-item}
-**AI Modeling**  
-예측 모델, 분류 모델, 임상 의사결정 보조 모델의 기초 실험
-:::
-
-:::{.focus-item}
-**Digital Service**  
-사용자 흐름, 프로토타입, 헬스케어 서비스 기획과 검증
-:::
-
-:::{.focus-item}
-**Research Review**  
-디지털 치료제, 원격의료, 의료 AI 관련 논문과 사례 리뷰
-:::
-
+:::{.road-step}
+**04. Share**  
+결과를 발표하고 활동 기록으로 남깁니다.
 :::
 :::
 
-:::{.home-section}
+## 빠른 이동
 
-:::{.section-heading}
-## 빠르게 확인하기
+:::{.link-grid}
+:::{.link-card}
+### 공지
+모집, 세미나, 제출 일정 안내
+
+[확인하기](announcements/index.qmd)
 :::
 
-:::{.quick-links}
+:::{.link-card}
+### 일정
+정기모임과 학기 주요 일정
 
-:::{.quick-link}
-### 공지사항
-
-모집, 세미나, 제출 일정 등 동아리 운영 공지를 확인합니다.
-
-[바로가기](announcements/index.qmd)
+[확인하기](events/index.qmd)
 :::
 
-:::{.quick-link}
-### 활동기록
-
-정기모임, 발표자료, 프로젝트 진행 상황을 학기별로 정리합니다.
-
-[바로가기](activities/index.qmd)
-:::
-
-:::{.quick-link}
+:::{.link-card}
 ### 자료실
+스터디 자료와 추천 학습 링크
 
-스터디 자료, 추천 학습 자료, 프로젝트 템플릿을 모아둡니다.
-
-[바로가기](resources.qmd)
-:::
-
+[확인하기](resources.qmd)
 :::
 :::
