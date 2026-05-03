@@ -1,11 +1,8 @@
 ---
-title: "DHC-SHIFT"
-subtitle: "학과 기반 디지털헬스케어 학술동아리"
 page-layout: full
 format:
   html:
     toc: false
-    body-class: home-page
 ---
 
 :::{.club-hero}

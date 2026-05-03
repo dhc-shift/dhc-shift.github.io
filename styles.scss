@@ -57,9 +57,14 @@ body {
   font-weight: 800;
 }
 
-body.home-page #title-block-header,
-body.home-page .quarto-title-block {
+#quarto-content.page-layout-full #title-block-header {
   display: none;
+}
+
+#quarto-content.page-layout-full main.content {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
 .club-hero {
