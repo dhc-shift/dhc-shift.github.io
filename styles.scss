@@ -41,7 +41,16 @@ body {
 }
 
 .navbar-nav .nav-link {
+  color: var(--dhc-navy) !important;
   font-weight: 650;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--dhc-teal) !important;
+}
+
+.navbar-brand {
+  color: var(--dhc-navy) !important;
 }
 
 .quarto-title-block .title {
