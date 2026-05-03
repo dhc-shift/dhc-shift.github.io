@@ -5,8 +5,9 @@ listing:
   sort: "date desc"
   type: grid
   grid-columns: 2
-  fields: [image, date, title, author, reading-time]
+  fields: [date, title, author, reading-time]
 ---
 
 ## 최신 공지
 
+동아리 모집, 정기 세미나, 프로젝트 일정 등 공식 공지를 확인하는 페이지입니다.

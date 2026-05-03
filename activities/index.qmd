@@ -5,9 +5,9 @@ listing:
   sort: "date desc"
   type: grid
   grid-columns: 2
-  fields: [image, date, title, author]
+  fields: [date, title, author, categories]
 ---
 
-## 우리의 활동들
+## 활동 아카이브
 
-지난 모임과 프로젝트의 기록들을 확인하세요.
+정기모임, 스터디, 프로젝트 진행 상황을 기록합니다. 학기 말에는 이 기록을 바탕으로 활동 보고서와 포트폴리오를 정리합니다.

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title">
+  <title id="title">Team activity placeholder</title>
+  <rect width="900" height="520" fill="#f2f7f8"/>
+  <rect x="90" y="76" width="720" height="368" rx="18" fill="#ffffff" stroke="#d8e2e8"/>
+  <circle cx="260" cy="208" r="48" fill="#0b6b74"/>
+  <circle cx="450" cy="188" r="54" fill="#2a8bbd"/>
+  <circle cx="640" cy="208" r="48" fill="#1f9d75"/>
+  <path d="M174 374c16-70 57-105 86-105s70 35 86 105" fill="#dff4f0" stroke="#0b6b74" stroke-width="8"/>
+  <path d="M350 374c18-82 66-122 100-122s82 40 100 122" fill="#dcecff" stroke="#2a8bbd" stroke-width="8"/>
+  <path d="M554 374c16-70 57-105 86-105s70 35 86 105" fill="#e6f5ee" stroke="#1f9d75" stroke-width="8"/>
+  <rect x="188" y="404" width="524" height="14" rx="7" fill="#d8e2e8"/>
+</svg>

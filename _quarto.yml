@@ -9,7 +9,7 @@ project:
 
 website:
   title: "DHC-SHIFT"
-  description: "Digital Healthcare Community - SHIFT Club"
+  description: "학과 기반 디지털헬스케어 학술동아리"
   site-url: "https://dhc-shift.github.io"
   favicon: assets/images/favicon.svg
   navbar:
@@ -18,9 +18,9 @@ website:
     logo-alt: "DHC-SHIFT"
     left:
       - href: index.qmd
-        text: Home
+        text: 홈
       - href: about.qmd
-        text: 소개
+        text: 동아리 소개
       - href: announcements/index.qmd
         text: 공지사항
       - href: activities/index.qmd
@@ -36,16 +36,22 @@ website:
     right:
       - icon: github
         href: https://github.com/dhc-shift
+        aria-label: GitHub
   page-footer:
-    center: "© 2026 DHC-SHIFT. All rights reserved."
+    left: "DHC-SHIFT"
+    center: "Digital Healthcare Community"
+    right: "© 2026 DHC-SHIFT"
+  page-navigation: true
+  back-to-top-navigation: true
 
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
+      light: [flatly, styles.scss]
+      dark: [darkly, styles.scss]
     toc: true
     toc-depth: 3
     code-copy: true
     code-fold: false
     smooth-scroll: true
+    anchor-sections: true
