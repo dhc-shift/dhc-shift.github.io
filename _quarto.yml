@@ -5,6 +5,7 @@ project:
     - "announcements/**/*.qmd"
     - "activities/**/*.qmd"
     - "events/**/*.qmd"
+    - "onboarding/**/*.qmd"
 
 website:
   title: "DHC-SHIFT"
@@ -24,6 +25,8 @@ website:
         text: 공지
       - href: activities/index.qmd
         text: 활동
+      - href: onboarding/index.qmd
+        text: 온보딩
       - href: members.qmd
         text: 멤버
       - href: gallery.qmd
