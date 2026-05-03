@@ -7,33 +7,31 @@ subtitle: "활동 장면과 프로젝트 기록"
 
 실제 사진이 준비되면 `assets/images/`에 넣고 아래 이미지 경로만 교체하면 됩니다.
 
-:::{.gallery-grid}
+<div class="gallery-grid">
+<div class="gallery-card">
+<img src="assets/images/gallery-seminar.svg" alt="정기 세미나">
+<h3>정기 세미나</h3>
+<p>디지털헬스케어와 의료 AI 주제를 함께 읽고 발표합니다.</p>
+</div>
 
-:::{.gallery-card}
-![정기 세미나](assets/images/gallery-seminar.svg)
-### 정기 세미나
-디지털헬스케어와 의료 AI 주제를 함께 읽고 발표합니다.
-:::
+<div class="gallery-card">
+<img src="assets/images/gallery-data.svg" alt="데이터 스터디">
+<h3>데이터 스터디</h3>
+<p>Python, R, SQL을 활용해 데이터 분석 기초를 다집니다.</p>
+</div>
 
-:::{.gallery-card}
-![데이터 스터디](assets/images/gallery-data.svg)
-### 데이터 스터디
-Python, R, SQL을 활용해 데이터 분석 기초를 다집니다.
-:::
+<div class="gallery-card">
+<img src="assets/images/gallery-project.svg" alt="프로젝트 발표">
+<h3>프로젝트 발표</h3>
+<p>학기별 팀 프로젝트 결과를 공유하고 피드백을 받습니다.</p>
+</div>
 
-:::{.gallery-card}
-![프로젝트 발표](assets/images/gallery-project.svg)
-### 프로젝트 발표
-학기별 팀 프로젝트 결과를 공유하고 피드백을 받습니다.
-:::
-
-:::{.gallery-card}
-![팀 활동](assets/images/gallery-team.svg)
-### 팀 활동
-스터디와 프로젝트를 통해 선후배가 함께 성장합니다.
-:::
-
-:::
+<div class="gallery-card">
+<img src="assets/images/gallery-team.svg" alt="팀 활동">
+<h3>팀 활동</h3>
+<p>스터디와 프로젝트를 통해 선후배가 함께 성장합니다.</p>
+</div>
+</div>
 
 ## 사진 추가 방법
 
