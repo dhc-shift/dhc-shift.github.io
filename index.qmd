@@ -21,7 +21,7 @@ format:
 :::
 
 :::{.club-hero-panel}
-![DHC-SHIFT 로고](assets/images/logo.svg){.hero-logo}
+<img src="assets/images/logo.svg" class="hero-logo" alt="DHC-SHIFT 로고">
 
 ### 이번 학기 운영
 

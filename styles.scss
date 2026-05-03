@@ -53,6 +53,14 @@ body {
   color: var(--dhc-navy) !important;
 }
 
+.navbar-toggler {
+  border-color: rgba(15, 36, 48, .18);
+}
+
+.navbar-toggler-icon {
+  filter: invert(12%) sepia(24%) saturate(945%) hue-rotate(158deg) brightness(92%) contrast(96%);
+}
+
 .quarto-title-block .title {
   font-weight: 800;
 }
@@ -62,14 +70,16 @@ body {
 }
 
 #quarto-content.page-layout-full main.content {
+  grid-column: screen-start / screen-end !important;
   padding: 0;
   margin: 0;
   max-width: 100%;
+  width: 100%;
 }
 
 .club-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
   gap: 2rem;
   align-items: stretch;
   padding: clamp(3rem, 7vw, 6rem) max(1.25rem, calc((100vw - 1120px) / 2));
@@ -83,6 +93,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
   max-width: 760px;
 }
 
@@ -103,23 +114,30 @@ body {
   line-height: 1;
 }
 
-.club-hero-copy > p:not(.eyebrow) {
+.club-hero-copy p:not(.eyebrow) {
   max-width: 680px;
   color: #334155;
   font-size: clamp(1.05rem, 1.8vw, 1.28rem);
   line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .hero-actions {
+  margin-top: 1.4rem;
+}
+
+.hero-actions p {
   display: flex;
   flex-wrap: wrap;
   gap: .75rem;
-  margin-top: 1.4rem;
+  margin: 0;
 }
 
 .btn {
   border-radius: 8px;
   font-weight: 750;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -135,6 +153,7 @@ body {
 
 .club-hero-panel {
   align-self: center;
+  min-width: 0;
   padding: 1.35rem;
   background: rgba(255, 255, 255, .88);
   border: 1px solid rgba(216, 226, 232, .95);
