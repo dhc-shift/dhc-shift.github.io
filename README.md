@@ -4,7 +4,7 @@ Digital Healthcare Community - SHIFT 동아리 공식 웹사이트
 
 **배포 주소**: https://dhc-shift.github.io
 
-## 🚀 시작하기
+## 시작하기
 
 ### 요구사항
 - Quarto (최신 버전)
@@ -12,7 +12,7 @@ Digital Healthcare Community - SHIFT 동아리 공식 웹사이트
 
 ### 로컬에서 실행
 
-```bash
+```powershell
 # 저장소 클론
 git clone https://github.com/dhc-shift/dhc-shift.github.io.git
 cd dhc-shift.github.io
@@ -22,12 +22,17 @@ quarto preview
 
 # 렌더링
 quarto render
-
-# GitHub Pages에 배포 (처음 한 번만)
-quarto publish gh-pages
 ```
 
-## 📁 프로젝트 구조
+## 배포
+
+`main` 브랜치에 push하면 GitHub Actions가 자동으로 Quarto 사이트를 렌더링하고 GitHub Pages에 배포합니다.
+
+직접 `quarto publish gh-pages`를 실행하지 않습니다.
+
+배포와 캐시 문제를 피하기 위한 자세한 운영 메모는 [DEVELOPMENT.md](DEVELOPMENT.md)를 확인하세요.
+
+## 프로젝트 구조
 
 ```
 .
@@ -37,6 +42,7 @@ quarto publish gh-pages
 ├── members.qmd          # 멤버 소개
 ├── gallery.qmd          # 활동 갤러리
 ├── resources.qmd        # 자료실
+├── onboarding/          # IT 온보딩 기록
 ├── announcements/       # 공지사항
 │   └── index.qmd
 ├── activities/          # 활동기록 (블로그 형식)
@@ -48,7 +54,7 @@ quarto publish gh-pages
     └── images/
 ```
 
-## ✏️ 컨텐츠 추가 방법
+## 컨텐츠 추가 방법
 
 ### 새로운 공지사항 추가
 
@@ -79,12 +85,12 @@ image: "../images/activity.jpg"
 활동 내용...
 ```
 
-## 🔗 관련 링크
+## 관련 링크
 
 - GitHub Organization: https://github.com/dhc-shift
 - 메인 채널: [Discord/카톡 링크]
 
-## 📝 기여 가이드
+## 기여 가이드
 
 1. Fork 및 새 브랜치 생성
 2. 컨텐츠 작성/수정
