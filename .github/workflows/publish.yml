@@ -16,8 +16,14 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Clean previous render output
+        run: rm -rf _site
+
       - name: Render Quarto site
         run: quarto render
+
+      - name: Disable Jekyll processing
+        run: touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
         with:
