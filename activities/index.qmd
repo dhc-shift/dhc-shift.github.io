@@ -1,0 +1,13 @@
+---
+title: "활동기록"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  grid-columns: 2
+  fields: [image, date, title, author]
+---
+
+## 우리의 활동들
+
+지난 모임과 프로젝트의 기록들을 확인하세요.

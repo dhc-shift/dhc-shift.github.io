@@ -1,0 +1,12 @@
+---
+title: "공지사항"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  grid-columns: 2
+  fields: [image, date, title, author, reading-time]
+---
+
+## 최신 공지
+

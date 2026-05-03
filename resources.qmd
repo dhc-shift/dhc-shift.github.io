@@ -1,0 +1,49 @@
+---
+title: "자료실"
+---
+
+## 학습 자료 및 리소스
+
+여기서 DHC-SHIFT 활동에 필요한 모든 학습 자료를 찾을 수 있습니다.
+
+### 📚 추천 학습 자료
+
+#### 기초 학습
+- [Python for Data Science](https://www.python.org/)
+- [Pandas 튜토리얼](https://pandas.pydata.org/)
+- [NumPy 가이드](https://numpy.org/)
+
+#### 헬스케어 & AI
+- [AI in Healthcare Course](https://example.com)
+- [의료 데이터 분석 가이드](https://example.com)
+- [Machine Learning with Healthcare Data](https://example.com)
+
+### 🔧 개발 도구
+
+- **Python**: 데이터 분석 및 머신러닝
+- **R**: 통계 분석 및 시각화
+- **SQL**: 데이터베이스 쿼리
+- **Git**: 버전 관리
+
+### 📖 읽을 만한 논문 & 블로그
+
+#### 최신 논문
+1. "AI in Healthcare: Current Applications" (2026)
+2. "Digital Health Innovations" (2025)
+
+#### 흥미로운 블로그
+- [Healthcare AI Blog](https://example.com)
+- [Data Science in Medicine](https://example.com)
+
+### 💾 코드 저장소
+
+모든 프로젝트 코드는 [GitHub Organization](https://github.com/dhc-shift)에서 확인할 수 있습니다.
+
+### 📝 모임 노트
+
+- [2026년 5월 모임 노트](activities/2026-05-01-may-meeting.qmd)
+- [2026년 4월 모임 노트](activities/2026-04-01-april-meeting.qmd)
+
+---
+
+**자료 제안**: 새로운 학습 자료를 발견했다면 GitHub Issues를 통해 제안해주세요!

@@ -1,0 +1,51 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "announcements/**/*.qmd"
+    - "activities/**/*.qmd"
+    - "events/**/*.qmd"
+    - "resources/**/*.qmd"
+
+website:
+  title: "DHC-SHIFT"
+  description: "Digital Healthcare Community - SHIFT Club"
+  site-url: "https://dhc-shift.github.io"
+  favicon: assets/images/favicon.svg
+  navbar:
+    title: false
+    logo: assets/images/logo.svg
+    logo-alt: "DHC-SHIFT"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: 소개
+      - href: announcements/index.qmd
+        text: 공지사항
+      - href: activities/index.qmd
+        text: 활동기록
+      - href: members.qmd
+        text: 멤버
+      - href: gallery.qmd
+        text: 갤러리
+      - href: events/index.qmd
+        text: 일정
+      - href: resources.qmd
+        text: 자료실
+    right:
+      - icon: github
+        href: https://github.com/dhc-shift
+  page-footer:
+    center: "© 2026 DHC-SHIFT. All rights reserved."
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-fold: false
+    smooth-scroll: true
