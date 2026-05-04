@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     locale: siteMeta.openGraphLocale,
     type: siteMeta.openGraphType,
   },
+  icons: {
+    icon: siteMeta.iconPath,
+    shortcut: siteMeta.iconPath,
+  },
 };
 
 export default function RootLayout({

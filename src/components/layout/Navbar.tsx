@@ -16,8 +16,19 @@ export function Navbar({ content }: { content: NavigationContent }) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <Image src="/logo.svg" alt={content.logoAlt} width={96} height={28} className="h-7 w-auto" />
+        <Link
+          href="/"
+          className="relative h-14 w-40 overflow-hidden sm:w-44"
+          onClick={() => setOpen(false)}
+        >
+          <Image
+            src={content.logoSrc}
+            alt={content.logoAlt}
+            width={2048}
+            height={1536}
+            className="absolute left-1/2 top-1/2 h-32 w-auto -translate-x-1/2 -translate-y-1/2"
+            priority
+          />
         </Link>
 
         <ul className="hidden md:flex items-center gap-1">

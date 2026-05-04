@@ -14,6 +14,7 @@ export interface SiteMetaContent {
   openGraphLocale: string;
   openGraphType: "website";
   htmlLang: string;
+  iconPath: string;
 }
 
 export interface LinkContent {
@@ -27,6 +28,7 @@ export interface NavigationContent {
   ctaLabel: string;
   menuAriaLabel: string;
   logoAlt: string;
+  logoSrc: string;
 }
 
 export interface FooterContent {
@@ -210,6 +212,7 @@ export function getSiteMetaContent(): SiteMetaContent {
     openGraphLocale: getStringValue(data, "openGraphLocale"),
     openGraphType: "website",
     htmlLang: getStringValue(data, "htmlLang", "ko"),
+    iconPath: getStringValue(data, "iconPath", "/logo.svg"),
   };
 }
 
@@ -222,6 +225,7 @@ export function getNavigationContent(): NavigationContent {
     ctaLabel: getStringValue(data, "ctaLabel"),
     menuAriaLabel: getStringValue(data, "menuAriaLabel"),
     logoAlt: getStringValue(data, "logoAlt"),
+    logoSrc: getStringValue(data, "logoSrc"),
   };
 }
 

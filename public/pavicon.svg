@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <rect width="1024" height="1024" fill="#fff"/>
-  <ellipse cx="512" cy="515" rx="442" ry="215" fill="#EBFAFD" opacity="0.75"/>
-  <text x="512" y="600" text-anchor="middle" font-family="Lato, Inter, Arial, sans-serif" font-size="344" font-weight="900" font-style="italic" fill="#00235C" letter-spacing="-10">SHIFT</text>
-  <g fill="#00BCEE">
-    <rect x="100" y="635" width="16" height="16"/><rect x="135" y="605" width="14" height="14" opacity="0.9"/><rect x="170" y="635" width="20" height="20"/><rect x="205" y="590" width="18" height="18" opacity="0.82"/><rect x="240" y="622" width="14" height="14" opacity="0.9"/><rect x="275" y="600" width="12" height="12" opacity="0.72"/><rect x="156" y="675" width="18" height="18"/><rect x="220" y="670" width="15" height="15" opacity="0.86"/>
-  </g>
-  <polyline points="125,530 405,530 430,530 455,458 485,564 512,345 545,735 585,478 615,530 770,530 800,530 845,530 885,530 910,530" fill="none" stroke="#00BCEE" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
