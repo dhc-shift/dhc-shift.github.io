@@ -3,33 +3,43 @@ import Link from "next/link";
 import { getAllActivities } from "@/lib/activities";
 import { Calendar, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getActivitiesPageContent } from "@/lib/site-content";
+
+const pageContent = getActivitiesPageContent();
 
 export const metadata: Metadata = {
-  title: "활동",
-  description: "DHC-SHIFT의 스터디, 세미나, 프로젝트 활동 아카이브",
+  title: pageContent.metadataTitle,
+  description: pageContent.metadataDescription,
 };
 
-const CATEGORY_COLORS: Record<string, string> = {
-  스터디: "bg-blue-50 text-blue-700 border-blue-200",
-  세미나: "bg-purple-50 text-purple-700 border-purple-200",
-  프로젝트: "bg-green-50 text-green-700 border-green-200",
-  행사: "bg-orange-50 text-orange-700 border-orange-200",
-};
+const CATEGORY_COLORS = [
+  "bg-blue-50 text-blue-700 border-blue-200",
+  "bg-purple-50 text-purple-700 border-purple-200",
+  "bg-green-50 text-green-700 border-green-200",
+  "bg-orange-50 text-orange-700 border-orange-200",
+];
+
+function getCategoryColor(category: string): string {
+  const index = [...category].reduce((sum, char) => sum + char.charCodeAt(0), 0) % CATEGORY_COLORS.length;
+  return CATEGORY_COLORS[index];
+}
 
 export default function ActivitiesPage() {
   const activities = getAllActivities();
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Activities</p>
-      <h1 className="text-4xl font-bold mb-2">활동 아카이브</h1>
-      <p className="text-muted-foreground mb-12">스터디, 세미나, 프로젝트 기록</p>
+      <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+        {pageContent.eyebrow}
+      </p>
+      <h1 className="text-4xl font-bold mb-2">{pageContent.title}</h1>
+      <p className="text-muted-foreground mb-12">{pageContent.description}</p>
 
       {activities.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border p-16 text-center">
-          <p className="text-muted-foreground">아직 활동 기록이 없습니다.</p>
+          <p className="text-muted-foreground">{pageContent.emptyTitle}</p>
           <p className="text-sm text-muted-foreground/60 mt-1">
-            첫 번째 활동 기록이 곧 올라올 예정입니다.
+            {pageContent.emptyDescription}
           </p>
         </div>
       ) : (
@@ -44,7 +54,7 @@ export default function ActivitiesPage() {
                 <span
                   className={cn(
                     "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium",
-                    CATEGORY_COLORS[activity.category] ?? "bg-muted text-muted-foreground border-border"
+                    getCategoryColor(activity.category)
                   )}
                 >
                   {activity.category}
@@ -65,7 +75,8 @@ export default function ActivitiesPage() {
                   <Tag size={11} className="text-muted-foreground/60" />
                   {activity.tags.map((tag) => (
                     <span key={tag} className="text-xs text-muted-foreground/70">
-                      #{tag}
+                      {pageContent.tagPrefix}
+                      {tag}
                     </span>
                   ))}
                 </div>

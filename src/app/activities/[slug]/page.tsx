@@ -5,13 +5,19 @@ import { Calendar, Tag, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MDXRemote } from "@/components/MDXRemote";
+import { getActivitiesPageContent } from "@/lib/site-content";
 
-const CATEGORY_COLORS: Record<string, string> = {
-  스터디: "bg-blue-50 text-blue-700 border-blue-200",
-  세미나: "bg-purple-50 text-purple-700 border-purple-200",
-  프로젝트: "bg-green-50 text-green-700 border-green-200",
-  행사: "bg-orange-50 text-orange-700 border-orange-200",
-};
+const CATEGORY_COLORS = [
+  "bg-blue-50 text-blue-700 border-blue-200",
+  "bg-purple-50 text-purple-700 border-purple-200",
+  "bg-green-50 text-green-700 border-green-200",
+  "bg-orange-50 text-orange-700 border-orange-200",
+];
+
+function getCategoryColor(category: string): string {
+  const index = [...category].reduce((sum, char) => sum + char.charCodeAt(0), 0) % CATEGORY_COLORS.length;
+  return CATEGORY_COLORS[index];
+}
 
 export async function generateStaticParams() {
   return getAllActivities().map((a) => ({ slug: a.slug }));
@@ -38,6 +44,7 @@ export default async function ActivityPage({
   if (!data) notFound();
 
   const { meta, content } = data;
+  const pageContent = getActivitiesPageContent();
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-20">
@@ -45,14 +52,14 @@ export default async function ActivityPage({
         href="/activities"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-10 transition-colors"
       >
-        <ArrowLeft size={14} /> 활동 목록
+        <ArrowLeft size={14} /> {pageContent.detailBackLabel}
       </Link>
 
       <div className="flex items-center gap-3 mb-4">
         <span
           className={cn(
             "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium",
-            CATEGORY_COLORS[meta.category] ?? "bg-muted text-muted-foreground border-border"
+            getCategoryColor(meta.category)
           )}
         >
           {meta.category}
@@ -74,7 +81,8 @@ export default async function ActivityPage({
               key={tag}
               className="rounded-full bg-muted px-2.5 py-0.5 text-xs text-muted-foreground"
             >
-              #{tag}
+              {pageContent.tagPrefix}
+              {tag}
             </span>
           ))}
         </div>
