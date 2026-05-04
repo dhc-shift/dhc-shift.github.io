@@ -70,7 +70,10 @@ export function MDXRemote({ source }: { source: string }) {
       }
 
       nodes.push(
-        <pre key={nodes.length} className="mb-4 overflow-x-auto rounded-xl bg-muted p-4 text-sm font-mono">
+        <pre
+          key={nodes.length}
+          className="mb-4 overflow-x-auto rounded-xl bg-muted p-4 text-sm font-mono"
+        >
           <code>{code.join("\n")}</code>
         </pre>
       );
@@ -141,9 +144,12 @@ export function MDXRemote({ source }: { source: string }) {
       }
 
       nodes.push(
-        <ul key={nodes.length} className="mb-4 ml-4 list-disc space-y-1 text-foreground/90">
-          {items.map((item) => (
-            <li key={item} className="leading-7">
+        <ul
+          key={nodes.length}
+          className="mb-4 ml-4 list-disc space-y-1 text-foreground/90"
+        >
+          {items.map((item, itemIndex) => (
+            <li key={`${item}-${itemIndex}`} className="leading-7">
               {renderInline(item)}
             </li>
           ))}
@@ -161,9 +167,12 @@ export function MDXRemote({ source }: { source: string }) {
       }
 
       nodes.push(
-        <ol key={nodes.length} className="mb-4 ml-4 list-decimal space-y-1 text-foreground/90">
-          {items.map((item) => (
-            <li key={item} className="leading-7">
+        <ol
+          key={nodes.length}
+          className="mb-4 ml-4 list-decimal space-y-1 text-foreground/90"
+        >
+          {items.map((item, itemIndex) => (
+            <li key={`${item}-${itemIndex}`} className="leading-7">
               {renderInline(item)}
             </li>
           ))}
@@ -175,7 +184,11 @@ export function MDXRemote({ source }: { source: string }) {
     const paragraph = [line];
     index += 1;
 
-    while (index < lines.length && lines[index].trim() && !isBlockStart(lines[index])) {
+    while (
+      index < lines.length &&
+      lines[index].trim() &&
+      !isBlockStart(lines[index])
+    ) {
       paragraph.push(lines[index].trim());
       index += 1;
     }

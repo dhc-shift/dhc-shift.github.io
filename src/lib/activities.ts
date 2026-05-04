@@ -12,8 +12,12 @@ export interface ActivityMeta {
 }
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content/activities");
+const ACTIVITY_CATEGORIES = ["스터디", "세미나", "프로젝트", "행사"] as const;
 
-function parseFrontmatter(raw: string): { data: Record<string, string | string[]>; content: string } {
+function parseFrontmatter(raw: string): {
+  data: Record<string, string | string[]>;
+  content: string;
+} {
   if (!raw.startsWith("---")) return { data: {}, content: raw };
 
   const end = raw.indexOf("\n---", 3);
@@ -59,6 +63,13 @@ function getTags(value: string | string[] | undefined): string[] {
   return Array.isArray(value) ? value : [];
 }
 
+function getCategory(value: string | string[] | undefined): ActivityMeta["category"] {
+  const category = getString(value);
+  return ACTIVITY_CATEGORIES.includes(category as ActivityMeta["category"])
+    ? (category as ActivityMeta["category"])
+    : "행사";
+}
+
 export function getAllActivities(): ActivityMeta[] {
   if (!fs.existsSync(CONTENT_DIR)) return [];
 
@@ -73,11 +84,11 @@ export function getAllActivities(): ActivityMeta[] {
         slug: filename.replace(/\.(mdx|md)$/, ""),
         title: getString(data.title),
         date: getString(data.date),
-        category: getString(data.category) || "행사",
+        category: getCategory(data.category),
         summary: getString(data.summary),
         tags: getTags(data.tags),
         thumbnail: getString(data.thumbnail),
-      } as ActivityMeta;
+      };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
 }
@@ -97,7 +108,7 @@ export function getActivityBySlug(slug: string): { meta: ActivityMeta; content: 
       slug,
       title: getString(data.title),
       date: getString(data.date),
-      category: getString(data.category) || "행사",
+      category: getCategory(data.category),
       summary: getString(data.summary),
       tags: getTags(data.tags),
       thumbnail: getString(data.thumbnail),
