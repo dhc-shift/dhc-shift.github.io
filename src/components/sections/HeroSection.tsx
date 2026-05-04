@@ -12,15 +12,6 @@ export function HeroSection({ content }: { content: HeroContent }) {
 
   return (
     <section className="relative overflow-hidden bg-background">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, oklch(0.85 0.08 240 / 0.4), transparent)",
-        }}
-      />
-
       <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div

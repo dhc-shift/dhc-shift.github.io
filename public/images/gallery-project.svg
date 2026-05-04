@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title">
   <title id="title">Project presentation placeholder</title>
-  <rect width="900" height="520" fill="#edf7f8"/>
-  <rect x="96" y="76" width="708" height="368" rx="18" fill="#ffffff" stroke="#d8e2e8"/>
-  <rect x="150" y="128" width="250" height="170" rx="12" fill="#0b6b74"/>
-  <path d="M182 250h54l24-52 34 38 28-26 44 40" fill="none" stroke="#b7f0e6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="450" y="132" width="250" height="20" rx="10" fill="#0f2430"/>
-  <rect x="450" y="178" width="290" height="14" rx="7" fill="#8aa4af"/>
-  <rect x="450" y="210" width="240" height="14" rx="7" fill="#8aa4af"/>
-  <rect x="450" y="242" width="270" height="14" rx="7" fill="#8aa4af"/>
-  <rect x="150" y="340" width="590" height="42" rx="8" fill="#dcecff"/>
-  <circle cx="185" cy="361" r="12" fill="#2a8bbd"/>
-  <circle cx="228" cy="361" r="12" fill="#1f9d75"/>
-  <circle cx="271" cy="361" r="12" fill="#0b6b74"/>
+  <rect width="900" height="520" fill="#f8f9f6"/>
+  <rect x="96" y="76" width="708" height="368" rx="18" fill="#ffffff" stroke="#d9ddd4"/>
+  <rect x="150" y="128" width="250" height="170" rx="12" fill="#687565"/>
+  <path d="M182 250h54l24-52 34 38 28-26 44 40" fill="none" stroke="#dbe3d5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="450" y="132" width="250" height="20" rx="10" fill="#202421"/>
+  <rect x="450" y="178" width="290" height="14" rx="7" fill="#8a9189"/>
+  <rect x="450" y="210" width="240" height="14" rx="7" fill="#8a9189"/>
+  <rect x="450" y="242" width="270" height="14" rx="7" fill="#8a9189"/>
+  <rect x="150" y="340" width="590" height="42" rx="8" fill="#eef1e8"/>
+  <circle cx="185" cy="361" r="12" fill="#202421"/>
+  <circle cx="228" cy="361" r="12" fill="#9aa58f"/>
+  <circle cx="271" cy="361" r="12" fill="#687565"/>
 </svg>

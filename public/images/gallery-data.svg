@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title">
   <title id="title">Data study placeholder</title>
-  <rect width="900" height="520" fill="#f2f7f8"/>
-  <rect x="86" y="84" width="728" height="352" rx="18" fill="#ffffff" stroke="#d8e2e8"/>
+  <rect width="900" height="520" fill="#f8f9f6"/>
+  <rect x="86" y="84" width="728" height="352" rx="18" fill="#ffffff" stroke="#d9ddd4"/>
   <g fill="none" stroke-linecap="round" stroke-width="9">
-    <path d="M150 350V230" stroke="#0b6b74"/>
-    <path d="M228 350V182" stroke="#2a8bbd"/>
-    <path d="M306 350V260" stroke="#1f9d75"/>
-    <path d="M384 350V148" stroke="#0f2430"/>
+    <path d="M150 350V230" stroke="#9aa58f"/>
+    <path d="M228 350V182" stroke="#687565"/>
+    <path d="M306 350V260" stroke="#7a817c"/>
+    <path d="M384 350V148" stroke="#202421"/>
   </g>
-  <path d="M500 338c45-102 92-126 142-73 38 40 75 27 108-39" fill="none" stroke="#0b6b74" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="500" cy="338" r="10" fill="#0b6b74"/>
-  <circle cx="642" cy="265" r="10" fill="#0b6b74"/>
-  <circle cx="750" cy="226" r="10" fill="#0b6b74"/>
-  <rect x="150" y="122" width="170" height="18" rx="9" fill="#0f2430"/>
-  <rect x="150" y="390" width="600" height="12" rx="6" fill="#d8e2e8"/>
+  <path d="M500 338c45-102 92-126 142-73 38 40 75 27 108-39" fill="none" stroke="#687565" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="500" cy="338" r="10" fill="#687565"/>
+  <circle cx="642" cy="265" r="10" fill="#687565"/>
+  <circle cx="750" cy="226" r="10" fill="#687565"/>
+  <rect x="150" y="122" width="170" height="18" rx="9" fill="#202421"/>
+  <rect x="150" y="390" width="600" height="12" rx="6" fill="#d9ddd4"/>
 </svg>

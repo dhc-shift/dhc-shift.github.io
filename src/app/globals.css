@@ -2,32 +2,32 @@
 
 @theme {
   --color-background: oklch(0.99 0 0);
-  --color-foreground: oklch(0.12 0.01 240);
+  --color-foreground: #202421;
 
-  --color-primary: oklch(0.45 0.18 240);
+  --color-primary: #687565;
   --color-primary-foreground: oklch(0.99 0 0);
 
-  --color-secondary: oklch(0.93 0.02 240);
-  --color-secondary-foreground: oklch(0.2 0.01 240);
+  --color-secondary: #eef1e8;
+  --color-secondary-foreground: #202421;
 
-  --color-muted: oklch(0.95 0.01 240);
-  --color-muted-foreground: oklch(0.5 0.02 240);
+  --color-muted: #f2f4ef;
+  --color-muted-foreground: #5f675e;
 
-  --color-accent: oklch(0.92 0.04 240);
-  --color-accent-foreground: oklch(0.2 0.01 240);
+  --color-accent: #e7ecdf;
+  --color-accent-foreground: #202421;
 
   --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.12 0.01 240);
+  --color-card-foreground: #202421;
 
-  --color-border: oklch(0.88 0.01 240);
-  --color-input: oklch(0.88 0.01 240);
-  --color-ring: oklch(0.45 0.18 240);
+  --color-border: #d9ddd4;
+  --color-input: #d9ddd4;
+  --color-ring: #687565;
 
   --color-destructive: oklch(0.577 0.245 27.325);
 
-  --color-shift-blue: oklch(0.45 0.18 240);
-  --color-shift-blue-light: oklch(0.85 0.08 240);
-  --color-shift-teal: oklch(0.55 0.14 195);
+  --color-shift-black: #202421;
+  --color-shift-olive: #687565;
+  --color-shift-olive-light: #e7ecdf;
 
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;

@@ -15,18 +15,18 @@ export function Navbar({ content }: { content: NavigationContent }) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+      <nav className="mx-auto flex h-20 max-w-5xl items-center justify-between px-6">
         <Link
           href="/"
-          className="relative h-14 w-40 overflow-hidden sm:w-44"
+          className="relative block h-14 w-56 sm:h-16 sm:w-72 lg:w-80"
           onClick={() => setOpen(false)}
         >
           <Image
             src={content.logoSrc}
             alt={content.logoAlt}
-            width={2048}
-            height={1536}
-            className="absolute left-1/2 top-1/2 h-32 w-auto -translate-x-1/2 -translate-y-1/2"
+            fill
+            sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
+            className="object-contain object-left"
             priority
           />
         </Link>

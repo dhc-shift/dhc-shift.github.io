@@ -10,16 +10,8 @@ export const metadata: Metadata = {
   description: content.metadataDescription,
 };
 
-const TYPE_COLORS = [
-  "bg-red-50 text-red-700 border-red-200",
-  "bg-sky-50 text-sky-700 border-sky-200",
-  "bg-violet-50 text-violet-700 border-violet-200",
-];
-
-function getTypeColor(type: string): string {
-  const index = [...type].reduce((sum, char) => sum + char.charCodeAt(0), 0) % TYPE_COLORS.length;
-  return TYPE_COLORS[index];
-}
+const TYPE_BADGE_CLASS =
+  "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary";
 
 export default function NewsletterPage() {
   const pinned = content.posts.filter((post) => post.pinned);
@@ -78,12 +70,7 @@ function PostCardInner({
     >
       <div className="flex items-center justify-between mb-2 gap-3">
         <div className="flex items-center gap-2">
-          <span
-            className={cn(
-              "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium",
-              getTypeColor(post.type)
-            )}
-          >
+          <span className={TYPE_BADGE_CLASS}>
             {post.type}
           </span>
           <span className="flex items-center gap-1 text-xs text-muted-foreground">

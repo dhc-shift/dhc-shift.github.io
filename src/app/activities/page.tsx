@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllActivities } from "@/lib/activities";
 import { Calendar, Tag } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { getActivitiesPageContent } from "@/lib/site-content";
 
 const pageContent = getActivitiesPageContent();
@@ -12,17 +11,8 @@ export const metadata: Metadata = {
   description: pageContent.metadataDescription,
 };
 
-const CATEGORY_COLORS = [
-  "bg-blue-50 text-blue-700 border-blue-200",
-  "bg-purple-50 text-purple-700 border-purple-200",
-  "bg-green-50 text-green-700 border-green-200",
-  "bg-orange-50 text-orange-700 border-orange-200",
-];
-
-function getCategoryColor(category: string): string {
-  const index = [...category].reduce((sum, char) => sum + char.charCodeAt(0), 0) % CATEGORY_COLORS.length;
-  return CATEGORY_COLORS[index];
-}
+const CATEGORY_BADGE_CLASS =
+  "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary";
 
 export default function ActivitiesPage() {
   const activities = getAllActivities();
@@ -51,12 +41,7 @@ export default function ActivitiesPage() {
               className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/40 hover:shadow-md transition-all"
             >
               <div className="flex items-center justify-between mb-3">
-                <span
-                  className={cn(
-                    "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium",
-                    getCategoryColor(activity.category)
-                  )}
-                >
+                <span className={CATEGORY_BADGE_CLASS}>
                   {activity.category}
                 </span>
                 <span className="flex items-center gap-1 text-xs text-muted-foreground">
