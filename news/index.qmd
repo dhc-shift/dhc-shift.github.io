@@ -1,0 +1,27 @@
+---
+title: "News"
+description: "DHC-SHIFT의 공지, 뉴스레터, 활동 소식"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  image-height: 220px
+  grid-columns: 3
+  date-format: "YYYY.MM.DD"
+  fields: [image, date, title, description, categories]
+  categories: true
+  feed: true
+format:
+  html:
+    page-layout: full
+---
+
+::: {.page-hero}
+::: {.section-kicker}
+Bulletin
+:::
+
+# News
+
+모집 안내, 세션 공지, 학습 프로그램과 운영 소식을 빠르게 확인할 수 있습니다. 모든 글은 RSS 피드로도 구독할 수 있습니다.
+:::

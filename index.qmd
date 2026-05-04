@@ -1,0 +1,155 @@
+---
+title: ""
+listing:
+  contents: news/posts
+  sort: "date desc"
+  type: grid
+  max-items: 3
+  image-height: 220px
+  grid-columns: 3
+  date-format: "YYYY.MM.DD"
+  fields: [image, date, title, description, categories]
+  categories: false
+format:
+  html:
+    page-layout: custom
+    toc: false
+---
+
+::: {.landing-page}
+
+::: {.hero-section}
+
+::: {.hero-content}
+
+::: {.hero-eyebrow}
+Digital Healthcare Academic Society
+:::
+
+<div class="hero-heading" role="heading" aria-level="1">
+  데이터로 건강을<br>
+  <span class="mobile-space"> </span>읽고 기술로<br>
+  <span class="mobile-space"> </span>서비스를 만듭니다.
+</div>
+
+DHC-SHIFT는 의료 데이터, AI, 소프트웨어, 서비스 기획을 함께 공부하고 학기별 프로젝트로 이어가는 학과 기반 커뮤니티입니다. 작은 스터디를 꾸준한 기록으로 남기고, 기록을 다시 프로젝트와 포트폴리오로 연결합니다.
+
+::: {.hero-actions}
+<a href="/join.html" class="btn btn-primary btn-lg">지원하기</a>
+<a href="/activities.html" class="btn btn-outline-primary btn-lg">활동 보기</a>
+:::
+
+::: {.hero-tags}
+`Healthcare Data` `AI Seminar` `Service Planning` `Team Project`
+:::
+
+:::
+
+::: {.hero-visual}
+![](public/images/hero-dashboard.svg){fig-alt="헬스케어 데이터 대시보드 일러스트레이션"}
+:::
+
+:::
+
+::: {.signal-strip}
+::: {.signal-item}
+**정기모임**  
+매주 수요일 15:00
+:::
+
+::: {.signal-item}
+**운영 방식**  
+세미나 · 스터디 · 팀 프로젝트
+:::
+
+::: {.signal-item}
+**기록 방식**  
+활동 아카이브와 뉴스레터
+:::
+:::
+
+::: {.section-shell}
+
+::: {.section-kicker}
+What we do
+:::
+
+## 한 학기 안에 배우고, 만들고, 남깁니다
+
+::: {.feature-grid}
+
+::: {.feature-card .feature-card-large}
+### 데이터 스터디
+공개 데이터셋, 설문 데이터, 헬스케어 지표를 다루며 전처리와 시각화의 기본기를 익힙니다.
+:::
+
+::: {.feature-card}
+### AI 세미나
+모델링 과정과 평가 지표를 함께 정리하고, 발표와 실습으로 이해를 보완합니다.
+:::
+
+::: {.feature-card}
+### 서비스 기획
+사용자 문제를 정의하고, 데이터와 기술이 실제 서비스로 이어지는 흐름을 설계합니다.
+:::
+
+::: {.feature-card}
+### 팀 프로젝트
+학기 말에는 작은 결과물을 완성해 활동 기록과 포트폴리오로 남깁니다.
+:::
+
+:::
+
+:::
+
+::: {.editorial-band}
+
+::: {.editorial-copy}
+::: {.section-kicker}
+Program flow
+:::
+
+## SHIFT 로드맵
+
+스터디는 느슨하게 시작하지만 결과는 남깁니다. 매주 같은 리듬으로 읽고, 실습하고, 공유하면서 학기 말 프로젝트까지 이어갑니다.
+:::
+
+::: {.roadmap-grid}
+
+::: {.roadmap-step}
+### 01 · Learn
+기초 개념과 도구를 함께 익힙니다.
+:::
+
+::: {.roadmap-step}
+### 02 · Discover
+헬스케어 문제와 데이터를 탐색합니다.
+:::
+
+::: {.roadmap-step}
+### 03 · Build
+팀별 프로젝트를 설계하고 구현합니다.
+:::
+
+::: {.roadmap-step}
+### 04 · Share
+결과를 발표하고 활동 기록으로 남깁니다.
+:::
+
+:::
+
+:::
+
+::: {.section-shell .latest-shell}
+
+::: {.section-kicker}
+Latest
+:::
+
+## 최근 소식
+
+공지, 모집 안내, 세션 기록을 한곳에 모았습니다. 새 글을 추가하면 아래 카드 목록에 자동으로 반영됩니다.
+
+:::
+
+:::

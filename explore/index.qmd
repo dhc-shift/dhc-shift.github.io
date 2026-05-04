@@ -1,0 +1,26 @@
+---
+title: "Explore"
+description: "IT 온보딩 및 디지털 헬스케어 산업 지도 세션"
+listing:
+  contents: sessions
+  sort: "date asc"
+  type: grid
+  image-height: 220px
+  grid-columns: 3
+  date-format: "YYYY.MM.DD"
+  fields: [image, date, title, description, categories]
+  categories: true
+format:
+  html:
+    page-layout: full
+---
+
+::: {.page-hero}
+::: {.section-kicker}
+Curriculum
+:::
+
+# Explore
+
+처음 합류한 부원이 빠르게 흐름을 잡을 수 있도록 준비한 온보딩 트랙입니다. 데이터, AI, 서비스 기획을 한 번에 연결해 봅니다.
+:::
