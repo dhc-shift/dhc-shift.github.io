@@ -1,107 +1,36 @@
-# DHC-SHIFT 웹사이트
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Digital Healthcare Community - SHIFT 동아리 공식 웹사이트
+## Getting Started
 
-**배포 주소**: https://dhc-shift.github.io
+First, run the development server:
 
-## 시작하기
-
-### 요구사항
-- Quarto (최신 버전)
-- Git
-
-### 로컬에서 실행
-
-```powershell
-# 저장소 클론
-git clone https://github.com/dhc-shift/dhc-shift.github.io.git
-cd dhc-shift.github.io
-
-# 미리보기
-quarto preview
-
-# 렌더링
-quarto render
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 배포
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-`main` 브랜치에 push하면 GitHub Actions가 자동으로 Quarto 사이트를 렌더링하고 GitHub Pages에 배포합니다.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-직접 `quarto publish gh-pages`를 실행하지 않습니다.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-배포와 캐시 문제를 피하기 위한 자세한 운영 메모는 [DEVELOPMENT.md](DEVELOPMENT.md)를 확인하세요.
+## Learn More
 
-## 프로젝트 구조
+To learn more about Next.js, take a look at the following resources:
 
-```
-.
-├── _quarto.yml          # Quarto 설정 파일
-├── index.qmd            # 홈페이지
-├── about.qmd            # 소개 페이지
-├── members.qmd          # 멤버 소개
-├── gallery.qmd          # 활동 갤러리
-├── resources.qmd        # 자료실
-├── onboarding/          # IT 온보딩 기록
-├── announcements/       # 공지사항
-│   └── index.qmd
-├── activities/          # 활동기록 (블로그 형식)
-│   ├── index.qmd
-│   └── posts/
-├── events/              # 일정 & 이벤트
-│   └── index.qmd
-└── assets/              # 이미지 등 정적 파일
-    └── images/
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 컨텐츠 추가 방법
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### 새로운 공지사항 추가
+## Deploy on Vercel
 
-`announcements/posts/` 디렉토리에 새 파일 생성:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```yaml
----
-title: "공지사항 제목"
-date: 2026-05-03
-author: "작성자"
----
-
-공지 내용...
-```
-
-### 새로운 활동 기록 추가
-
-`activities/posts/` 디렉토리에 새 파일 생성:
-
-```yaml
----
-title: "활동 제목"
-date: 2026-05-03
-author: "작성자"
-image: "../images/activity.jpg"
----
-
-활동 내용...
-```
-
-## 관련 링크
-
-- GitHub Organization: https://github.com/dhc-shift
-- 메인 채널: [Discord/카톡 링크]
-
-## 기여 가이드
-
-1. Fork 및 새 브랜치 생성
-2. 컨텐츠 작성/수정
-3. Pull Request 제출
-4. 리뷰 후 병합
-
-## 📧 문의
-
-질문이나 제안사항은 GitHub Issues를 통해 등록해주세요.
-
----
-
-**만든이**: DHC-SHIFT Team  
-**마지막 업데이트**: 2026년 5월 3일
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

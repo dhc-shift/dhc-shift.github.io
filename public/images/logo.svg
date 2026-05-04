@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="88" viewBox="0 0 360 88" role="img" aria-labelledby="title desc">
+  <title id="title">DHC-SHIFT logo</title>
+  <desc id="desc">Digital Healthcare Community SHIFT wordmark</desc>
+  <rect width="360" height="88" rx="12" fill="#ffffff"/>
+  <g transform="translate(18 16)">
+    <rect x="0" y="0" width="56" height="56" rx="14" fill="#0b6b74"/>
+    <path d="M28 12v32M12 28h32" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+    <path d="M13 41c7-11 14-11 21 0 3 5 7 5 10 0" fill="none" stroke="#b7f0e6" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="90" y="41" fill="#0f2430" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">DHC-SHIFT</text>
+  <text x="91" y="62" fill="#0b6b74" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Digital Healthcare Community</text>
+</svg>
