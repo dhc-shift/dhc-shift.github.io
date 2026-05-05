@@ -8,7 +8,7 @@ project:
     - "news/**/*.qmd"
 
 website:
-  title: "DHC-SHIFT"
+  title: "SHIFT"
   favicon: public/icon.svg
   page-navigation: true
   site-url: "https://dhc-shift.github.io"
@@ -18,7 +18,7 @@ website:
     type: overlay
   navbar:
     logo: public/icon.svg
-    title: "DHC-SHIFT"
+    title: "SHIFT"
     right:
       - text: "About"
         href: about.qmd

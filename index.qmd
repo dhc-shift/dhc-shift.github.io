@@ -11,7 +11,7 @@ format:
 
 ::: {.column-screen-inset .home-hero}
 ::: {.home-hero-copy}
-# DHC-SHIFT
+# SHIFT
 
 연세대학교 미래캠퍼스 디지털헬스케어학부 학술 동아리
 
