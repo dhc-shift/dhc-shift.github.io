@@ -3,7 +3,7 @@ title: "About"
 subtitle: "연세대학교 미래캠퍼스 디지털헬스케어학부 학술 동아리"
 page-layout: full
 title-block-banner: true
-toc: true
+toc: false
 ---
 
 ::: {.about-brand-hero}
