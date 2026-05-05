@@ -1,19 +1,69 @@
 /* SciQuest-inspired site polish */
 
+/* ── 전역 색상 변수 ─────────────────────────────────────────── */
 :root {
-  --shift-red: #d9230f;
-  --shift-dark: #373a3c;
-  --shift-soft: #f7f7f7;
+  --shift-red: #d9230f;   /* SHIFT 브랜드 레드 */
+  --shift-dark: #373a3c;  /* 다크 텍스트/배경 */
+  --shift-soft: #f7f7f7;  /* 연한 배경 */
 }
 
-.navbar-brand img {
-  max-height: 36px;
+/* ── 네브바 ──────────────────────────────────────────────────── */
+.navbar {
+  min-height: 60px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
+/* 로고 이미지 크기 — Quarto Bootstrap이 max-height:24px로 제한하므로 같이 덮어써야 함 */
+.navbar-logo {
+  height: 140px !important;
+  max-height: 60px !important;
+  width: auto !important;
+}
+
+/* 사이트 제목 굵기 */
 .navbar-title {
   font-weight: 700;
 }
 
+/* ── About 브랜드 히어로 ─────────────────────────────────────── */
+.about-brand-hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 2rem;
+}
+
+.about-brand-logo {
+  height: 100px !important;
+  width: auto !important;
+  flex-shrink: 0;
+}
+
+.about-brand-copy h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #1a1a1a;
+}
+
+.about-brand-copy p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .about-brand-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ── 홈 히어로 섹션 ──────────────────────────────────────────── */
+/* 좌(텍스트) + 우(이미지) 2열 그리드 레이아웃 */
 .home-hero {
   align-items: center;
   background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
@@ -21,10 +71,11 @@
   display: grid;
   gap: clamp(1.5rem, 4vw, 3rem);
   grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1fr);
-  margin-bottom: 2rem;
-  padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 4vw, 3rem);
 }
 
+/* 히어로 메인 타이틀 — 뷰포트 너비에 따라 유동적으로 크기 조정 */
 .home-hero-copy h1 {
   font-size: clamp(2.75rem, 7vw, 5.4rem);
   font-weight: 700;
@@ -38,6 +89,7 @@
   margin-bottom: 0.8rem;
 }
 
+/* 히어로 첫 번째 단락: 레드 컬러 대문자 강조 레이블 */
 .home-hero-copy p:first-of-type {
   color: var(--shift-red);
   font-weight: 700;
@@ -45,6 +97,28 @@
   text-transform: uppercase;
 }
 
+/* 히어로 보조 설명 텍스트 (회색 소문자) */
+.hero-sub {
+  color: #888 !important;
+  font-size: 0.92rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.2rem !important;
+}
+
+/* 히어로 슬로건 — 큰 라이트 웨이트 문구 */
+.hero-tagline {
+  font-size: clamp(1.6rem, 3.5vw, 3.2rem) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.3 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 2rem !important;
+  white-space: pre-line !important; /* 줄바꿈 문자(\n) 존중 */
+}
+
+/* 히어로 CTA 버튼 영역 — 가로 정렬 flex */
 .hero-buttons p {
   display: flex;
   flex-wrap: wrap;
@@ -52,12 +126,14 @@
   margin-top: 1.35rem;
 }
 
+/* "Index" 버튼 — 다크 그라디언트 스타일 */
 .hero-buttons #btn-index {
   background-image: linear-gradient(#52565a, #3a3f44 60%, #353a3f);
   border-color: rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+/* 히어로 우측 이미지 */
 .home-hero-media img {
   background: #ffffff;
   border: 1px solid #dedede;
@@ -65,6 +141,7 @@
   width: 100%;
 }
 
+/* ── 홈 소개 노트 ────────────────────────────────────────────── */
 .home-note {
   color: #4b4b4b;
   font-size: 1.05rem;
@@ -72,6 +149,7 @@
   max-width: 850px;
 }
 
+/* ── 타임라인 모듈 ───────────────────────────────────────────── */
 .timeline-module {
   background: #f7f7f7;
   border-bottom: 1px solid #dedede;
@@ -81,11 +159,13 @@
   padding: 0;
 }
 
+/* TimelineJS iframe 컨테이너 */
 .shift-timeline-embed {
   height: 650px;
   width: 100%;
 }
 
+/* ── PDF 뷰어 ────────────────────────────────────────────────── */
 .pdf-viewer {
   background: #f7f7f7;
   border: 1px solid #dedede;
@@ -98,10 +178,12 @@
   display: block;
 }
 
+/* TimelineJS 폰트를 사이트 폰트로 통일 */
 .tl-timeline {
   font-family: inherit;
 }
 
+/* ── 홈 링크 카드 그리드 (4열) ───────────────────────────────── */
 .home-links {
   display: grid;
   gap: 1rem;
@@ -109,6 +191,7 @@
   margin: 1.2rem 0 2rem;
 }
 
+/* 연구그룹 카드 그리드 (3열) */
 .group-grid {
   display: grid;
   gap: 1rem;
@@ -116,6 +199,7 @@
   margin: 1.5rem 0 2rem;
 }
 
+/* 탐색 카드 그리드 (2열) */
 .explore-grid {
   display: grid;
   gap: 1rem;
@@ -123,6 +207,7 @@
   margin: 1.5rem 0 2rem;
 }
 
+/* ── 카드 공통 스타일 ────────────────────────────────────────── */
 .home-link-card {
   background: #ffffff;
   border: 1px solid #dedede;
@@ -163,14 +248,22 @@
   color: #5d5d5d;
 }
 
+/* ── Quarto 페이지 타이틀 배너 ───────────────────────────────── */
 .quarto-title-banner {
   border-bottom: 1px solid #dedede;
 }
 
 .quarto-title-banner .title {
+  color: #1a1a1a !important;
   font-weight: 700;
 }
 
+.quarto-title-banner .description,
+.quarto-title-banner .subtitle {
+  color: #444 !important;
+}
+
+/* ── Quarto 리스팅(블로그/뉴스) 카드 ────────────────────────── */
 .quarto-grid-item.card {
   border-color: #dedede;
 }
@@ -183,6 +276,26 @@
   border-radius: 0.25rem !important;
 }
 
+/* 카테고리 사이드바 제목 */
+.quarto-listing-category-title {
+  color: var(--shift-red) !important;
+  font-weight: 700 !important;
+}
+
+/* 카테고리 링크 색상 */
+.quarto-listing-category .category {
+  color: var(--shift-red) !important;
+}
+
+/* 선택된 카테고리 — 좌측 레드 보더 강조 */
+.quarto-listing-category .category.active {
+  color: var(--shift-red) !important;
+  font-weight: 700 !important;
+  border-left: 2px solid var(--shift-red) !important;
+}
+
+/* ── 공통 페이지 레이아웃 래퍼 ───────────────────────────────── */
+/* 최대 너비 1100px, 양쪽 여백 자동 중앙 정렬 */
 .page-hero,
 .section-shell,
 .editorial-band,
@@ -199,6 +312,7 @@
   padding: 2rem 0;
 }
 
+/* ── 공통 그리드 컨테이너 ────────────────────────────────────── */
 .feature-grid,
 .roadmap-grid,
 .faq-stack,
@@ -207,10 +321,12 @@
   gap: 1rem;
 }
 
+/* 피처 그리드 (4열) */
 .feature-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+/* 공통 카드/패널 스타일 */
 .feature-card,
 .roadmap-step,
 .faq-item,
@@ -224,10 +340,12 @@
   padding: 1rem;
 }
 
+/* 넓은 피처 카드 — 2열 차지 */
 .feature-card-large {
   grid-column: span 2;
 }
 
+/* 시그널 스트립 (3열 수평 지표) */
 .signal-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -237,7 +355,9 @@
   margin-bottom: 0;
 }
 
+/* ── 반응형: 태블릿 이하 (991px) ────────────────────────────── */
 @media (max-width: 991px) {
+  /* 모든 다중 열 그리드를 단일 열로 전환 */
   .home-hero,
   .home-links,
   .explore-grid,
@@ -247,10 +367,12 @@
     grid-template-columns: 1fr;
   }
 
+  /* 모바일에서 이미지를 텍스트 위로 */
   .home-hero-media {
     order: -1;
   }
 
+  /* span 2 해제 */
   .feature-card-large {
     grid-column: auto;
   }

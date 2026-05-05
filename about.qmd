@@ -6,6 +6,17 @@ title-block-banner: true
 toc: true
 ---
 
+::: {.about-brand-hero}
+![](public/logo.svg){.about-brand-logo}
+
+::: {.about-brand-copy}
+### SHIFT
+**S**tudy · **H**ealth · **I**nnovation · **F**uture · **T**ogether
+
+연세대학교 미래캠퍼스 디지털헬스케어학부 학술 동아리
+:::
+:::
+
 ## SHIFT란?
 
 **SHIFT**는 연세대학교 미래캠퍼스 디지털헬스케어학부 학생들이 만든 학술 동아리입니다.

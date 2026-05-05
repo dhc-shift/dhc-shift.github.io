@@ -9,7 +9,7 @@ project:
 
 website:
   title: "SHIFT"
-  favicon: public/icon.svg
+  favicon: public/logo.svg
   page-navigation: true
   site-url: "https://dhc-shift.github.io"
   repo-url: "https://github.com/dhc-shift/dhc-shift.github.io"
@@ -17,8 +17,8 @@ website:
     location: navbar
     type: overlay
   navbar:
-    logo: public/icon.svg
-    title: "SHIFT"
+    logo: public/logo.svg
+    title: false
     right:
       - text: "About"
         href: about.qmd
@@ -35,7 +35,7 @@ website:
       - icon: github
         href: https://github.com/dhc-shift/dhc-shift.github.io
   page-footer:
-    left: "Site made with [Quarto](https://quarto.org/)."
+    left: "© 2026 SHIFT, Division of Digital Healthcare, Yonsei University Mirae Campus. All Rights Reserved."
     right:
       - icon: github
         href: https://github.com/dhc-shift/dhc-shift.github.io
