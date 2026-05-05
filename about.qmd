@@ -41,6 +41,79 @@ toc: true
 ### 소모임 (Groups)
 논문, 취업 준비, 영어 학습 등 관심사 기반의 소모임을 운영합니다.
 
+## 조직도
+
+```{=html}
+<div class="org2">
+
+  <div class="org2-section">
+    <span class="org2-label">회장단</span>
+    <div class="org2-row">
+      <div class="org2-card org2-exec"><strong>회장</strong><span>유민준</span></div>
+      <div class="org2-card org2-exec"><strong>부회장</strong><span>최유진</span></div>
+    </div>
+  </div>
+
+  <div class="org2-section">
+    <span class="org2-label">운영진</span>
+    <div class="org2-row">
+      <div class="org2-card"><strong>기획실장</strong><span>김남훈</span></div>
+      <div class="org2-card"><strong>대외협력</strong><span>이남주</span></div>
+      <div class="org2-card"><strong>복지부장</strong><span>김시연</span></div>
+      <div class="org2-card"><strong>IT/운영</strong><span>김대희</span></div>
+      <div class="org2-card"><strong>서기</strong><span>김지원</span></div>
+    </div>
+  </div>
+
+  <div class="org2-section">
+    <span class="org2-label">본부</span>
+    <div class="org2-dept-grid">
+
+      <div class="org2-dept">
+        <div class="org2-dept-header">
+          <p class="org2-dept-name">학술기획본부</p>
+          <p class="org2-dept-chief">본부장 박찬영</p>
+        </div>
+        <div class="org2-dept-body">
+          <p class="org2-role-label">팀원</p>
+          <p>박준현 · 이동우 · 이승민 · 이수린</p>
+          <p class="org2-role-label">인턴</p>
+          <p>강지민 · 김승제 · 김우진 · 최보경 · 남유빈 · 김현서 · 형승우</p>
+        </div>
+      </div>
+
+      <div class="org2-dept">
+        <div class="org2-dept-header">
+          <p class="org2-dept-name">브랜드&amp;마케팅본부</p>
+          <p class="org2-dept-chief">본부장 김지섭</p>
+        </div>
+        <div class="org2-dept-body">
+          <p class="org2-role-label">팀원</p>
+          <p>이시우 · 송하나</p>
+          <p class="org2-role-label">인턴</p>
+          <p>박동준 · 박민정 · 성윤아 · 윤시내 · 나정민 · 한준</p>
+        </div>
+      </div>
+
+      <div class="org2-dept">
+        <div class="org2-dept-header">
+          <p class="org2-dept-name">인사&amp;시스템본부</p>
+          <p class="org2-dept-chief">본부장 이형재</p>
+        </div>
+        <div class="org2-dept-body">
+          <p class="org2-role-label">팀원</p>
+          <p>최윤혁 · 강서영 · 신민채</p>
+          <p class="org2-role-label">인턴</p>
+          <p>윤재혁 · 이다연 · 이민경 · 고영주 · 김종혁</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+```
+
 ## 연혁
 
 | 일자 | 내용 |

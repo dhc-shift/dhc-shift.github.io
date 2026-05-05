@@ -26,6 +26,125 @@
   font-weight: 700;
 }
 
+/* ── About 조직도 v2 ─────────────────────────────────────────── */
+.org2 {
+  max-width: 860px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.org2-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.org2-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.org2-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.org2-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  min-width: 110px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.org2-card strong {
+  font-size: 0.82rem;
+  color: #333;
+}
+
+.org2-card span {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.org2-exec {
+  border-color: #c5bce8;
+  background: #f5f3fc;
+}
+
+/* 본부 3열 그리드 */
+.org2-dept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.org2-dept {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.org2-dept-header {
+  background: #373a3c;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.org2-dept-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 0 0 0.15rem;
+  color: #fff;
+}
+
+.org2-dept-chief {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin: 0;
+}
+
+.org2-dept-body {
+  background: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.org2-dept-body p { margin: 0; }
+
+.org2-role-label {
+  font-size: 0.72rem !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa !important;
+  margin-top: 0.5rem !important;
+}
+
+.org2-dept-body p:first-child.org2-role-label {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .org2-dept-grid { grid-template-columns: 1fr; }
+}
+
 /* ── About 브랜드 히어로 ─────────────────────────────────────── */
 .about-brand-hero {
   display: flex;
