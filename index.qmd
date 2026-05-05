@@ -43,7 +43,7 @@ Maintenance:
 -->
 <iframe
   class="shift-timeline-embed"
-  src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vQPskSr_FBMd-9PSlXs-EPX4rUCxikXTm9lE3BAH2mZEab7nesHv06LtSRQPGjhAv5O3QMN8MCDcbPf%2Fpub%3Foutput%3Dcsv&font=Default&lang=ko&initial_zoom=4&height=650"
+  src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vQPskSr_FBMd-9PSlXs-EPX4rUCxikXTm9lE3BAH2mZEab7nesHv06LtSRQPGjhAv5O3QMN8MCDcbPf%2Fpub%3Foutput%3Dcsv&font=Default&lang=ko&initial_zoom=1&timenav_background=%23f0f2e8&marker_background_color=%236b7a3b&height=650"
   width="100%"
   height="650"
   webkitallowfullscreen
