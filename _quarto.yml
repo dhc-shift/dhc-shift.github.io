@@ -1,69 +1,56 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "explore/**/*.qmd"
+    - "groups/**/*.qmd"
+    - "news/**/*.qmd"
 
 website:
   title: "DHC-SHIFT"
-  site-url: "https://dhc-shift.github.io"
-  description: "Digital Healthcare Academic Society · 의료 데이터, AI, 서비스 기획을 함께 탐구하는 학과 기반 학술동아리"
   favicon: public/icon.svg
-  repo-url: https://github.com/dhc-shift/dhc-shift.github.io
+  page-navigation: true
+  site-url: "https://dhc-shift.github.io"
+  repo-url: "https://github.com/dhc-shift/dhc-shift.github.io"
   search:
     location: navbar
     type: overlay
-  announcement:
-    content: "**2026년 1기 모집 중** · 5월 15일 마감 · [지원하기](/join.html)"
-    position: below-navbar
-    dismissable: true
-    icon: megaphone
-    type: primary
   navbar:
-    background: light
-    logo: public/logo.svg
-    logo-alt: "SHIFT"
-    logo-href: /index.html
-    title: false
-    pinned: true
-    collapse-below: lg
-    left:
-      - href: /index.html
-        text: Home
-      - href: /about.html
-        text: About
-      - href: /activities.html
-        text: Activities
-      - href: /explore/
-        text: Explore
-      - href: /news/
-        text: News
-      - href: /join.html
-        text: Join
+    logo: public/icon.svg
+    title: "DHC-SHIFT"
     right:
-      - icon: rss
-        href: news/index.xml
+      - text: "About"
+        href: about.qmd
+      - text: "Activities"
+        href: activities.qmd
+      - text: "Explore"
+        href: explore/index.qmd
+      - text: "Groups"
+        href: groups/index.qmd
+      - text: "News"
+        href: news/index.qmd
+      - text: "Join"
+        href: join.qmd
+      - icon: github
+        href: https://github.com/dhc-shift/dhc-shift.github.io
   page-footer:
-    border: true
-    left: "© 2026 DHC-SHIFT · Digital Healthcare Academic Society"
-    center:
-      - text: About
-        href: /about.html
-      - text: Activities
-        href: /activities.html
-      - text: News
-        href: /news/
+    left: "Site made with [Quarto](https://quarto.org/)."
     right:
       - icon: github
-        href: https://github.com/dhc-shift
+        href: https://github.com/dhc-shift/dhc-shift.github.io
 
 format:
   html:
-    theme:
-      - lux
-      - custom.scss
+    theme: simplex
     css: styles.css
-    toc: false
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    toc-title: "On this page"
     smooth-scroll: true
+    highlight-style: github
     link-external-newwindow: true
 
 execute:
-  freeze: auto
+  freeze: false

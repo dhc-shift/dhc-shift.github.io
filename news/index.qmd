@@ -1,6 +1,6 @@
 ---
 title: "News"
-description: "DHC-SHIFT의 공지, 뉴스레터, 활동 소식"
+description: "SHIFT의 공지, 뉴스레터, 활동 소식"
 listing:
   contents: posts
   sort: "date desc"
@@ -8,8 +8,10 @@ listing:
   image-height: 220px
   grid-columns: 3
   date-format: "YYYY.MM.DD"
-  fields: [image, date, title, description, categories]
+  fields: [date, title, description, categories]
   categories: true
+  sort-ui: true
+  filter-ui: true
   feed: true
 format:
   html:

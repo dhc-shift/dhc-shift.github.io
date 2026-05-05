@@ -1,155 +1,54 @@
 ---
-title: ""
-listing:
-  contents: news/posts
-  sort: "date desc"
-  type: grid
-  max-items: 3
-  image-height: 220px
-  grid-columns: 3
-  date-format: "YYYY.MM.DD"
-  fields: [image, date, title, description, categories]
-  categories: false
+pagetitle: "디지털헬스케어 학술 동아리 SHIFT"
+section-divs: false
+toc: false
+comments: false
+citation: false
 format:
   html:
-    page-layout: custom
-    toc: false
+    number-sections: false
 ---
 
-::: {.landing-page}
+::: {.column-screen-inset .home-hero}
+::: {.home-hero-copy}
+# DHC-SHIFT
 
-::: {.hero-section}
+연세대학교 미래캠퍼스 디지털헬스케어학부 학술 동아리
 
-::: {.hero-content}
+소프트웨어와 헬스케어의 교차점에서, 함께 배우고 성장합니다.
 
-::: {.hero-eyebrow}
-Digital Healthcare Academic Society
+::: {.hero-buttons}
+[동아리 소개](/about.html){#btn-index .btn .btn-primary .btn-lg}
+[활동 소식](/news/){.btn .btn-secondary .btn-lg}
 :::
-
-<div class="hero-heading" role="heading" aria-level="1">
-  데이터로 건강을<br>
-  <span class="mobile-space"> </span>읽고 기술로<br>
-  <span class="mobile-space"> </span>서비스를 만듭니다.
-</div>
-
-DHC-SHIFT는 의료 데이터, AI, 소프트웨어, 서비스 기획을 함께 공부하고 학기별 프로젝트로 이어가는 학과 기반 커뮤니티입니다. 작은 스터디를 꾸준한 기록으로 남기고, 기록을 다시 프로젝트와 포트폴리오로 연결합니다.
-
-::: {.hero-actions}
-<a href="/join.html" class="btn btn-primary btn-lg">지원하기</a>
-<a href="/activities.html" class="btn btn-outline-primary btn-lg">활동 보기</a>
-:::
-
-::: {.hero-tags}
-`Healthcare Data` `AI Seminar` `Service Planning` `Team Project`
-:::
-
-:::
-
-::: {.hero-visual}
-![](public/images/hero-dashboard.svg){fig-alt="헬스케어 데이터 대시보드 일러스트레이션"}
-:::
-
-:::
-
-::: {.signal-strip}
-::: {.signal-item}
-**정기모임**  
-매주 수요일 15:00
-:::
-
-::: {.signal-item}
-**운영 방식**  
-세미나 · 스터디 · 팀 프로젝트
-:::
-
-::: {.signal-item}
-**기록 방식**  
-활동 아카이브와 뉴스레터
 :::
 :::
 
-::: {.section-shell}
-
-::: {.section-kicker}
-What we do
+::: {.home-note}
+**SHIFT**는 2026년 3월 연세대학교 미래캠퍼스 디지털헬스케어학부(DHC) 학생들이 창설한 학술 동아리입니다.
+AI·빅데이터·IoT와 헬스케어가 융합되는 시대에서, 실력 있는 디지털헬스케어 전문가로 성장할 수 있도록
+세미나, 스터디, 프로젝트 등 다양한 학술 활동을 함께 운영합니다.
 :::
 
-## 한 학기 안에 배우고, 만들고, 남깁니다
+::: {.column-screen-inset .timeline-module}
+<!--
+TimelineJS Google Sheet embed.
 
-::: {.feature-grid}
-
-::: {.feature-card .feature-card-large}
-### 데이터 스터디
-공개 데이터셋, 설문 데이터, 헬스케어 지표를 다루며 전처리와 시각화의 기본기를 익힙니다.
-:::
-
-::: {.feature-card}
-### AI 세미나
-모델링 과정과 평가 지표를 함께 정리하고, 발표와 실습으로 이해를 보완합니다.
-:::
-
-::: {.feature-card}
-### 서비스 기획
-사용자 문제를 정의하고, 데이터와 기술이 실제 서비스로 이어지는 흐름을 설계합니다.
-:::
-
-::: {.feature-card}
-### 팀 프로젝트
-학기 말에는 작은 결과물을 완성해 활동 기록과 포트폴리오로 남깁니다.
-:::
-
-:::
-
-:::
-
-::: {.editorial-band}
-
-::: {.editorial-copy}
-::: {.section-kicker}
-Program flow
-:::
-
-## SHIFT 로드맵
-
-스터디는 느슨하게 시작하지만 결과는 남깁니다. 매주 같은 리듬으로 읽고, 실습하고, 공유하면서 학기 말 프로젝트까지 이어갑니다.
-:::
-
-::: {.roadmap-grid}
-
-::: {.roadmap-step}
-### 01 · Learn
-기초 개념과 도구를 함께 익힙니다.
-:::
-
-::: {.roadmap-step}
-### 02 · Discover
-헬스케어 문제와 데이터를 탐색합니다.
-:::
-
-::: {.roadmap-step}
-### 03 · Build
-팀별 프로젝트를 설계하고 구현합니다.
-:::
-
-::: {.roadmap-step}
-### 04 · Share
-결과를 발표하고 활동 기록으로 남깁니다.
-:::
-
-:::
-
-:::
-
-::: {.section-shell .latest-shell}
-
-::: {.section-kicker}
-Latest
-:::
-
-## 최근 소식
-
-공지, 모집 안내, 세션 기록을 한곳에 모았습니다. 새 글을 추가하면 아래 카드 목록에 자동으로 반영됩니다.
-
-:::
-
+Maintenance:
+1. Make a copy of the official TimelineJS template:
+   https://timeline.knightlab.com/#make
+2. Publish the sheet to the web.
+3. Replace the encoded published CSV URL below when the Google Sheet changes.
+4. Put post/image links in the sheet columns. TimelineJS will update this module.
+-->
+<iframe
+  class="shift-timeline-embed"
+  src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vQPskSr_FBMd-9PSlXs-EPX4rUCxikXTm9lE3BAH2mZEab7nesHv06LtSRQPGjhAv5O3QMN8MCDcbPf%2Fpub%3Foutput%3Dcsv&font=Default&lang=ko&initial_zoom=4&height=650"
+  width="100%"
+  height="650"
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen
+  frameborder="0">
+</iframe>
 :::

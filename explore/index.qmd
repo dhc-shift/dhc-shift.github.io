@@ -1,26 +1,29 @@
 ---
 title: "Explore"
-description: "IT 온보딩 및 디지털 헬스케어 산업 지도 세션"
-listing:
-  contents: sessions
-  sort: "date asc"
-  type: grid
-  image-height: 220px
-  grid-columns: 3
-  date-format: "YYYY.MM.DD"
-  fields: [image, date, title, description, categories]
-  categories: true
-format:
-  html:
-    page-layout: full
+subtitle: |
+  공통 학습 트랙과 탐색 세션을 정리합니다.
+page-layout: full
+title-block-banner: true
 ---
 
-::: {.page-hero}
-::: {.section-kicker}
-Curriculum
+Explore는 SHIFT 구성원이 공통으로 경험하는 학습과 탐색 활동을 모아두는 공간입니다. 소모임이 독립 운영 공간이라면, Explore는 전체 구성원이 함께 참고하는 커리큘럼과 온보딩 허브에 가깝습니다.
+
+::: {.explore-grid}
+::: {.explore-card}
+### [IT Onboarding](it-onboarding/)
+
+IT 기초 역량을 맞추기 위한 온보딩 트랙입니다. 협업 도구, Git/GitHub, 문서 작성, 데이터 분석 환경, 기본 개발 흐름을 함께 정리합니다.
 :::
 
-# Explore
+::: {.explore-card}
+### [Industry Map](industry-map/)
 
-처음 합류한 부원이 빠르게 흐름을 잡을 수 있도록 준비한 온보딩 트랙입니다. 데이터, AI, 서비스 기획을 한 번에 연결해 봅니다.
+디지털 헬스케어와 관련 산업을 이해하기 위한 산업 지도 세션입니다. 기업, 직무, 서비스, 기술 흐름을 조사하고 연결해 봅니다.
 :::
+:::
+
+## 기록 기준
+
+- 전체 구성원이 공통으로 참고하는 학습 자료는 `Explore`에 둡니다.
+- 실제 모임 후기와 결과 기록은 `Activities` 또는 각 `Groups`에 둡니다.
+- 타임라인에 노출하고 싶은 주요 세션은 Google Sheet에도 한 줄을 추가합니다.

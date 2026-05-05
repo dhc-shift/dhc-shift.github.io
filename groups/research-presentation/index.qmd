@@ -1,0 +1,25 @@
+---
+title: "Research & Presentation"
+subtitle: |
+  논문 읽기 및 학술 발표 소모임
+page-layout: full
+title-block-banner: true
+---
+
+Research & Presentation은 논문을 함께 읽고 발표하는 소모임입니다. 각자 맡은 자료를 정리하고, 발표를 통해 이해를 점검하며, 질문과 피드백을 남깁니다.
+
+## 다루는 활동
+
+- 논문 읽기와 요약
+- 학술 발표 연습
+- 발표 자료 피드백
+- 연구 주제 탐색
+- 세미나 기록 정리
+
+## 게시물 위치
+
+이 소모임의 활동 기록은 아래 폴더에 작성합니다.
+
+```text
+groups/research-presentation/posts/
+```

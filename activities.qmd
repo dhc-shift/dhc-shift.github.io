@@ -1,26 +1,9 @@
 ---
 title: "Activities"
-description: "DHC-SHIFT의 스터디, 세미나, 프로젝트 활동 아카이브"
-listing:
-  contents: activities-posts
-  sort: "date desc"
-  type: grid
-  image-height: 220px
-  grid-columns: 3
-  date-format: "YYYY.MM.DD"
-  fields: [image, date, title, description, categories]
-  categories: true
-format:
-  html:
-    page-layout: full
+subtitle: |
+  Starter page.
+page-layout: full
+title-block-banner: true
 ---
 
-::: {.page-hero}
-::: {.section-kicker}
-Archive
-:::
-
-# Activities
-
-DHC-SHIFT가 어떤 리듬으로 공부하고 만드는지 보여주는 활동 기록입니다. 세션 요약, 프로젝트 진행, 발표 자료가 이곳에 쌓입니다.
-:::
+This page is empty and ready for new content.

@@ -1,0 +1,54 @@
+---
+title: "IT Onboarding"
+subtitle: |
+  공통 IT 기초와 협업 도구를 맞추는 온보딩 트랙
+page-layout: full
+title-block-banner: true
+---
+
+IT Onboarding은 SHIFT 활동을 시작하기 전에 필요한 기본 도구와 작업 방식을 맞추는 트랙입니다. 전공이나 경험에 따라 출발점이 달라도 같은 협업 환경에서 활동할 수 있도록 돕습니다.
+
+## Session 1: IT Onboarding
+
+- **Date**: 2026.04.30
+- **Material**: `2026-shift-it-onboarding-1.pdf`
+- **Path**: `public/files/it-onboarding/2026-shift-it-onboarding-1.pdf`
+
+::: {.pdf-viewer}
+<object
+  data="/public/files/it-onboarding/2026-shift-it-onboarding-1.pdf"
+  type="application/pdf"
+  width="100%"
+  height="820">
+  <p>
+    PDF를 바로 표시할 수 없습니다.
+    <a href="/public/files/it-onboarding/2026-shift-it-onboarding-1.pdf">PDF 새 창으로 열기</a>
+  </p>
+</object>
+:::
+
+<p>
+  <a
+    href="/public/files/it-onboarding/2026-shift-it-onboarding-1.pdf"
+    class="btn btn-primary"
+    target="_blank"
+    rel="noopener">
+    PDF 새 창으로 열기
+  </a>
+</p>
+
+## 다루는 주제
+
+- Git/GitHub 기본 사용법
+- Quarto와 Markdown 기반 문서 작성
+- 데이터 분석 환경 세팅
+- 협업 도구와 파일 관리 규칙
+- 프로젝트 기록과 공유 방식
+
+## 추천 기록 위치
+
+온보딩 자료와 세션 기록은 아래 폴더에 추가합니다.
+
+```text
+explore/it-onboarding/posts/
+```
