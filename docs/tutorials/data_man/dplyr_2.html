@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jewel Johnson">
+<meta name="dcterms.date" content="2021-12-13">
+<meta name="description" content="Learn how to manipulate your data with the dplyr package">
+
+<title>SciQuest - Chapter 3: Data manipulation using dplyr (part 2)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/social-share-0.1.0/social-share.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/social-share-0.1.0/all.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EVCS615JQR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EVCS615JQR', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+<link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="SciQuest - Chapter 3: Data manipulation using dplyr (part 2)">
+<meta property="og:description" content="Learn how to manipulate your data with the dplyr package">
+<meta property="og:image" content="https://sciquest.netlify.app/tutorials/data_man/images/dplyr1.png">
+<meta property="og:site-name" content="SciQuest">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="SciQuest - Chapter 3: Data manipulation using dplyr (part 2)">
+<meta name="twitter:description" content="Learn how to manipulate your data with the dplyr package">
+<meta name="twitter:image" content="https://sciquest.netlify.app/tutorials/data_man/images/dplyr1.png">
+<meta name="twitter:image-height" content="1080">
+<meta name="twitter:image-width" content="1920">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../favicon.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SciQuest</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials.html" rel="" target="">
+ <span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://jeweljohnsonj.github.io/jewel_resume/" rel="" target="">
+ <span class="menu-text">About me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jeweljohnsonj/SciQuest" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jeweljohnsonj" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Chapter 3: Data manipulation using dplyr (part 2)</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                  <div>
+        <div class="description">
+          Learn how to manipulate your data with the dplyr package
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">dplyr</div>
+                <div class="quarto-category">data wrangling</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://sciquest.netlify.app/">Jewel Johnson</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 13, 2021</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">April 15, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#continuation-from-the-previous-chapter" id="toc-continuation-from-the-previous-chapter" class="nav-link active" data-scroll-target="#continuation-from-the-previous-chapter"><span class="header-section-number">1</span> Continuation from the previous chapter</a>
+  <ul class="collapse">
+  <li><a href="#rownames_to_column-column_to_rownames" id="toc-rownames_to_column-column_to_rownames" class="nav-link" data-scroll-target="#rownames_to_column-column_to_rownames"><span class="header-section-number">1.1</span> rownames_to_column() &amp; column_to_rownames()</a></li>
+  </ul></li>
+  <li><a href="#combine-tablescolumns" id="toc-combine-tablescolumns" class="nav-link" data-scroll-target="#combine-tablescolumns"><span class="header-section-number">2</span> Combine tables/columns</a>
+  <ul class="collapse">
+  <li><a href="#bind_cols" id="toc-bind_cols" class="nav-link" data-scroll-target="#bind_cols"><span class="header-section-number">2.1</span> bind_cols()</a></li>
+  <li><a href="#bind_rows" id="toc-bind_rows" class="nav-link" data-scroll-target="#bind_rows"><span class="header-section-number">2.2</span> bind_rows()</a></li>
+  </ul></li>
+  <li><a href="#mutating-joins-and-filtering-joins" id="toc-mutating-joins-and-filtering-joins" class="nav-link" data-scroll-target="#mutating-joins-and-filtering-joins"><span class="header-section-number">3</span> Mutating joins and filtering joins</a></li>
+  <li><a href="#additional-commands-for-joins" id="toc-additional-commands-for-joins" class="nav-link" data-scroll-target="#additional-commands-for-joins"><span class="header-section-number">4</span> Additional commands for joins</a></li>
+  <li><a href="#set-operations" id="toc-set-operations" class="nav-link" data-scroll-target="#set-operations"><span class="header-section-number">5</span> Set operations</a>
+  <ul class="collapse">
+  <li><a href="#intersect" id="toc-intersect" class="nav-link" data-scroll-target="#intersect"><span class="header-section-number">5.1</span> intersect()</a></li>
+  <li><a href="#setdiff" id="toc-setdiff" class="nav-link" data-scroll-target="#setdiff"><span class="header-section-number">5.2</span> setdiff()</a></li>
+  <li><a href="#union" id="toc-union" class="nav-link" data-scroll-target="#union"><span class="header-section-number">5.3</span> union()</a></li>
+  <li><a href="#setequal" id="toc-setequal" class="nav-link" data-scroll-target="#setequal"><span class="header-section-number">5.4</span> setequal()</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">6</span> Summary</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jeweljohnsonj/SciQuest/edit/main/tutorials/data_man/dplyr_2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jeweljohnsonj/SciQuest/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="continuation-from-the-previous-chapter" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="continuation-from-the-previous-chapter"><span class="header-section-number">1</span> Continuation from the previous chapter</h2>
+<p>In the <a href="https://sciquest.netlify.app/tutorials/data_man/dplyr_1.html">previous chapter</a> we have seen quite a lot of functions from the <code>{dplyr}</code> package. In this chapter, we will see the rest of the functions where we learn how to handle row names, how to join columns and rows and different set operations in the <code>{dplyr}</code> package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading necessary packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="rownames_to_column-column_to_rownames" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="rownames_to_column-column_to_rownames"><span class="header-section-number">1.1</span> rownames_to_column() &amp; column_to_rownames()</h3>
+<p>Tidy data does not use row names. So use <code>rownames_to_column()</code> command to convert row names to a new column to the data. The function <code>column_to_rownames()</code> does the exact opposite of <code>rownames_to_column()</code> as it converts a column into rownames but make sure that the column you are converting into rownames does not contain <code>NA</code> values.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mtcars dataset contains rownames</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># creates new column called car_names which contains row names</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">"car_names"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the original mtcars dataset</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">"car_names"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_to_rownames</span>(<span class="at">var =</span> <span class="st">"car_names"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="combine-tablescolumns" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="combine-tablescolumns"><span class="header-section-number">2</span> Combine tables/columns</h2>
+<section id="bind_cols" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="bind_cols"><span class="header-section-number">2.1</span> bind_cols()</h3>
+<p>Joins columns with other columns. Similar function as that of <code>cbind()</code> from base R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(df1,df2)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#similar functionality</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(df1,df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="bind_rows" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="bind_rows"><span class="header-section-number">2.2</span> bind_rows()</h3>
+<p>Joins rows with other rows. Similar function as that of <code>rbind()</code> from base R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(df1,df2)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#similar functionality</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(df1,df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The functions that are described below have the same functionality as that of <code>bind_cols()</code> but give you control over how the columns are joined.</p>
+</section>
+</section>
+<section id="mutating-joins-and-filtering-joins" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="mutating-joins-and-filtering-joins"><span class="header-section-number">3</span> Mutating joins and filtering joins</h2>
+<p>Mutating joins include <code>left_join()</code>, <code>right_join()</code>, <code>inner_join()</code> and <code>full_join()</code> and filtering joins include <code>semi_join()</code> and <code>anti_join()</code>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">left_join()</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">right_join()</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">inner_join()</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">full_join()</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">anti_join()</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">semi_join()</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>In the code below, matching variables of df2 are joined with df1. In the final data, you can see that only kevin and sam from df2 are matched with df1, and only those row values are joined with df1. For those variables which didn’t get a match, the row values for those are filled with <code>NA</code>. You can interpret the variables with <code>NA</code> values as; both john and chris are not present in df2.</p>
+<p>If you are familiar with set theory in mathematics, what we are doing essentially is similar to <span class="math inline">(df1 \cap df2) \cup df1</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"john","2":"1","3":"NA"},{"1":"kevin","2":"2","3":"10"},{"1":"chris","2":"3","3":"NA"},{"1":"sam","2":"4","3":"11"},{"1":"sam","2":"5","3":"11"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Similar to <code>left_join()</code> but here, you will be joining matching values from df1 to df2, the opposite of what we did earlier. As you can see only kevin and sam from the df1 is matched with df2, and only those row values are joined with df2. For the variables which didn’t get a match, the row values for those are filled with <code>NA</code>. You can interpret the variables with <code>NA</code> values as; bob is not present in df1.</p>
+<p>This function, in the manner used here, is similar to <span class="math inline">(df1 \cap df2) \cup df2</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"kevin","2":"2","3":"10"},{"1":"sam","2":"4","3":"11"},{"1":"sam","2":"5","3":"11"},{"1":"bob","2":"NA","3":"12"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>The function <code>inner_join()</code> compares both df1 and df2 variables and only joins rows with the same variables. Here only kevin and sam are common in both the dataframes so the row values of only those columns are joined and others are omitted.</p>
+<p>This function is similar to <span class="math inline">df1 \cap df2</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"kevin","2":"2","3":"10"},{"1":"sam","2":"4","3":"11"},{"1":"sam","2":"5","3":"11"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>The function <code>full_join()</code> compares both df1 and df2 variables and joins all possible matches while retaining both mistakes in df1 and df2 with <code>NA</code> values.</p>
+<p>This function is similar to <span class="math inline">df1 \cup df2</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">full_join</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"john","2":"1","3":"NA"},{"1":"kevin","2":"2","3":"10"},{"1":"chris","2":"3","3":"NA"},{"1":"sam","2":"4","3":"11"},{"1":"sam","2":"5","3":"11"},{"1":"bob","2":"NA","3":"12"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>This is an example of filtering join. The function <code>anti_join()</code> compares df1 variables to and df2 variables and only outputs those variables of df1 which didn’t get a match with df2.</p>
+<p>This function, in the manner used here, is similar to <span class="math inline">df1 \cap df2^c</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"john","2":"1"},{"1":"chris","2":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<p>This is an example of filtering join. The function <code>semi_join()</code> is similar to <code>inner_join()</code> but it only gives variables of df1 which has a match with df2.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"kevin","2":"2"},{"1":"sam","2":"4"},{"1":"sam","2":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Here is a nice graphical representation of the functions we just described now. Image <a href="https://rpubs.com/frasermyers/627597">source</a>.</p>
+<div id="fig-joins" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-surus" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/joins.jpg" class="img-fluid figure-img" data-ref-parent="fig-joins"></p>
+<figcaption class="figure-caption">(a) Mutating joins</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-hanno" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/joins1.jpg" class="img-fluid figure-img" data-ref-parent="fig-joins"></p>
+<figcaption class="figure-caption">(b) Filtering joins</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Graphical abstract for joins. Image source: RPubs.com</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="additional-commands-for-joins" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="additional-commands-for-joins"><span class="header-section-number">4</span> Additional commands for joins</h2>
+<p>Additionally, you can specify which common columns to match.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># match with column 'x'</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(df2, <span class="at">by =</span> <span class="st">"x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"john","2":"1","3":"NA"},{"1":"kevin","2":"2","3":"10"},{"1":"chris","2":"3","3":"NA"},{"1":"sam","2":"4","3":"11"},{"1":"sam","2":"5","3":"11"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df3 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">a =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df4 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">b =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># matching with column having different names, a and b in this case</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>df3 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(df4, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"a"</span> <span class="ot">=</span> <span class="st">"b"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["a"],"name":[1],"type":["chr"],"align":["left"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"john","2":"1","3":"NA"},{"1":"kevin","2":"2","3":"10"},{"1":"chris","2":"3","3":"NA"},{"1":"sam","2":"4","3":"11"},{"1":"sam","2":"5","3":"11"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</section>
+<section id="set-operations" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="set-operations"><span class="header-section-number">5</span> Set operations</h2>
+<p>Similar to the mutating join functions that we had seen, there are different functions related to set theory operations.</p>
+<section id="intersect" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="intersect"><span class="header-section-number">5.1</span> intersect()</h3>
+<p>Outputs common rows in the dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">intersect</span>(df1, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"kevin"},{"1":"sam"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</section>
+<section id="setdiff" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="setdiff"><span class="header-section-number">5.2</span> setdiff()</h3>
+<p>Outputs rows in first data frame but not in second data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">setdiff</span>(df1, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"john"},{"1":"chris"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</section>
+<section id="union" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="union"><span class="header-section-number">5.3</span> union()</h3>
+<p>Outputs all the rows in both dataframes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">union</span>(df1, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"john"},{"1":"kevin"},{"1":"chris"},{"1":"sam"},{"1":"bob"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</section>
+<section id="setequal" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="setequal"><span class="header-section-number">5.4</span> setequal()</h3>
+<p>Checks whether two datasets have same number of rows.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">setequal</span>(df1, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="summary" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="summary"><span class="header-section-number">6</span> Summary</h2>
+<p>In this chapter, we have seen;</p>
+<div class="incremental">
+<ul class="incremental">
+<li>How to handle row names</li>
+<li>How to combine columns and rows</li>
+<li>What are mutating and filtering joins and various set operations</li>
+</ul>
+</div>
+<p>Thus to conclude this chapter, we have now learned almost all functions in the dplyr package and have seen how to manipulate data efficiently. With the knowledge of the pipe operator that we have seen in chapter 1, we are now equipped to write codes compactly and more clearly. I hope this chapter was useful for you and I will see you next time.</p>
+</section>
+<section id="references" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="references"><span class="header-section-number">7</span> References</h2>
+<ol type="1">
+<li>Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2021). dplyr: A Grammar of Data Manipulation. R package version 1.0.7. https://CRAN.R-project.org/package=dplyr. Here is the <a href="https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf">link</a> to the cheat sheet explaining each and every function in <code>{dplyr}</code>.</li>
+</ol>
+<p><a hidden="" href="https://info.flagcounter.com/ynrK"><img src="https://s11.flagcounter.com/count2/ynrK/bg_000000/txt_FFFFFF/border_F0F0F0/columns_5/maxflags_25/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{johnson2021,
+  author = {Johnson, Jewel},
+  title = {Chapter 3: {Data} Manipulation Using Dplyr (Part 2)},
+  date = {2021-12-13},
+  url = {https://sciquest.netlify.app//tutorials/data_man/dplyr_2.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-johnson2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Johnson, Jewel. 2021. <span>“Chapter 3: Data Manipulation Using Dplyr
+(Part 2).”</span> December 13, 2021. <a href="https://sciquest.netlify.app//tutorials/data_man/dplyr_2.html">https://sciquest.netlify.app//tutorials/data_man/dplyr_2.html</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jeweljohnsonj/SciQuest" data-repo-id="R_kgDOHW124A" data-category="General" data-category-id="DIC_kwDOHW124M4CPNVL" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb18" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Chapter 3: Data manipulation using dplyr (part 2)"</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Learn how to manipulate your data with the dplyr package"</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "12/13/2021"</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> last-modified</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> images/dplyr1.png</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [dplyr, data wrangling]</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="an">filters:</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">   - social-share</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="an">share:</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">  permalink: "https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html"</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co">  description: "Data manipulation using dplyr (part 2)"</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">  twitter: true</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co">  facebook: true</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="co">  reddit: true</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="co">  stumble: true</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co">  tumblr: true</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="co">  linkedin: true</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="co">  email: true</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Continuation from the previous chapter</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>In the <span class="co">[</span><span class="ot">previous chapter</span><span class="co">](https://sciquest.netlify.app/tutorials/data_man/dplyr_1.html)</span> we have seen quite a lot of functions from the <span class="in">`{dplyr}`</span> package. In this chapter, we will see the rest of the functions where we learn how to handle row names, how to join columns and rows and different set operations in the <span class="in">`{dplyr}`</span> package.</span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="co"># loading necessary packages</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### rownames_to_column() &amp; column_to_rownames()</span></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>Tidy data does not use row names. So use <span class="in">`rownames_to_column()`</span> command to convert row names to a new column to the data. The function <span class="in">`column_to_rownames()`</span> does the exact opposite of <span class="in">`rownames_to_column()`</span> as it converts a column into rownames but make sure that the column you are converting into rownames does not contain <span class="in">`NA`</span> values.</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a><span class="co"># mtcars dataset contains rownames</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="co"># creates new column called car_names which contains row names</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">"car_names"</span>)</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the original mtcars dataset</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">"car_names"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_to_rownames</span>(<span class="at">var =</span> <span class="st">"car_names"</span>)</span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Combine tables/columns</span></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### bind_cols()</span></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a>Joins columns with other columns. Similar function as that of <span class="in">`cbind()`</span> from base R.</span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>))</span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(df1,df2)</span>
+<span id="cb18-65"><a href="#cb18-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-66"><a href="#cb18-66" aria-hidden="true" tabindex="-1"></a><span class="co">#similar functionality</span></span>
+<span id="cb18-67"><a href="#cb18-67" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(df1,df2)</span>
+<span id="cb18-68"><a href="#cb18-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-69"><a href="#cb18-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-70"><a href="#cb18-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### bind_rows()</span></span>
+<span id="cb18-71"><a href="#cb18-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-72"><a href="#cb18-72" aria-hidden="true" tabindex="-1"></a>Joins rows with other rows. Similar function as that of <span class="in">`rbind()`</span> from base R.</span>
+<span id="cb18-73"><a href="#cb18-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>))</span>
+<span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> letters[<span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(df1,df2)</span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-82"><a href="#cb18-82" aria-hidden="true" tabindex="-1"></a><span class="co">#similar functionality</span></span>
+<span id="cb18-83"><a href="#cb18-83" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(df1,df2)</span>
+<span id="cb18-84"><a href="#cb18-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-86"><a href="#cb18-86" aria-hidden="true" tabindex="-1"></a>The functions that are described below have the same functionality as that of <span class="in">`bind_cols()`</span> but give you control over how the columns are joined.</span>
+<span id="cb18-87"><a href="#cb18-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-88"><a href="#cb18-88" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mutating joins and filtering joins</span></span>
+<span id="cb18-89"><a href="#cb18-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-90"><a href="#cb18-90" aria-hidden="true" tabindex="-1"></a>Mutating joins include <span class="in">`left_join()`</span>, <span class="in">`right_join()`</span>, <span class="in">`inner_join()`</span> and <span class="in">`full_join()`</span> and filtering joins include <span class="in">`semi_join()`</span> and <span class="in">`anti_join()`</span>.</span>
+<span id="cb18-91"><a href="#cb18-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-92"><a href="#cb18-92" aria-hidden="true" tabindex="-1"></a>::: panel-tabset</span>
+<span id="cb18-93"><a href="#cb18-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## left_join()</span></span>
+<span id="cb18-94"><a href="#cb18-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-95"><a href="#cb18-95" aria-hidden="true" tabindex="-1"></a>In the code below, matching variables of df2 are joined with df1. In the final data, you can see that only kevin and sam from df2 are matched with df1, and only those row values are joined with df1. For those variables which didn't get a match, the row values for those are filled with <span class="in">`NA`</span>. You can interpret the variables with <span class="in">`NA`</span> values as; both john and chris are not present in df2.</span>
+<span id="cb18-96"><a href="#cb18-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-97"><a href="#cb18-97" aria-hidden="true" tabindex="-1"></a>If you are familiar with set theory in mathematics, what we are doing essentially is similar to $(df1 \cap df2) \cup df1$.</span>
+<span id="cb18-98"><a href="#cb18-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-101"><a href="#cb18-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-102"><a href="#cb18-102" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-103"><a href="#cb18-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-104"><a href="#cb18-104" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-105"><a href="#cb18-105" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-106"><a href="#cb18-106" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(df2)</span>
+<span id="cb18-107"><a href="#cb18-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-108"><a href="#cb18-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-109"><a href="#cb18-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## right_join()</span></span>
+<span id="cb18-110"><a href="#cb18-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-111"><a href="#cb18-111" aria-hidden="true" tabindex="-1"></a>Similar to <span class="in">`left_join()`</span> but here, you will be joining matching values from df1 to df2, the opposite of what we did earlier. As you can see only kevin and sam from the df1 is matched with df2, and only those row values are joined with df2. For the variables which didn't get a match, the row values for those are filled with <span class="in">`NA`</span>. You can interpret the variables with <span class="in">`NA`</span> values as; bob is not present in df1.</span>
+<span id="cb18-112"><a href="#cb18-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-113"><a href="#cb18-113" aria-hidden="true" tabindex="-1"></a>This function, in the manner used here, is similar to $(df1 \cap df2) \cup df2$.</span>
+<span id="cb18-114"><a href="#cb18-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-117"><a href="#cb18-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-118"><a href="#cb18-118" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-119"><a href="#cb18-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-120"><a href="#cb18-120" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-121"><a href="#cb18-121" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-122"><a href="#cb18-122" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(df2)</span>
+<span id="cb18-123"><a href="#cb18-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-124"><a href="#cb18-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-125"><a href="#cb18-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## inner_join()</span></span>
+<span id="cb18-126"><a href="#cb18-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-127"><a href="#cb18-127" aria-hidden="true" tabindex="-1"></a>The function <span class="in">`inner_join()`</span> compares both df1 and df2 variables and only joins rows with the same variables. Here only kevin and sam are common in both the dataframes so the row values of only those columns are joined and others are omitted.</span>
+<span id="cb18-128"><a href="#cb18-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-129"><a href="#cb18-129" aria-hidden="true" tabindex="-1"></a>This function is similar to $df1 \cap df2$.</span>
+<span id="cb18-130"><a href="#cb18-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-133"><a href="#cb18-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-134"><a href="#cb18-134" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-135"><a href="#cb18-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-136"><a href="#cb18-136" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-137"><a href="#cb18-137" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-138"><a href="#cb18-138" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(df2)</span>
+<span id="cb18-139"><a href="#cb18-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-140"><a href="#cb18-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-141"><a href="#cb18-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## full_join()</span></span>
+<span id="cb18-142"><a href="#cb18-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-143"><a href="#cb18-143" aria-hidden="true" tabindex="-1"></a>The function <span class="in">`full_join()`</span> compares both df1 and df2 variables and joins all possible matches while retaining both mistakes in df1 and df2 with <span class="in">`NA`</span> values.</span>
+<span id="cb18-144"><a href="#cb18-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-145"><a href="#cb18-145" aria-hidden="true" tabindex="-1"></a>This function is similar to $df1 \cup df2$.</span>
+<span id="cb18-146"><a href="#cb18-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-149"><a href="#cb18-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-150"><a href="#cb18-150" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-151"><a href="#cb18-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-152"><a href="#cb18-152" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-153"><a href="#cb18-153" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-154"><a href="#cb18-154" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">full_join</span>(df2)</span>
+<span id="cb18-155"><a href="#cb18-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-156"><a href="#cb18-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-157"><a href="#cb18-157" aria-hidden="true" tabindex="-1"></a><span class="fu">## anti_join()</span></span>
+<span id="cb18-158"><a href="#cb18-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-159"><a href="#cb18-159" aria-hidden="true" tabindex="-1"></a>This is an example of filtering join. The function <span class="in">`anti_join()`</span> compares df1 variables to and df2 variables and only outputs those variables of df1 which didn't get a match with df2.</span>
+<span id="cb18-160"><a href="#cb18-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-161"><a href="#cb18-161" aria-hidden="true" tabindex="-1"></a>This function, in the manner used here, is similar to $df1 \cap df2^c$.</span>
+<span id="cb18-162"><a href="#cb18-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-165"><a href="#cb18-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-166"><a href="#cb18-166" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-167"><a href="#cb18-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-168"><a href="#cb18-168" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-169"><a href="#cb18-169" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-170"><a href="#cb18-170" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(df2)</span>
+<span id="cb18-171"><a href="#cb18-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-172"><a href="#cb18-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-173"><a href="#cb18-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## semi_join()</span></span>
+<span id="cb18-174"><a href="#cb18-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-175"><a href="#cb18-175" aria-hidden="true" tabindex="-1"></a>This is an example of filtering join. The function <span class="in">`semi_join()`</span> is similar to <span class="in">`inner_join()`</span> but it only gives variables of df1 which has a match with df2.</span>
+<span id="cb18-176"><a href="#cb18-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-179"><a href="#cb18-179" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-180"><a href="#cb18-180" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-181"><a href="#cb18-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-182"><a href="#cb18-182" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-183"><a href="#cb18-183" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-184"><a href="#cb18-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-185"><a href="#cb18-185" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(df2)</span>
+<span id="cb18-186"><a href="#cb18-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-187"><a href="#cb18-187" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb18-188"><a href="#cb18-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-189"><a href="#cb18-189" aria-hidden="true" tabindex="-1"></a>Here is a nice graphical representation of the functions we just described now. Image <span class="co">[</span><span class="ot">source</span><span class="co">](https://rpubs.com/frasermyers/627597)</span>.</span>
+<span id="cb18-190"><a href="#cb18-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-191"><a href="#cb18-191" aria-hidden="true" tabindex="-1"></a>::: {#fig-joins layout-ncol="2"}</span>
+<span id="cb18-192"><a href="#cb18-192" aria-hidden="true" tabindex="-1"></a><span class="al">![Mutating joins](images/joins.jpg)</span>{#fig-surus}</span>
+<span id="cb18-193"><a href="#cb18-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-194"><a href="#cb18-194" aria-hidden="true" tabindex="-1"></a><span class="al">![Filtering joins](images/joins1.jpg)</span>{#fig-hanno}</span>
+<span id="cb18-195"><a href="#cb18-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-196"><a href="#cb18-196" aria-hidden="true" tabindex="-1"></a>Graphical abstract for joins. Image source: RPubs.com</span>
+<span id="cb18-197"><a href="#cb18-197" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb18-198"><a href="#cb18-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-199"><a href="#cb18-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional commands for joins</span></span>
+<span id="cb18-200"><a href="#cb18-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-201"><a href="#cb18-201" aria-hidden="true" tabindex="-1"></a>Additionally, you can specify which common columns to match.</span>
+<span id="cb18-202"><a href="#cb18-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-205"><a href="#cb18-205" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-206"><a href="#cb18-206" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-207"><a href="#cb18-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-208"><a href="#cb18-208" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-209"><a href="#cb18-209" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-210"><a href="#cb18-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-211"><a href="#cb18-211" aria-hidden="true" tabindex="-1"></a><span class="co"># match with column 'x'</span></span>
+<span id="cb18-212"><a href="#cb18-212" aria-hidden="true" tabindex="-1"></a>df1 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(df2, <span class="at">by =</span> <span class="st">"x"</span>)</span>
+<span id="cb18-213"><a href="#cb18-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-214"><a href="#cb18-214" aria-hidden="true" tabindex="-1"></a>df3 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">a =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb18-215"><a href="#cb18-215" aria-hidden="true" tabindex="-1"></a>df4 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">b =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>), <span class="at">z =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb18-216"><a href="#cb18-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-217"><a href="#cb18-217" aria-hidden="true" tabindex="-1"></a><span class="co"># matching with column having different names, a and b in this case</span></span>
+<span id="cb18-218"><a href="#cb18-218" aria-hidden="true" tabindex="-1"></a>df3 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(df4, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"a"</span> <span class="ot">=</span> <span class="st">"b"</span>))</span>
+<span id="cb18-219"><a href="#cb18-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-220"><a href="#cb18-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-221"><a href="#cb18-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## Set operations</span></span>
+<span id="cb18-222"><a href="#cb18-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-223"><a href="#cb18-223" aria-hidden="true" tabindex="-1"></a>Similar to the mutating join functions that we had seen, there are different functions related to set theory operations.</span>
+<span id="cb18-224"><a href="#cb18-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-225"><a href="#cb18-225" aria-hidden="true" tabindex="-1"></a><span class="fu">### intersect()</span></span>
+<span id="cb18-226"><a href="#cb18-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-227"><a href="#cb18-227" aria-hidden="true" tabindex="-1"></a>Outputs common rows in the dataset.</span>
+<span id="cb18-228"><a href="#cb18-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-231"><a href="#cb18-231" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-232"><a href="#cb18-232" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-233"><a href="#cb18-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-234"><a href="#cb18-234" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb18-235"><a href="#cb18-235" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb18-236"><a href="#cb18-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-237"><a href="#cb18-237" aria-hidden="true" tabindex="-1"></a><span class="fu">intersect</span>(df1, df2)</span>
+<span id="cb18-238"><a href="#cb18-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-239"><a href="#cb18-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-240"><a href="#cb18-240" aria-hidden="true" tabindex="-1"></a><span class="fu">### setdiff()</span></span>
+<span id="cb18-241"><a href="#cb18-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-242"><a href="#cb18-242" aria-hidden="true" tabindex="-1"></a>Outputs rows in first data frame but not in second data frame.</span>
+<span id="cb18-243"><a href="#cb18-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-246"><a href="#cb18-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-247"><a href="#cb18-247" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-248"><a href="#cb18-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-249"><a href="#cb18-249" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb18-250"><a href="#cb18-250" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb18-251"><a href="#cb18-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-252"><a href="#cb18-252" aria-hidden="true" tabindex="-1"></a><span class="fu">setdiff</span>(df1, df2)</span>
+<span id="cb18-253"><a href="#cb18-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-254"><a href="#cb18-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-255"><a href="#cb18-255" aria-hidden="true" tabindex="-1"></a><span class="fu">### union()</span></span>
+<span id="cb18-256"><a href="#cb18-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-257"><a href="#cb18-257" aria-hidden="true" tabindex="-1"></a>Outputs all the rows in both dataframes</span>
+<span id="cb18-258"><a href="#cb18-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-261"><a href="#cb18-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-262"><a href="#cb18-262" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-263"><a href="#cb18-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-264"><a href="#cb18-264" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb18-265"><a href="#cb18-265" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb18-266"><a href="#cb18-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-267"><a href="#cb18-267" aria-hidden="true" tabindex="-1"></a><span class="fu">union</span>(df1, df2)</span>
+<span id="cb18-268"><a href="#cb18-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-269"><a href="#cb18-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-270"><a href="#cb18-270" aria-hidden="true" tabindex="-1"></a><span class="fu">### setequal()</span></span>
+<span id="cb18-271"><a href="#cb18-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-272"><a href="#cb18-272" aria-hidden="true" tabindex="-1"></a>Checks whether two datasets have same number of rows.</span>
+<span id="cb18-273"><a href="#cb18-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-276"><a href="#cb18-276" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-277"><a href="#cb18-277" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-278"><a href="#cb18-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-279"><a href="#cb18-279" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"john"</span>,<span class="st">"kevin"</span>,<span class="st">"chris"</span>,<span class="st">"sam"</span>,<span class="st">"sam"</span>))</span>
+<span id="cb18-280"><a href="#cb18-280" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> tidytable<span class="sc">::</span><span class="fu">data.table</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"kevin"</span>,<span class="st">"sam"</span>, <span class="st">"bob"</span>))</span>
+<span id="cb18-281"><a href="#cb18-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-282"><a href="#cb18-282" aria-hidden="true" tabindex="-1"></a><span class="fu">setequal</span>(df1, df2)</span>
+<span id="cb18-283"><a href="#cb18-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-284"><a href="#cb18-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-285"><a href="#cb18-285" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb18-286"><a href="#cb18-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-287"><a href="#cb18-287" aria-hidden="true" tabindex="-1"></a>In this chapter, we have seen;</span>
+<span id="cb18-288"><a href="#cb18-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-289"><a href="#cb18-289" aria-hidden="true" tabindex="-1"></a>::: incremental</span>
+<span id="cb18-290"><a href="#cb18-290" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>How to handle row names</span>
+<span id="cb18-291"><a href="#cb18-291" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>How to combine columns and rows</span>
+<span id="cb18-292"><a href="#cb18-292" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>What are mutating and filtering joins and various set operations</span>
+<span id="cb18-293"><a href="#cb18-293" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb18-294"><a href="#cb18-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-295"><a href="#cb18-295" aria-hidden="true" tabindex="-1"></a>Thus to conclude this chapter, we have now learned almost all functions in the dplyr package and have seen how to manipulate data efficiently. With the knowledge of the pipe operator that we have seen in chapter 1, we are now equipped to write codes compactly and more clearly. I hope this chapter was useful for you and I will see you next time.</span>
+<span id="cb18-296"><a href="#cb18-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-297"><a href="#cb18-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb18-298"><a href="#cb18-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-299"><a href="#cb18-299" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2021). dplyr: A Grammar of Data Manipulation. R package version 1.0.7. https://CRAN.R-project.org/package=dplyr. Here is the <span class="co">[</span><span class="ot">link</span><span class="co">](https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf)</span> to the cheat sheet explaining each and every function in <span class="in">`{dplyr}`</span>.</span>
+<span id="cb18-300"><a href="#cb18-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-301"><a href="#cb18-301" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">hidden</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://info.flagcounter.com/ynrK"</span><span class="kw">&gt;&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://s11.flagcounter.com/count2/ynrK/bg_000000/txt_FFFFFF/border_F0F0F0/columns_5/maxflags_25/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"Flag Counter"</span> <span class="er">border</span><span class="ot">=</span><span class="st">"0"</span><span class="kw">/&gt;&lt;/a&gt;</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog made using <a href="https://quarto.org/">Quarto®</a> with ❤️, by Jewel Johnson.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jeweljohnsonj">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jeweljohnsonj">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:jewel.johnson@bsu.edu">
+      <i class="bi bi-briefcase" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:jeweljohnsonj@gmail.com">
+      <i class="bi bi-house" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html&amp;text=Data manipulation using dplyr (part 2)" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html&amp;title=Data manipulation using dplyr (part 2)" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=Data manipulation using dplyr (part 2)&amp;body=Check out this link:https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html&amp;title=Data manipulation using dplyr (part 2)" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html&amp;title=Data manipulation using dplyr (part 2)" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://sciquest.netlify.app/tutorials/data_man/dplyr_2.html&amp;name=Data manipulation using dplyr (part 2)" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a></div></div>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,11 +1,6 @@
-# Quarto
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
 /.quarto/
-/_site/
-**/*.quarto_ipynb
-
-# misc
-.DS_Store
-*.pem
-
-# env
-.env*

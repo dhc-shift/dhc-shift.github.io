@@ -1,45 +1,44 @@
 project:
   type: website
-  output-dir: _site
-  render:
-    - "*.qmd"
-    - "explore/**/*.qmd"
-    - "groups/**/*.qmd"
-    - "news/**/*.qmd"
+  output-dir: docs
 
 website:
-  title: "SHIFT"
-  favicon: public/logo.svg
+  title: "SciQuest"
+  image: media/blog_preview.png
+  favicon: favicon.png
   page-navigation: true
-  site-url: "https://dhc-shift.github.io"
-  repo-url: "https://github.com/dhc-shift/dhc-shift.github.io"
-  search:
-    location: navbar
-    type: overlay
-  navbar:
-    logo: public/logo.svg
-    title: false
-    right:
-      - text: "About"
-        href: about.qmd
-      - text: "Activities"
-        href: activities.qmd
-      - text: "Explore"
-        href: explore/index.qmd
-      - text: "Groups"
-        href: groups/index.qmd
-      - text: "News"
-        href: news/index.qmd
-      - text: "Join"
-        href: join.qmd
-      - icon: github
-        href: https://github.com/dhc-shift/dhc-shift.github.io
   page-footer:
-    left: "© 2026 SHIFT, Division of Digital Healthcare, Yonsei University Mirae Campus. All Rights Reserved."
+    left: "Blog made using [Quarto®](https://quarto.org/) with ❤️, by Jewel Johnson."
     right:
       - icon: github
-        href: https://github.com/dhc-shift/dhc-shift.github.io
-
+        href: https://github.com/jeweljohnsonj
+      - icon: twitter
+        href: https://twitter.com/jeweljohnsonj
+      - icon: briefcase
+        href: mailto:jewel.johnson@bsu.edu
+      - icon: house
+        href: mailto:jeweljohnsonj@gmail.com
+  open-graph: true
+  site-url: "https://sciquest.netlify.app/"
+  repo-url: "https://github.com/jeweljohnsonj/SciQuest"
+  repo-actions: [edit, issue]
+  twitter-card: true
+  google-analytics: G-EVCS615JQR
+    
+  navbar:
+    logo: favicon.png
+    right:
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Tutorials"
+        href: tutorials.qmd
+      - text: "About me"
+        href: https://jeweljohnsonj.github.io/jewel_resume/
+      - icon: github
+        href: https://github.com/jeweljohnsonj/SciQuest
+      - icon: twitter
+        href: https://twitter.com/jeweljohnsonj
+ 
 format:
   html:
     theme: simplex
@@ -47,10 +46,24 @@ format:
     toc: true
     toc-location: right
     toc-depth: 3
-    toc-title: "On this page"
+    toc-title: On this page
+    html-math-method: katex
+    number-sections: true
     smooth-scroll: true
     highlight-style: github
-    link-external-newwindow: true
+    code-link: true
+    df-print: paged
 
-execute:
-  freeze: false
+citation: true
+
+comments:
+  giscus:
+    repo: jeweljohnsonj/SciQuest
+
+editor: source
+
+freeze: auto
+
+# Extension settings
+filters:
+   - lightbox

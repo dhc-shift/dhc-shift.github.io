@@ -1,50 +1,35 @@
 ---
-pagetitle: "디지털헬스케어 학술 동아리 SHIFT"
+pagetitle: "SciQuest"
 section-divs: false
 toc: false
+css: index_css/index.css
+editor: source
+image: /media/blog_preview.png
 comments: false
 citation: false
 format:
   html:
     number-sections: false
 ---
-::: {.column-screen-inset .home-hero}
-::: {.home-hero-copy}
 
-<p class="hero-tagline">소프트웨어와 헬스케어의 교차점에서,<br>함께 배우고 성장합니다.</p>
-
-::: {.hero-buttons}
-[동아리 소개](/about.html){#btn-index .btn .btn-primary .btn-lg}
-[활동 소식](/news/){.btn .btn-secondary .btn-lg}
-:::
-:::
+::: {.column-screen-inset}
+<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1x140XobOdXwflXTyN53o_0udhJAOW8SVnPgRX5iXtxE&font=Default&lang=en&initial_zoom=4&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 :::
 
-::: {.home-note}
-**SHIFT**는 2026년 3월 연세대학교 미래캠퍼스 디지털헬스케어학부(DHC) 학생들이 창설한 학술 동아리입니다.
-AI·빅데이터·IoT와 헬스케어가 융합되는 시대에서, 실력 있는 디지털헬스케어 전문가로 성장할 수 있도록
-세미나, 스터디, 프로젝트 등 다양한 학술 활동을 함께 운영합니다.
-:::
+Hey there! My name is Jewel Johnson, and this is my blog showcasing my journey in exploring science.
 
-::: {.column-screen-inset .timeline-module}
-<!--
-TimelineJS Google Sheet embed.
+I am interested in studying animal behavior and am curious to know how and why animals behave in a certain way. Currently, I am a PhD student in [Dr. Jessica Ward's lab](https://www.animalbehaviorlab.com/) at [Ball State University](https://www.bsu.edu/), where I will be studying embryonic learning using the fathead minnow fish.
 
-Maintenance:
-1. Make a copy of the official TimelineJS template:
-   https://timeline.knightlab.com/#make
-2. Publish the sheet to the web.
-3. Replace the encoded published CSV URL below when the Google Sheet changes.
-4. Put post/image links in the sheet columns. TimelineJS will update this module.
--->
-<iframe
-  class="shift-timeline-embed"
-  src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vQPskSr_FBMd-9PSlXs-EPX4rUCxikXTm9lE3BAH2mZEab7nesHv06LtSRQPGjhAv5O3QMN8MCDcbPf%2Fpub%3Foutput%3Dcsv&font=Default&lang=ko&initial_zoom=0&start_at_end=true&timenav_background=%23f0f2e8&marker_background_color=%236b7a3b&height=650"
-  width="100%"
-  height="650"
-  webkitallowfullscreen
-  mozallowfullscreen
-  allowfullscreen
-  frameborder="0">
-</iframe>
-:::
+I completed a dual degree program in biological sciences at the [Indian Institute of Science Education and Research, Thiruvananthapuram](https://www.iisertvm.ac.in/) (IISER-TVM), earning both my bachelor's and master's degrees. During my master's thesis, I worked in [Prof. Hema Somanathan's lab](https://faculty.iisertvm.ac.in/beelab/) at IISER-TVM, investigating how the giant honeybee (*Apis dorsata*) is able to forage during the twilight period despite having day-adapted apposition eyes.
+
+I created this blog using the [quarto](https://quarto.org/) package. My blog posts primarily focus on science communication and R programming. Additionally, I firmly believe that teaching refines one's ability to learn and comprehend. Therefore, I document my learning experiences by writing extensive tutorials on the topics I am studying. You can find them in the "Tutorials" section on the navigation bar.
+
+
+
+<center>        
+<a href="https://info.flagcounter.com/ynrK"><img src="https://s11.flagcounter.com/count2/ynrK/bg_000000/txt_FFFFFF/border_F0F0F0/columns_3/maxflags_9/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+</center>
+
+<center>
+**Thanks for visiting my blog!**
+</center>

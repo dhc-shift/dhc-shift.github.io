@@ -1,9 +1,0 @@
----
-title: "Activities"
-subtitle: |
-  Starter page.
-page-layout: full
-title-block-banner: true
----
-
-This page is empty and ready for new content.
