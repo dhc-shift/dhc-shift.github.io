@@ -38,14 +38,9 @@ git push origin main
 ├── groups/              # 소모임 (안내, 개설중, 종료)
 ├── notice.qmd           # 공지
 ├── news.qmd             # 뉴스
-├── posts/               # 블로그 글 카테고리별 폴더
-│   ├── notice/
-│   ├── news/
-│   ├── recruit/
-│   ├── seminar/
-│   ├── groups-active/
-│   └── groups-closed/
-├── media/               # 이미지 등 미디어 파일
+├── posts/               # 게시글 폴더
+│   └── notice/
+├── SHIFT 로고.svg       # 사이트 로고
 ├── _quarto.yml          # 사이트 설정
 └── docs/                # 빌드 결과물 (GitHub Pages 배포 대상)
 ```
@@ -57,6 +52,8 @@ git push origin main
 mkdir -p posts/recruit/2026-09-01-fall-recruit
 $EDITOR posts/recruit/2026-09-01-fall-recruit/index.qmd
 ```
+
+새 글을 listing 페이지에 자동으로 모으려면 해당 페이지의 frontmatter에 `listing` 설정을 추가하면 됩니다.
 
 `index.qmd` 상단 frontmatter 예시:
 ```yaml

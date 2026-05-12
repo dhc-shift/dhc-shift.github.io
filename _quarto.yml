@@ -8,6 +8,7 @@ website:
   title: "SHIFT"
   description: "연세대학교 미래캠퍼스 디지털헬스케어학부 학술동아리 SHIFT"
   favicon: favicon.png
+  search: false
   page-navigation: true
   page-footer:
     left: "© SHIFT — 연세대학교 미래캠퍼스 디지털헬스케어학부 학술동아리"
@@ -23,7 +24,7 @@ website:
 
   navbar:
     logo: "SHIFT 로고.svg"
-    title: "SHIFT"
+    title: false
     left:
       - text: "홈"
         href: index.qmd

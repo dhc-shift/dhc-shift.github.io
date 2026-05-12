@@ -2,12 +2,6 @@
 title: "개설 중인 소모임"
 subtitle: "지금 함께할 수 있는 소모임들"
 title-block-banner: true
-listing:
-  contents: ../posts/groups-active
-  sort: "date desc"
-  type: grid
-  categories: true
-  fields: [image, date, title, description, categories]
 page-layout: full
 ---
 
@@ -15,3 +9,5 @@ page-layout: full
 가입을 원하는 소모임이 있다면 해당 소모임 페이지의 안내에 따라 신청하거나,
 [문의 페이지](../about/contact.qmd)로 연락주세요.
 :::
+
+현재 공개된 소모임 공고가 없습니다.

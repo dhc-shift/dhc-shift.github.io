@@ -2,13 +2,9 @@
 title: "종료된 소모임"
 subtitle: "지난 시즌의 활동 기록"
 title-block-banner: true
-listing:
-  contents: ../posts/groups-closed
-  sort: "date desc"
-  type: default
-  categories: true
-  fields: [date, title, description, categories]
 page-layout: full
 ---
 
 종료된 소모임의 결과물과 회고를 모아둔 아카이브입니다. 후배들의 참고 자료가 됩니다.
+
+아직 게시된 종료 소모임 기록이 없습니다.

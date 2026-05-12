@@ -2,12 +2,6 @@
 title: "모집공고"
 subtitle: "함께 변화를 만들어갈 사람을 찾습니다"
 title-block-banner: true
-listing:
-  contents: posts/recruit
-  sort: "date desc"
-  type: default
-  categories: false
-  fields: [date, title, description]
 page-layout: full
 ---
 
@@ -29,3 +23,5 @@ SHIFT는 매 학기 초 신입 부원을 모집합니다.
 자세한 내용은 학기별 공고를 확인해주세요.
 
 ## 지난 모집공고
+
+아직 게시된 지난 모집공고가 없습니다.

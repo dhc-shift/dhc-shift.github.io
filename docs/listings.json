@@ -1,28 +1,8 @@
 [
   {
-    "listing": "/recruit.html",
-    "items": []
-  },
-  {
     "listing": "/notice.html",
     "items": [
       "/posts/notice/2026-05-07-website-launch/index.html"
     ]
-  },
-  {
-    "listing": "/groups/closed.html",
-    "items": []
-  },
-  {
-    "listing": "/activity/seminar.html",
-    "items": []
-  },
-  {
-    "listing": "/groups/active.html",
-    "items": []
-  },
-  {
-    "listing": "/news.html",
-    "items": []
   }
 ]

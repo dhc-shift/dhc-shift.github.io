@@ -2,11 +2,10 @@
 title: "뉴스"
 subtitle: "SHIFT의 활동 소식과 디지털 헬스케어 업계 소식"
 title-block-banner: true
-listing:
-  contents: posts/news
-  sort: "date desc"
-  type: default
-  categories: true
-  fields: [date, title, description, categories]
 page-layout: full
 ---
+
+아직 게시된 뉴스가 없습니다.
+
+새로운 활동 소식과 외부 소식은 준비되는 대로 이 페이지에 업데이트됩니다.
+  
