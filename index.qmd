@@ -75,6 +75,12 @@ body {
   background: rgba(183, 255, 42, 0.08);
 }
 
+.navbar-logo {
+  max-height: 36px;
+  width: auto;
+  border-radius: 4px;
+}
+
 #quarto-content,
 #quarto-document-content {
   padding: 0 !important;
@@ -192,16 +198,30 @@ main.content,
   box-shadow: 0 0 16px var(--shift-neon);
 }
 
-.shift-hero h1 {
+.hero-logo-title {
   margin: 0;
-  max-width: 8ch;
-  font-size: clamp(4.7rem, 14vw, 10.5rem);
-  line-height: 0.84;
-  letter-spacing: 0;
-  color: var(--shift-text);
-  text-shadow:
-    0 0 28px rgba(183, 255, 42, 0.28),
-    0 0 48px rgba(23, 215, 198, 0.16);
+}
+
+.hero-logo {
+  display: block;
+  width: clamp(148px, 28vw, 260px);
+  height: auto;
+  border-radius: 18px;
+  filter:
+    drop-shadow(0 0 26px rgba(183, 255, 42, 0.32))
+    drop-shadow(0 0 38px rgba(23, 215, 198, 0.18));
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hero-copy {
@@ -817,8 +837,8 @@ main.content,
     padding-top: 58px;
   }
 
-  .shift-hero h1 {
-    font-size: clamp(4.25rem, 28vw, 6.4rem);
+  .hero-logo {
+    width: clamp(136px, 48vw, 220px);
   }
 
   .hero-copy {
@@ -879,7 +899,10 @@ main.content,
         <div class="hero-grid">
           <div>
             <p class="eyebrow">Academic Tech Community</p>
-            <h1>SHIFT</h1>
+            <h1 class="hero-logo-title">
+              <img class="hero-logo" src="SHIFT 로고.svg" alt="SHIFT 로고">
+              <span class="sr-only">SHIFT</span>
+            </h1>
             <p class="hero-copy">
               <strong>[대학교명] [학과/전공명] 학술 동아리</strong> SHIFT는 데이터, AI, 서비스 기획, 디지털 프로젝트를 연결해 실제 문제를 탐구하는 실무형 커뮤니티입니다. 이 영역에는 동아리의 핵심 소개 문구가 들어갑니다.
             </p>

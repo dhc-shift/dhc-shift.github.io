@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "SHIFT 로고.svg"
 
 website:
   title: "SHIFT"
@@ -20,7 +22,7 @@ website:
   repo-actions: [edit, issue]
 
   navbar:
-    logo: favicon.png
+    logo: "SHIFT 로고.svg"
     title: "SHIFT"
     left:
       - text: "홈"
