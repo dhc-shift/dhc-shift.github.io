@@ -3,67 +3,74 @@ project:
   output-dir: docs
 
 website:
-  title: "SciQuest"
-  image: media/blog_preview.png
+  title: "SHIFT"
+  description: "연세대학교 미래캠퍼스 디지털헬스케어학부 학술동아리 SHIFT"
   favicon: favicon.png
   page-navigation: true
   page-footer:
-    left: "Blog made using [Quarto®](https://quarto.org/) with ❤️, by Jewel Johnson."
+    left: "© SHIFT — 연세대학교 미래캠퍼스 디지털헬스케어학부 학술동아리"
     right:
       - icon: github
-        href: https://github.com/jeweljohnsonj
-      - icon: twitter
-        href: https://twitter.com/jeweljohnsonj
-      - icon: briefcase
-        href: mailto:jewel.johnson@bsu.edu
-      - icon: house
-        href: mailto:jeweljohnsonj@gmail.com
+        href: https://github.com/dhc-shift
+      - icon: envelope
+        href: mailto:hepsdata@gmail.com
   open-graph: true
-  site-url: "https://sciquest.netlify.app/"
-  repo-url: "https://github.com/jeweljohnsonj/SciQuest"
+  site-url: "https://dhc-shift.github.io"
+  repo-url: "https://github.com/dhc-shift/dhc-shift.github.io"
   repo-actions: [edit, issue]
-  twitter-card: true
-  google-analytics: G-EVCS615JQR
-    
+
   navbar:
     logo: favicon.png
+    title: "SHIFT"
+    left:
+      - text: "홈"
+        href: index.qmd
+      - text: "소개"
+        menu:
+          - text: "동아리 소개"
+            href: about/intro.qmd
+          - text: "운영진"
+            href: about/team.qmd
+          - text: "문의"
+            href: about/contact.qmd
+      - text: "모집공고"
+        href: recruit.qmd
+      - text: "활동"
+        menu:
+          - text: "IT 온보딩"
+            href: activity/it-onboarding.qmd
+          - text: "산업지도"
+            href: activity/industry-map.qmd
+          - text: "세미나 / 행사"
+            href: activity/seminar.qmd
+      - text: "소모임"
+        menu:
+          - text: "소모임 안내"
+            href: groups/intro.qmd
+          - text: "개설 중인 소모임"
+            href: groups/active.qmd
+          - text: "종료된 소모임"
+            href: groups/closed.qmd
+      - text: "공지"
+        href: notice.qmd
+      - text: "뉴스"
+        href: news.qmd
     right:
-      - text: "Blog"
-        href: blog.qmd
-      - text: "Tutorials"
-        href: tutorials.qmd
-      - text: "About me"
-        href: https://jeweljohnsonj.github.io/jewel_resume/
       - icon: github
-        href: https://github.com/jeweljohnsonj/SciQuest
-      - icon: twitter
-        href: https://twitter.com/jeweljohnsonj
- 
+        href: https://github.com/dhc-shift
+
 format:
   html:
-    theme: simplex
+    theme: cosmo
     css: styles.css
     toc: true
     toc-location: right
     toc-depth: 3
-    toc-title: On this page
-    html-math-method: katex
-    number-sections: true
+    toc-title: 이 페이지에서
     smooth-scroll: true
     highlight-style: github
     code-link: true
-    df-print: paged
-
-citation: true
-
-comments:
-  giscus:
-    repo: jeweljohnsonj/SciQuest
 
 editor: source
 
 freeze: auto
-
-# Extension settings
-filters:
-   - lightbox

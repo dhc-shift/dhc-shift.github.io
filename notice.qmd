@@ -1,0 +1,12 @@
+---
+title: "공지"
+subtitle: "SHIFT의 공식 공지사항"
+title-block-banner: true
+listing:
+  contents: posts/notice
+  sort: "date desc"
+  type: default
+  categories: false
+  fields: [date, title, description]
+page-layout: full
+---

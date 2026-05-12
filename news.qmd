@@ -1,0 +1,12 @@
+---
+title: "뉴스"
+subtitle: "SHIFT의 활동 소식과 디지털 헬스케어 업계 소식"
+title-block-banner: true
+listing:
+  contents: posts/news
+  sort: "date desc"
+  type: default
+  categories: true
+  fields: [date, title, description, categories]
+page-layout: full
+---

@@ -1,37 +1,28 @@
 [
   {
-    "listing": "/blog.html",
+    "listing": "/recruit.html",
+    "items": []
+  },
+  {
+    "listing": "/notice.html",
     "items": [
-      "/posts/obsidian_zotero/index.html",
-      "/posts/research_article_embryonic_learning/index_post.html",
-      "/posts/research_article_biggest_bacterium/index_post.html",
-      "/posts/notion_movie_books/index.html",
-      "/posts/welcome_to_blog/index.html",
-      "/posts/notion_task_manager/index.html",
-      "/posts/notion_literature/index.html",
-      "/posts/notion_research_diary/index.html",
-      "/posts/notion_intro/index.html",
-      "/posts/word_happy_2022/index.html"
+      "/posts/notice/2026-05-07-website-launch/index.html"
     ]
   },
   {
-    "listing": "/tutorials.html",
-    "items": [
-      "/tutorials/data_viz/ggpubr.html",
-      "/tutorials/data_viz/ggplot_3.html",
-      "/tutorials/data_viz/ggplot_2.html",
-      "/tutorials/data_viz/ggplot_1.html",
-      "/tutorials/data_man/dplyr_1.html",
-      "/tutorials/data_man/dplyr_2.html",
-      "/tutorials/data_man/tidyr.html",
-      "/tutorials/stat_basic/inter_reg.html",
-      "/tutorials/stat_basic/intro_reg.html",
-      "/tutorials/stat_basic/intro_stat.html",
-      "/tutorials/stat_model/glmer_stat_model.html",
-      "/tutorials/stat_model/glm_stat_model.html",
-      "/tutorials/stat_model/inter_stat_model.html",
-      "/tutorials/stat_model/intro_stat_model.html",
-      "/tutorials/network_analysis/network_analysis.html"
-    ]
+    "listing": "/groups/closed.html",
+    "items": []
+  },
+  {
+    "listing": "/activity/seminar.html",
+    "items": []
+  },
+  {
+    "listing": "/groups/active.html",
+    "items": []
+  },
+  {
+    "listing": "/news.html",
+    "items": []
   }
 ]

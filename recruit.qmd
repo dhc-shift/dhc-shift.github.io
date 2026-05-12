@@ -1,0 +1,31 @@
+---
+title: "모집공고"
+subtitle: "함께 변화를 만들어갈 사람을 찾습니다"
+title-block-banner: true
+listing:
+  contents: posts/recruit
+  sort: "date desc"
+  type: default
+  categories: false
+  fields: [date, title, description]
+page-layout: full
+---
+
+::: {.callout-note}
+## 현재 모집 상태
+
+**상태**: 학기 시작 전 모집공고가 게시됩니다.
+가장 최신 공고는 아래 목록에서 확인하세요.
+:::
+
+## 모집 안내
+
+SHIFT는 매 학기 초 신입 부원을 모집합니다.
+
+- **모집 시기**: 1학기(3월), 2학기(9월) 초
+- **모집 대상**: 디지털 헬스케어 산업에 관심 있는 연세대 미래캠퍼스 학생
+- **모집 절차**: 지원서 → 간단한 면담 → 합격 발표
+
+자세한 내용은 학기별 공고를 확인해주세요.
+
+## 지난 모집공고
