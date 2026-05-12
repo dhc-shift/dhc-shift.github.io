@@ -1,12 +1,46 @@
 ---
-title: "공지"
-subtitle: "SHIFT의 공식 공지사항"
-title-block-banner: true
-listing:
-  contents: posts/notice
-  sort: "date desc"
-  type: default
-  categories: false
-  fields: [date, title, description]
-page-layout: full
+pagetitle: "공지"
+description: "SHIFT의 모집, 일정, 운영 공지를 모아두는 페이지"
 ---
+
+::: {.page-hero}
+::: {.page-kicker}
+Notice
+:::
+
+# 공지
+
+모집, 정기 세션, 프로젝트 일정, 운영 변경 사항을 한곳에서 확인합니다.
+:::
+
+::: {.notice-list}
+::: {.notice-item .accent-lime}
+### 2026년 1학기 공지 예시
+
+공지 제목, 게시일, 담당자, 상세 링크를 이 영역에 정리합니다. 실제 공지가 생기면 이 카드를 복제해서 사용하면 됩니다.
+
+[자세히 보기](#)
+:::
+
+::: {.notice-item}
+### 정기 세션 일정
+
+세미나, 워크숍, 데모데이 등 반복 일정과 장소를 정리합니다.
+
+[일정 확인](activities.qmd)
+:::
+
+::: {.notice-item}
+### 프로젝트 모집 안내
+
+학기별 프로젝트 팀 모집 방식과 참여 조건을 안내합니다.
+
+[프로젝트 보기](projects/index.qmd)
+:::
+:::
+
+## 작성 가이드
+
+- 공지는 최신순으로 위에 배치합니다.
+- 제목, 날짜, 대상, 담당자, 신청 링크를 함께 적어두면 좋습니다.
+- 장기 보관이 필요한 내용은 자료실에도 연결합니다.

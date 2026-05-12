@@ -1,268 +1,184 @@
 [
   {
-    "objectID": "recruit.html",
-    "href": "recruit.html",
-    "title": "모집공고",
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "자료실",
     "section": "",
-    "text": "Note현재 모집 상태\n\n\n\n상태: 학기 시작 전 모집공고가 게시됩니다. 가장 최신 공고는 아래 목록에서 확인하세요."
+    "text": "Resources\n\n\n\n학습 노트, 발표 자료, 프로젝트 템플릿, 참고 링크를 축적하는 아카이브입니다."
   },
   {
-    "objectID": "recruit.html#모집-안내",
-    "href": "recruit.html#모집-안내",
-    "title": "모집공고",
-    "section": "모집 안내",
-    "text": "모집 안내\nSHIFT는 매 학기 초 신입 부원을 모집합니다.\n\n모집 시기: 1학기(3월), 2학기(9월) 초\n모집 대상: 디지털 헬스케어 산업에 관심 있는 연세대 미래캠퍼스 학생\n모집 절차: 지원서 → 간단한 면담 → 합격 발표\n\n자세한 내용은 학기별 공고를 확인해주세요."
+    "objectID": "resources.html#자료-분류",
+    "href": "resources.html#자료-분류",
+    "title": "자료실",
+    "section": "자료 분류",
+    "text": "자료 분류\n\n\n학습 노트\n세미나 요약, 스터디 기록, 실습 메모를 정리합니다.\n\n\n발표 자료\n데모데이, 워크숍, 프로젝트 발표 자료를 모읍니다.\n\n\n템플릿\n프로젝트 제안서, 회고 문서, 발표 자료, 리서치 노트 양식을 제공합니다.\n\n\n추천 링크\n공식 문서, 산업 리포트, 채용/직무 자료, 학습 사이트를 분류합니다."
   },
   {
-    "objectID": "recruit.html#지난-모집공고",
-    "href": "recruit.html#지난-모집공고",
-    "title": "모집공고",
-    "section": "지난 모집공고",
-    "text": "지난 모집공고\n아직 게시된 지난 모집공고가 없습니다."
+    "objectID": "resources.html#관리-원칙",
+    "href": "resources.html#관리-원칙",
+    "title": "자료실",
+    "section": "관리 원칙",
+    "text": "관리 원칙\n\n\n출처와 작성일을 함께 남깁니다.\n오래된 자료는 업데이트 필요 여부를 표시합니다.\n프로젝트 페이지와 연결해 맥락을 잃지 않게 합니다."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "프로젝트",
+    "section": "",
+    "text": "Projects\n\n\n\nSHIFT의 프로젝트는 학습을 결과물로 연결하는 시스템입니다. 현재는 IT 온보딩과 디지털헬스케어 직무 로드맵을 중심으로 구성합니다."
+  },
+  {
+    "objectID": "projects/index.html#운영-방식",
+    "href": "projects/index.html#운영-방식",
+    "title": "프로젝트",
+    "section": "운영 방식",
+    "text": "운영 방식\n\n\n문제와 대상 사용자를 먼저 정의합니다.\n학습 자료, 참고 링크, 실습 과제를 한 페이지에 모읍니다.\n산출물은 발표 자료, 코드, 문서, 회고로 나누어 정리합니다.\n다음 기수가 이어받을 수 있도록 자료실과 연결합니다."
   },
   {
     "objectID": "notice.html",
     "href": "notice.html",
     "title": "공지",
     "section": "",
-    "text": "SHIFT 공식 웹사이트가 오픈되었습니다\n\n\n동아리 활동 아카이빙과 외부 소통을 위해 공식 웹사이트가 새로 만들어졌습니다.\n\n\n\n\n\nMay 7, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Notice\n\n\n\n모집, 정기 세션, 프로젝트 일정, 운영 변경 사항을 한곳에서 확인합니다."
+  },
+  {
+    "objectID": "notice.html#작성-가이드",
+    "href": "notice.html#작성-가이드",
+    "title": "공지",
+    "section": "작성 가이드",
+    "text": "작성 가이드\n\n공지는 최신순으로 위에 배치합니다.\n제목, 날짜, 대상, 담당자, 신청 링크를 함께 적어두면 좋습니다.\n장기 보관이 필요한 내용은 자료실에도 연결합니다."
+  },
+  {
+    "objectID": "groups.html",
+    "href": "groups.html",
+    "title": "소모임",
+    "section": "",
+    "text": "Small Groups\n\n\n\n소모임은 관심사가 비슷한 구성원이 작게 모여 실험하고 기록하는 학습 단위입니다."
+  },
+  {
+    "objectID": "groups.html#운영-예시",
+    "href": "groups.html#운영-예시",
+    "title": "소모임",
+    "section": "운영 예시",
+    "text": "운영 예시\n\n\n데이터 리딩 클럽\n헬스케어 데이터 사례, 지표, 분석 리포트를 읽고 짧게 공유합니다.\n\n\n프로토타입 랩\n웹, 앱, 대시보드 등 빠르게 보여줄 수 있는 형태의 미니 제작을 진행합니다.\n\n\n커리어 스프린트\n직무 조사, 포트폴리오 구성, 자기소개서 소재 정리를 함께 진행합니다."
+  },
+  {
+    "objectID": "groups.html#소모임-기록-양식",
+    "href": "groups.html#소모임-기록-양식",
+    "title": "소모임",
+    "section": "소모임 기록 양식",
+    "text": "소모임 기록 양식\n\n\n소모임명:\n운영 기간:\n참여 대상:\n목표 산출물:\n주차별 기록:\n최종 회고:"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "소개",
+    "section": "",
+    "text": "About SHIFT\n\n\n\nSHIFT는 디지털헬스케어를 중심으로 데이터, AI, 기획, 개발, 리서치를 연결하는 실무형 학술 커뮤니티입니다."
+  },
+  {
+    "objectID": "about.html#우리가-지향하는-방향",
+    "href": "about.html#우리가-지향하는-방향",
+    "title": "소개",
+    "section": "우리가 지향하는 방향",
+    "text": "우리가 지향하는 방향\n\n\n학술적 탐구\n논문, 산업 리포트, 케이스 스터디를 읽고 디지털헬스케어의 문제를 구조적으로 이해합니다.\n\n\n실무형 제작\n분석 노트북, 서비스 기획서, 프로토타입, 발표 자료처럼 실제로 보여줄 수 있는 산출물을 만듭니다.\n\n\n커뮤니티 학습\n처음 시작하는 구성원도 따라올 수 있도록 온보딩, 피드백, 회고를 운영 구조에 포함합니다."
+  },
+  {
+    "objectID": "about.html#운영-원칙",
+    "href": "about.html#운영-원칙",
+    "title": "소개",
+    "section": "운영 원칙",
+    "text": "운영 원칙\n\n\n어렵게 설명하기보다 명확하게 기록합니다.\n결과물보다 학습 과정과 회고를 함께 남깁니다.\n각자의 관심사를 프로젝트, 소모임, 자료실로 이어지게 만듭니다.\n과한 장식보다 정돈된 정보 구조와 지속 가능한 아카이브를 우선합니다."
+  },
+  {
+    "objectID": "about.html#이런-구성원에게-잘-맞습니다",
+    "href": "about.html#이런-구성원에게-잘-맞습니다",
+    "title": "소개",
+    "section": "이런 구성원에게 잘 맞습니다",
+    "text": "이런 구성원에게 잘 맞습니다\n디지털헬스케어 분야를 탐색하고 싶은 사람, 데이터와 IT 도구를 실습해보고 싶은 사람, 팀 프로젝트 경험을 만들고 싶은 사람, 학습한 내용을 포트폴리오로 정리하고 싶은 사람에게 열려 있습니다."
+  },
+  {
+    "objectID": "activities.html",
+    "href": "activities.html",
+    "title": "활동",
+    "section": "",
+    "text": "Activities\n\n\n\nSHIFT의 활동은 정기 세션, 워크숍, 프로젝트 리뷰, 결과 공유로 이어지는 구조를 가집니다."
+  },
+  {
+    "objectID": "activities.html#대표-활동",
+    "href": "activities.html#대표-활동",
+    "title": "활동",
+    "section": "대표 활동",
+    "text": "대표 활동\n\n\n정기 세션\n매주 학습 주제, 프로젝트 진행 상황, 짧은 발표를 공유합니다.\n\n\n테크 워크숍\nGitHub, 데이터 분석, 웹 기초, AI 도구 활용처럼 프로젝트에 필요한 기반 기술을 실습합니다.\n\n\n프로젝트 리뷰\n팀별 문제 정의, 데이터, 프로토타입, 발표 자료를 함께 점검합니다.\n\n\n데모데이\n학기 말 결과물을 발표하고 다음 기수를 위한 아카이브로 정리합니다."
+  },
+  {
+    "objectID": "activities.html#학기-흐름",
+    "href": "activities.html#학기-흐름",
+    "title": "활동",
+    "section": "학기 흐름",
+    "text": "학기 흐름\n\n\n01. 온보딩\n협업 도구와 기본 규칙을 맞춥니다.\n\n\n02. 스터디\n공통 기초와 관심 분야별 주제를 학습합니다.\n\n\n03. 제작\n팀별 프로젝트 산출물을 만듭니다.\n\n\n04. 공유\n발표, 회고, 자료실 아카이브로 마무리합니다."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SHIFT",
     "section": "",
-    "text": "&lt;header class=\"shift-hero\" id=\"hero\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"hero-grid\"&gt;\n      &lt;div class=\"hero-main\"&gt;\n        &lt;p class=\"eyebrow\"&gt;Academic Tech Community&lt;/p&gt;\n        &lt;h1 class=\"hero-title\"&gt;shift&lt;/h1&gt;\n        &lt;p class=\"hero-copy\"&gt;\n          &lt;strong&gt;[대학교명] [학과/전공명] 학술 동아리&lt;/strong&gt; SHIFT는 데이터, AI, 서비스 기획, 디지털 프로젝트를 연결해 실제 문제를 탐구하는 실무형 커뮤니티입니다. 이 영역에는 동아리의 핵심 소개 문구가 들어갑니다.\n        &lt;/p&gt;\n        &lt;div class=\"hero-actions\" aria-label=\"주요 이동 링크\"&gt;\n          &lt;a class=\"shift-btn primary\" href=\"#recruitment\"&gt;모집 안내 보기&lt;/a&gt;\n          &lt;a class=\"shift-btn ghost\" href=\"#projects\"&gt;프로젝트 둘러보기&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n\n      &lt;aside class=\"hero-visual\" aria-label=\"SHIFT 활동 요약 패널\"&gt;\n        &lt;div class=\"visual-topbar\"&gt;\n          &lt;div class=\"window-dots\" aria-hidden=\"true\"&gt;\n            &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;\n          &lt;/div&gt;\n          &lt;span&gt;SHIFT.SYSTEM / LIVE&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"visual-body\"&gt;\n          &lt;div class=\"signal-row\"&gt;\n            &lt;div class=\"signal-card\"&gt;\n              &lt;b&gt;00&lt;/b&gt;\n              &lt;span&gt;정기 프로젝트&lt;br&gt;placeholder&lt;/span&gt;\n            &lt;/div&gt;\n            &lt;div class=\"signal-card\"&gt;\n              &lt;b&gt;00&lt;/b&gt;\n              &lt;span&gt;스터디 트랙&lt;br&gt;placeholder&lt;/span&gt;\n            &lt;/div&gt;\n            &lt;div class=\"signal-card\"&gt;\n              &lt;b&gt;00&lt;/b&gt;\n              &lt;span&gt;운영 세션&lt;br&gt;placeholder&lt;/span&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=\"terminal-stack\"&gt;\n            &lt;div class=\"terminal-line\"&gt;\n              &lt;span&gt;&gt; initialize community&lt;/span&gt;\n              &lt;span&gt;ready&lt;/span&gt;\n            &lt;/div&gt;\n            &lt;div class=\"terminal-line\"&gt;\n              &lt;span&gt;&gt; build project pipeline&lt;/span&gt;\n              &lt;span&gt;active&lt;/span&gt;\n            &lt;/div&gt;\n            &lt;div class=\"terminal-line\"&gt;\n              &lt;span&gt;&gt; connect members&lt;/span&gt;\n              &lt;span&gt;online&lt;/span&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/aside&gt;\n    &lt;/div&gt;\n\n    &lt;nav class=\"section-nav\" aria-label=\"페이지 섹션\"&gt;\n      &lt;a href=\"#about\"&gt;About&lt;/a&gt;\n      &lt;a href=\"#activities\"&gt;Activities&lt;/a&gt;\n      &lt;a href=\"#curriculum\"&gt;Curriculum&lt;/a&gt;\n      &lt;a href=\"#projects\"&gt;Projects&lt;/a&gt;\n      &lt;a href=\"#recruitment\"&gt;Recruitment&lt;/a&gt;\n      &lt;a href=\"#contact\"&gt;Contact&lt;/a&gt;\n    &lt;/nav&gt;\n  &lt;/div&gt;\n&lt;/header&gt;\n\n&lt;section class=\"shift-section\" id=\"about\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"section-head\"&gt;\n      &lt;div&gt;\n        &lt;p class=\"kicker\"&gt;About&lt;/p&gt;\n        &lt;h2&gt;문제를 정의하고, 작게 만들고, 함께 검증합니다.&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;p class=\"section-note\"&gt;\n        동아리 소개, 운영 철학, 대상 학과, 활동 방식 등 공식 홈페이지에 들어갈 핵심 문구를 이곳에 배치합니다.\n      &lt;/p&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"split-layout\"&gt;\n      &lt;div class=\"lead-box\"&gt;\n        &lt;p&gt;\n          SHIFT는 학술 탐구와 실무형 제작 사이의 간격을 줄이는 프로젝트 중심 학술 동아리입니다. 구성원은 관심 분야별 스터디와 팀 프로젝트를 통해 문제를 발견하고, 데이터를 수집하며, 프로토타입과 발표 자료로 결과물을 정리합니다.\n        &lt;/p&gt;\n        &lt;p&gt;\n          이 문단은 placeholder입니다. 동아리의 실제 목표, 학과 연계성, 선발 기준, 정기 모임 요일, 운영진 메시지 등으로 교체해 사용할 수 있습니다.\n        &lt;/p&gt;\n      &lt;/div&gt;\n\n      &lt;div class=\"stat-grid\" aria-label=\"동아리 핵심 가치\"&gt;\n        &lt;div class=\"stat-item\"&gt;\n          &lt;strong&gt;Build&lt;/strong&gt;\n          &lt;span&gt;아이디어를 문서, 코드, 데이터, 데모 형태로 빠르게 구체화합니다.&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"stat-item\"&gt;\n          &lt;strong&gt;Learn&lt;/strong&gt;\n          &lt;span&gt;기초 온보딩부터 심화 트랙까지 함께 학습하는 구조를 만듭니다.&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"stat-item\"&gt;\n          &lt;strong&gt;Share&lt;/strong&gt;\n          &lt;span&gt;세미나, 회고, 데모데이를 통해 결과와 시행착오를 공유합니다.&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;section class=\"shift-section compact\" id=\"activities\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"section-head\"&gt;\n      &lt;div&gt;\n        &lt;p class=\"kicker\"&gt;Activities&lt;/p&gt;\n        &lt;h2&gt;정기 활동&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;p class=\"section-note\"&gt;\n        학기 중 운영되는 대표 활동을 카드 형태로 소개합니다. 실제 운영 항목에 맞게 제목과 설명을 수정하세요.\n      &lt;/p&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"card-grid\"&gt;\n      &lt;article class=\"shift-card\"&gt;\n        &lt;span class=\"card-tag\"&gt;Weekly Session&lt;/span&gt;\n        &lt;h3&gt;정기 세미나&lt;/h3&gt;\n        &lt;p&gt;관심 주제 발표, 논문/아티클 리뷰, 산업 동향 공유를 진행합니다. 발표자와 주제는 학기별 운영 계획에 맞춰 업데이트합니다.&lt;/p&gt;\n      &lt;/article&gt;\n      &lt;article class=\"shift-card\"&gt;\n        &lt;span class=\"card-tag\"&gt;Project Lab&lt;/span&gt;\n        &lt;h3&gt;팀 프로젝트&lt;/h3&gt;\n        &lt;p&gt;데이터 분석, 웹/앱 프로토타입, 서비스 기획 등 팀 단위 결과물을 만드는 활동입니다. 주제와 산출물 예시는 placeholder입니다.&lt;/p&gt;\n      &lt;/article&gt;\n      &lt;article class=\"shift-card\"&gt;\n        &lt;span class=\"card-tag\"&gt;Study Track&lt;/span&gt;\n        &lt;h3&gt;스터디 트랙&lt;/h3&gt;\n        &lt;p&gt;신입 부원을 위한 기초 온보딩과 관심 분야별 심화 스터디를 운영합니다. 난이도와 커리큘럼은 학기마다 조정됩니다.&lt;/p&gt;\n      &lt;/article&gt;\n      &lt;article class=\"shift-card\"&gt;\n        &lt;span class=\"card-tag\"&gt;Networking&lt;/span&gt;\n        &lt;h3&gt;커뮤니티 밋업&lt;/h3&gt;\n        &lt;p&gt;선배, 현업자, 타 전공 구성원과 연결되는 네트워킹 세션을 기획합니다. 게스트 정보와 일정은 추후 입력합니다.&lt;/p&gt;\n      &lt;/article&gt;\n      &lt;article class=\"shift-card\"&gt;\n        &lt;span class=\"card-tag\"&gt;Archive&lt;/span&gt;\n        &lt;h3&gt;지식 아카이브&lt;/h3&gt;\n        &lt;p&gt;스터디 노트, 발표 자료, 프로젝트 회고를 정리해 다음 기수도 이어서 사용할 수 있는 자료 구조를 만듭니다.&lt;/p&gt;\n      &lt;/article&gt;\n      &lt;article class=\"shift-card\"&gt;\n        &lt;span class=\"card-tag\"&gt;Demo Day&lt;/span&gt;\n        &lt;h3&gt;결과 공유회&lt;/h3&gt;\n        &lt;p&gt;학기 말 프로젝트 결과를 발표하고 피드백을 받는 자리입니다. 포스터, 깃허브, 발표 영상 링크를 연결할 수 있습니다.&lt;/p&gt;\n      &lt;/article&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;section class=\"shift-section compact\" id=\"curriculum\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"section-head\"&gt;\n      &lt;div&gt;\n        &lt;p class=\"kicker\"&gt;Curriculum&lt;/p&gt;\n        &lt;h2&gt;학기 운영 흐름&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;p class=\"section-note\"&gt;\n        신규 부원이 따라오기 쉬운 온보딩부터 프로젝트 발표까지의 흐름을 단계별로 보여줍니다.\n      &lt;/p&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"timeline\"&gt;\n      &lt;article class=\"timeline-item\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;Orientation & Tool Setup&lt;/h3&gt;\n          &lt;p&gt;동아리 소개, 협업 도구 세팅, Git/GitHub, 문서 작성 규칙 등 기본 환경을 맞춥니다.&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"timeline-item\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;Core Study Sprint&lt;/h3&gt;\n          &lt;p&gt;데이터 리터러시, Python/R, 웹 기초, AI 활용 등 공통 기초를 짧은 실습 단위로 학습합니다.&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"timeline-item\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;Problem Framing&lt;/h3&gt;\n          &lt;p&gt;팀별 관심사를 바탕으로 문제 정의, 리서치, 데이터 탐색, 기능 범위를 정리합니다.&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"timeline-item\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;Prototype & Review&lt;/h3&gt;\n          &lt;p&gt;분석 노트북, 대시보드, 웹 페이지, 발표 자료 등 실제로 보여줄 수 있는 산출물을 제작합니다.&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"timeline-item\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;Demo Day&lt;/h3&gt;\n          &lt;p&gt;결과 발표와 회고를 통해 다음 학기 프로젝트, 스터디, 운영 개선 과제를 정리합니다.&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;section class=\"shift-section compact\" id=\"projects\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"section-head\"&gt;\n      &lt;div&gt;\n        &lt;p class=\"kicker\"&gt;Projects&lt;/p&gt;\n        &lt;h2&gt;프로젝트 아카이브&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;p class=\"section-note\"&gt;\n        공개 가능한 프로젝트를 소개하는 영역입니다. 프로젝트명, 기간, 참여자, 링크, 한 줄 성과로 교체하면 됩니다.\n      &lt;/p&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"project-grid\"&gt;\n      &lt;article class=\"project-card\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;[Project 01] 데이터 기반 리서치&lt;/h3&gt;\n          &lt;p&gt;공개 데이터 또는 설문 데이터를 활용해 특정 문제를 분석하고 인사이트를 정리한 프로젝트 소개 문구가 들어갑니다.&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"project-meta\"&gt;\n          &lt;span&gt;Data&lt;/span&gt;\n          &lt;span&gt;Research&lt;/span&gt;\n          &lt;span&gt;2026&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"project-card\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;[Project 02] 서비스 프로토타입&lt;/h3&gt;\n          &lt;p&gt;사용자 시나리오, 기능 설계, 화면 구성, MVP 제작 과정을 담은 프로젝트 소개 문구가 들어갑니다.&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"project-meta\"&gt;\n          &lt;span&gt;Prototype&lt;/span&gt;\n          &lt;span&gt;UX&lt;/span&gt;\n          &lt;span&gt;Team&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"project-card\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;[Project 03] AI 활용 실험&lt;/h3&gt;\n          &lt;p&gt;AI 모델, 자동화 도구, 프롬프트 워크플로 등을 활용해 실무 문제를 해결해 본 실험 내용을 소개합니다.&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"project-meta\"&gt;\n          &lt;span&gt;AI&lt;/span&gt;\n          &lt;span&gt;Automation&lt;/span&gt;\n          &lt;span&gt;Lab&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n      &lt;article class=\"project-card\"&gt;\n        &lt;div&gt;\n          &lt;h3&gt;[Project 04] 커뮤니티 리포트&lt;/h3&gt;\n          &lt;p&gt;세미나, 인터뷰, 산업 지도, 학술 자료를 바탕으로 제작한 리포트나 아카이브를 연결할 수 있습니다.&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"project-meta\"&gt;\n          &lt;span&gt;Report&lt;/span&gt;\n          &lt;span&gt;Archive&lt;/span&gt;\n          &lt;span&gt;Open&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/article&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;section class=\"shift-section compact\" id=\"recruitment\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"recruit-panel\"&gt;\n      &lt;div&gt;\n        &lt;p class=\"kicker\"&gt;Recruitment&lt;/p&gt;\n        &lt;h2&gt;다음 기수 모집 안내&lt;/h2&gt;\n        &lt;p&gt;\n          SHIFT는 함께 배우고 만들며 기록할 구성원을 모집합니다. 모집 기간, 지원 대상, 선발 절차, 지원 링크는 실제 공고가 확정된 뒤 교체하세요.\n        &lt;/p&gt;\n        &lt;ul class=\"recruit-list\"&gt;\n          &lt;li&gt;모집 기간: [YYYY.MM.DD] - [YYYY.MM.DD]&lt;/li&gt;\n          &lt;li&gt;지원 대상: [학교/학과/학년/전공 제한 여부 입력]&lt;/li&gt;\n          &lt;li&gt;활동 기간: [학기 또는 연간 운영 기간 입력]&lt;/li&gt;\n          &lt;li&gt;우대 사항: 꾸준히 배우고 팀으로 결과물을 만들고 싶은 사람&lt;/li&gt;\n        &lt;/ul&gt;\n        &lt;div class=\"hero-actions\"&gt;\n          &lt;a class=\"shift-btn primary\" href=\"recruit.html\"&gt;지원 공고 보기&lt;/a&gt;\n          &lt;a class=\"shift-btn ghost\" href=\"#contact\"&gt;문의하기&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n\n      &lt;aside class=\"recruit-side\" aria-label=\"모집 절차 요약\"&gt;\n        &lt;div class=\"mini-panel\"&gt;\n          &lt;strong&gt;01. 지원서 제출&lt;/strong&gt;\n          &lt;span&gt;관심 분야, 참여 가능 시간, 만들고 싶은 프로젝트를 작성합니다.&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"mini-panel\"&gt;\n          &lt;strong&gt;02. 간단한 미팅&lt;/strong&gt;\n          &lt;span&gt;지원 동기와 활동 방향을 확인하는 캐주얼 미팅을 진행합니다.&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"mini-panel\"&gt;\n          &lt;strong&gt;03. 온보딩 합류&lt;/strong&gt;\n          &lt;span&gt;협업 도구 세팅 후 정기 세션과 스터디 트랙에 참여합니다.&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/aside&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;section class=\"shift-section compact\" id=\"contact\"&gt;\n  &lt;div class=\"shift-container\"&gt;\n    &lt;div class=\"section-head\"&gt;\n      &lt;div&gt;\n        &lt;p class=\"kicker\"&gt;Contact&lt;/p&gt;\n        &lt;h2&gt;연락처&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;p class=\"section-note\"&gt;\n        공식 문의 채널, 소셜 링크, 활동 장소를 입력하는 영역입니다. 공개 가능한 정보만 남겨주세요.\n      &lt;/p&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"contact-grid\"&gt;\n      &lt;div class=\"contact-item\"&gt;\n        &lt;strong&gt;Email&lt;/strong&gt;\n        &lt;a href=\"mailto:placeholder@example.com\"&gt;placeholder@example.com&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"contact-item\"&gt;\n        &lt;strong&gt;Instagram&lt;/strong&gt;\n        &lt;a href=\"#\" aria-label=\"인스타그램 링크 placeholder\"&gt;@shift_placeholder&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"contact-item\"&gt;\n        &lt;strong&gt;Location&lt;/strong&gt;\n        &lt;span&gt;[캠퍼스명] [건물명] [동아리방/활동 장소]&lt;/span&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;footer class=\"shift-footer\"&gt;\n  &lt;div class=\"shift-container footer-row\"&gt;\n    &lt;span&gt;© SHIFT. [대학교명] 학술 동아리 공식 웹페이지.&lt;/span&gt;\n    &lt;a href=\"#hero\"&gt;Back to top&lt;/a&gt;\n  &lt;/div&gt;\n&lt;/footer&gt;\n\n\n```"
+    "text": "Digital Healthcare Academic Community\n\n\n\n\n디지털헬스케어를 배우고, 실험하고, 실무형 프로젝트로 연결하는 테크 기반 학술 커뮤니티입니다.\n\n\n프로젝트 보기 동아리 소개\n\n\n\n\n\nSHIFT.SYSTEM\n\nONLINE\n\n\n\n\n\nFOCUS\n\nDigital Health\n\n\n\nMODE\n\nStudy + Project\n\n\n\nOUTPUT\n\nPortfolio Ready\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlog Structure\n\n\n\n공지, 소개, 활동, 프로젝트, 소모임, 자료실을 중심으로 운영합니다. 카드형 UI와 얇은 라인, cyan/lime 포인트를 유지해 깔끔한 테크 커뮤니티 무드를 잡았습니다.\n\n\n\n\n\n01 / Notice\n\n\n\n모집, 일정, 운영 변경 사항을 가장 빠르게 확인하는 공간입니다.\n\n\n\n\n02 / About\n\n\n\nSHIFT의 방향성, 운영 방식, 함께 만드는 학습 문화를 정리합니다.\n\n\n\n\n03 / Activities\n\n\n\n정기 세션, 세미나, 워크숍, 데모데이 등 학기 활동을 모읍니다.\n\n\n\n\n04 / Projects\n\n\n\nIT 온보딩과 디지털헬스케어 직무 로드맵을 중심으로 결과물을 축적합니다.\n\n\n\n\n05 / Groups\n\n\n\n관심 분야별 스터디와 작은 실험팀을 운영하는 공간입니다.\n\n\n\n\n06 / Resources\n\n\n\n발표 자료, 학습 노트, 템플릿, 추천 링크를 정리합니다.\n\n\n\n\n\n\n\n\n\nProject System\n\n\n\n\n\n\n\n\n01\n\n\n\n협업 도구, 개발 환경, 데이터/문서 작성 기초를 맞춥니다.\n\n\n\n\n02\n\n\n\n직무, 기술, 산업 문제를 탐색하고 팀별 주제를 구체화합니다.\n\n\n\n\n03\n\n\n\n분석, 프로토타입, 발표 자료처럼 보여줄 수 있는 산출물을 만듭니다.\n\n\n\n\n04\n\n\n\n회고와 아카이브로 다음 기수가 이어받을 수 있게 정리합니다."
   },
   {
-    "objectID": "groups/closed.html",
-    "href": "groups/closed.html",
-    "title": "종료된 소모임",
+    "objectID": "index.html#핵심-정보로-바로-들어가는-블로그-구조",
+    "href": "index.html#핵심-정보로-바로-들어가는-블로그-구조",
+    "title": "SHIFT",
     "section": "",
-    "text": "종료된 소모임의 결과물과 회고를 모아둔 아카이브입니다. 후배들의 참고 자료가 됩니다.\n아직 게시된 종료 소모임 기록이 없습니다."
+    "text": "공지, 소개, 활동, 프로젝트, 소모임, 자료실을 중심으로 운영합니다. 카드형 UI와 얇은 라인, cyan/lime 포인트를 유지해 깔끔한 테크 커뮤니티 무드를 잡았습니다."
   },
   {
-    "objectID": "activity/seminar.html",
-    "href": "activity/seminar.html",
-    "title": "세미나 / 행사",
+    "objectID": "projects/digital-healthcare-roadmap.html",
+    "href": "projects/digital-healthcare-roadmap.html",
+    "title": "디지털헬스케어 직무 로드맵",
     "section": "",
-    "text": "SHIFT는 학기 중 정기적으로 세미나를 개최합니다. 디지털 헬스케어 업계의 개발자 / 연구자 / 창업자 / 대학원 선배 등을 모셔 현장의 이야기를 직접 듣는 자리입니다."
+    "text": "Project 02\n\n\n\n디지털헬스케어 분야의 직무, 필요한 역량, 학습 경로, 포트폴리오 방향을 한눈에 볼 수 있게 정리하는 프로젝트입니다."
   },
   {
-    "objectID": "activity/seminar.html#정기-세미나",
-    "href": "activity/seminar.html#정기-세미나",
-    "title": "세미나 / 행사",
-    "section": "",
-    "text": "SHIFT는 학기 중 정기적으로 세미나를 개최합니다. 디지털 헬스케어 업계의 개발자 / 연구자 / 창업자 / 대학원 선배 등을 모셔 현장의 이야기를 직접 듣는 자리입니다."
+    "objectID": "projects/digital-healthcare-roadmap.html#로드맵-축",
+    "href": "projects/digital-healthcare-roadmap.html#로드맵-축",
+    "title": "디지털헬스케어 직무 로드맵",
+    "section": "로드맵 축",
+    "text": "로드맵 축\n\n\n직무 탐색\n서비스 기획, 데이터 분석, AI, UX 리서치, 사업개발 등 관련 직무를 비교합니다.\n\n\n역량 지도\n도메인 지식, 데이터 리터러시, 문제 정의, 커뮤니케이션, 프로토타이핑 역량을 정리합니다.\n\n\n포트폴리오 예시\n프로젝트 문서, 분석 리포트, 대시보드, 서비스 제안서 등 보여줄 수 있는 결과물 유형을 모읍니다."
   },
   {
-    "objectID": "activity/seminar.html#외부-행사-참여",
-    "href": "activity/seminar.html#외부-행사-참여",
-    "title": "세미나 / 행사",
-    "section": "외부 행사 참여",
-    "text": "외부 행사 참여\n학회, 해커톤, 공모전 등 외부 행사 참여를 적극적으로 지원합니다. 관심 있는 부원이 있다면 운영진이 팀 빌딩과 신청을 도와드립니다."
+    "objectID": "projects/digital-healthcare-roadmap.html#정리-방식",
+    "href": "projects/digital-healthcare-roadmap.html#정리-방식",
+    "title": "디지털헬스케어 직무 로드맵",
+    "section": "정리 방식",
+    "text": "정리 방식\n\n\n직무별 핵심 업무와 자주 쓰는 도구를 정리합니다.\n학년별 또는 수준별 추천 학습 경로를 만듭니다.\n실제 프로젝트와 연결 가능한 실습 주제를 함께 제안합니다.\n자료 출처와 업데이트 날짜를 남겨 신뢰도를 유지합니다."
   },
   {
-    "objectID": "activity/seminar.html#지난-세미나",
-    "href": "activity/seminar.html#지난-세미나",
-    "title": "세미나 / 행사",
-    "section": "지난 세미나",
-    "text": "지난 세미나\n아직 게시된 지난 세미나 기록이 없습니다."
-  },
-  {
-    "objectID": "activity/industry-map.html",
-    "href": "activity/industry-map.html",
-    "title": "산업지도",
-    "section": "",
-    "text": "디지털 헬스케어 산업은 의료기기, EMR/EHR, 디지털치료제(DTx), AI 진단, 유전체, 보험, 플랫폼, 웰니스 등 매우 넓은 영역을 아우릅니다. 산업지도 활동은 이 복잡한 지형을 학생이 이해할 수 있는 한 장의 지도로 정리하는 스터디입니다."
-  },
-  {
-    "objectID": "activity/industry-map.html#무엇을-하나요",
-    "href": "activity/industry-map.html#무엇을-하나요",
-    "title": "산업지도",
-    "section": "",
-    "text": "디지털 헬스케어 산업은 의료기기, EMR/EHR, 디지털치료제(DTx), AI 진단, 유전체, 보험, 플랫폼, 웰니스 등 매우 넓은 영역을 아우릅니다. 산업지도 활동은 이 복잡한 지형을 학생이 이해할 수 있는 한 장의 지도로 정리하는 스터디입니다."
-  },
-  {
-    "objectID": "activity/industry-map.html#진행-방식",
-    "href": "activity/industry-map.html#진행-방식",
-    "title": "산업지도",
-    "section": "진행 방식",
-    "text": "진행 방식\n\n분야 선정 — 매 사이클마다 한두 개의 세부 영역을 선정합니다.\n리서치 — 시장 규모, 주요 플레이어, 규제 환경, 최신 트렌드를 조사합니다.\n요약 발표 — 부원들이 짧은 형식(슬라이드 또는 노션 페이지)으로 공유합니다.\n아카이빙 — 결과물을 SHIFT 자료실에 모아 후배들이 볼 수 있게 남깁니다."
-  },
-  {
-    "objectID": "activity/industry-map.html#다룬-주제-예시",
-    "href": "activity/industry-map.html#다룬-주제-예시",
-    "title": "산업지도",
-    "section": "다룬 주제 (예시)",
-    "text": "다룬 주제 (예시)\n\n\n\n회차\n주제\n비고\n\n\n\n\n1\n디지털 치료제(DTx) 국내외 시장\n발표자: (TBD)\n\n\n2\nEMR/EHR 시장 구조\n발표자: (TBD)\n\n\n3\n의료 AI 스타트업 지형\n발표자: (TBD)\n\n\n\n\n본 표는 예시이며, 실제 진행 내역은 학기마다 업데이트됩니다."
-  },
-  {
-    "objectID": "about/intro.html",
-    "href": "about/intro.html",
-    "title": "동아리 소개",
-    "section": "",
-    "text": "SHIFT는 연세대학교 미래캠퍼스 디지털헬스케어학부의 학술동아리입니다. “Shift”라는 이름처럼, 디지털 헬스케어 산업이 만들어내는 변화의 한가운데에서 학생들이 직접 흐름을 읽고 기여할 수 있도록 돕는 것을 목표로 합니다."
-  },
-  {
-    "objectID": "about/intro.html#우리는-누구인가요",
-    "href": "about/intro.html#우리는-누구인가요",
-    "title": "동아리 소개",
-    "section": "",
-    "text": "SHIFT는 연세대학교 미래캠퍼스 디지털헬스케어학부의 학술동아리입니다. “Shift”라는 이름처럼, 디지털 헬스케어 산업이 만들어내는 변화의 한가운데에서 학생들이 직접 흐름을 읽고 기여할 수 있도록 돕는 것을 목표로 합니다."
-  },
-  {
-    "objectID": "about/intro.html#미션",
-    "href": "about/intro.html#미션",
-    "title": "동아리 소개",
-    "section": "미션",
-    "text": "미션\n\n이해하기 (Understand) — 디지털 헬스케어 산업의 구조와 흐름을 학생 눈높이에서 정리합니다.\n익히기 (Equip) — 산업에서 요구하는 IT·데이터 역량을 함께 학습합니다.\n연결하기 (Connect) — 동기, 선배, 업계 관계자와의 네트워크를 만듭니다."
-  },
-  {
-    "objectID": "about/intro.html#무엇을-하나요",
-    "href": "about/intro.html#무엇을-하나요",
-    "title": "동아리 소개",
-    "section": "무엇을 하나요",
-    "text": "무엇을 하나요\n\n\n정규 활동\n\nIT 온보딩 프로그램\n산업지도 스터디\n정기 세미나 / 외부 연사 초청\n\n\n\n자율 활동\n\n관심 분야별 소모임 운영\n프로젝트 / 공모전 팀 빌딩\n학부 행사 기획·운영 참여"
-  },
-  {
-    "objectID": "about/intro.html#함께하고-싶다면",
-    "href": "about/intro.html#함께하고-싶다면",
-    "title": "동아리 소개",
-    "section": "함께하고 싶다면",
-    "text": "함께하고 싶다면\n매 학기 초 신입 부원을 모집합니다. 자세한 일정은 모집공고 페이지에서 확인하세요."
-  },
-  {
-    "objectID": "about/contact.html",
-    "href": "about/contact.html",
-    "title": "문의",
-    "section": "",
-    "text": "hepsdata@gmail.com\n가입 문의, 협업 제안, 외부 강연 요청 등 모든 문의를 받습니다.\n\n\n\ngithub.com/dhc-shift\n프로젝트 코드와 동아리 자료가 공개되어 있습니다."
-  },
-  {
-    "objectID": "about/contact.html#연락-방법",
-    "href": "about/contact.html#연락-방법",
-    "title": "문의",
-    "section": "",
-    "text": "hepsdata@gmail.com\n가입 문의, 협업 제안, 외부 강연 요청 등 모든 문의를 받습니다.\n\n\n\ngithub.com/dhc-shift\n프로젝트 코드와 동아리 자료가 공개되어 있습니다."
-  },
-  {
-    "objectID": "about/contact.html#자주-묻는-질문",
-    "href": "about/contact.html#자주-묻는-질문",
-    "title": "문의",
-    "section": "자주 묻는 질문",
-    "text": "자주 묻는 질문\nQ. 디지털헬스케어학부 학생만 가입할 수 있나요?\nA. 디지털헬스케어학부 학생을 우선으로 모집하지만, 관심이 있다면 타 학부생도 문의해주세요.\nQ. 활동에 비용이 드나요?\nA. 정규 활동은 무료이며, 외부 행사 참여 시에는 상황에 따라 일부 자비 부담이 있을 수 있습니다.\nQ. 활동은 얼마나 자주 있나요?\nA. 정기 모임은 격주 또는 월 1회를 기준으로 하며, 소모임은 자율적으로 운영됩니다.\nQ. 비대면으로도 참여할 수 있나요?\nA. 일부 세미나는 온라인으로 함께 진행하지만, 신입 온보딩과 친목 활동은 대면 참여를 권장합니다."
-  },
-  {
-    "objectID": "about/contact.html#위치",
-    "href": "about/contact.html#위치",
-    "title": "문의",
-    "section": "위치",
-    "text": "위치\n연세대학교 미래캠퍼스 (강원도 원주시 연세대길 1) 디지털헬스케어학부"
-  },
-  {
-    "objectID": "about/team.html",
-    "href": "about/team.html",
-    "title": "운영진",
-    "section": "",
-    "text": "이름: (입력 예정)\n학번/학년: (입력 예정)\n연락: (입력 예정)\n\n\n\n\n\n이름: (입력 예정)\n학번/학년: (입력 예정)\n연락: (입력 예정)\n\n\n\n\n\n이름: (입력 예정)\n학번/학년: (입력 예정)\n연락: (입력 예정)"
-  },
-  {
-    "objectID": "about/team.html#운영진",
-    "href": "about/team.html#운영진",
-    "title": "운영진",
-    "section": "",
-    "text": "이름: (입력 예정)\n학번/학년: (입력 예정)\n연락: (입력 예정)\n\n\n\n\n\n이름: (입력 예정)\n학번/학년: (입력 예정)\n연락: (입력 예정)\n\n\n\n\n\n이름: (입력 예정)\n학번/학년: (입력 예정)\n연락: (입력 예정)"
-  },
-  {
-    "objectID": "about/team.html#활동-부서",
-    "href": "about/team.html#활동-부서",
-    "title": "운영진",
-    "section": "활동 부서",
-    "text": "활동 부서\n\n\n\n부서\n담당 활동\n부서장\n\n\n\n\nIT 온보딩\n신입 부원 IT 기초 교육\n(미정)\n\n\n산업지도\n디지털 헬스케어 산업 리서치\n(미정)\n\n\n세미나\n외부 연사 초청 및 행사 기획\n(미정)\n\n\n소모임\n소모임 개설 / 운영 지원\n(미정)\n\n\n홍보·콘텐츠\nSNS, 블로그, 디자인\n(미정)\n\n\n\n\n운영진 정보는 학기마다 갱신됩니다. 최신 운영진은 모집공고와 함께 업데이트됩니다."
-  },
-  {
-    "objectID": "activity/it-onboarding.html",
-    "href": "activity/it-onboarding.html",
+    "objectID": "projects/it-onboarding.html",
+    "href": "projects/it-onboarding.html",
     "title": "IT 온보딩",
     "section": "",
-    "text": "디지털 헬스케어 산업에서 학생이 갖춰야 할 IT·데이터 역량의 공통 베이스라인을 신입 부원이 한 학기 안에 다질 수 있도록 설계된 온보딩 프로그램입니다."
+    "text": "Project 01\n\n\n\n신입 구성원이 협업과 제작에 필요한 기본 환경을 빠르게 갖추도록 돕는 온보딩 프로젝트입니다."
   },
   {
-    "objectID": "activity/it-onboarding.html#프로그램-소개",
-    "href": "activity/it-onboarding.html#프로그램-소개",
+    "objectID": "projects/it-onboarding.html#목표",
+    "href": "projects/it-onboarding.html#목표",
     "title": "IT 온보딩",
-    "section": "",
-    "text": "디지털 헬스케어 산업에서 학생이 갖춰야 할 IT·데이터 역량의 공통 베이스라인을 신입 부원이 한 학기 안에 다질 수 있도록 설계된 온보딩 프로그램입니다."
+    "section": "목표",
+    "text": "목표\n\n\n협업 환경 세팅\nGitHub, Notion 또는 문서 도구, 커뮤니케이션 채널 사용법을 정리합니다.\n\n\n기본 제작 역량\n마크다운, 데이터 파일 구조, 간단한 웹 문서, 발표 자료 작성 흐름을 익힙니다.\n\n\n프로젝트 참여 준비\n이슈 작성, 역할 분담, 회고 작성처럼 팀 프로젝트에 필요한 습관을 연습합니다."
   },
   {
-    "objectID": "activity/it-onboarding.html#커리큘럼",
-    "href": "activity/it-onboarding.html#커리큘럼",
+    "objectID": "projects/it-onboarding.html#커리큘럼-예시",
+    "href": "projects/it-onboarding.html#커리큘럼-예시",
     "title": "IT 온보딩",
-    "section": "커리큘럼",
-    "text": "커리큘럼\n\n\n1. 도구 / 환경\n\nGit & GitHub 기초\nMarkdown / 문서 협업\nVS Code / 개발 환경 셋업\n\n\n\n2. 데이터 다루기\n\nPython 또는 R 입문\n의료 데이터 형식 (CSV, JSON, FHIR 등)\n간단한 시각화\n\n\n\n3. 협업\n\n이슈/PR 흐름\n코드 리뷰 체험\n노션·슬랙 활용\n\n\n\n4. 미니 프로젝트\n\n팀 단위 데이터 분석 미니 프로젝트\n결과 발표 및 회고"
+    "section": "커리큘럼 예시",
+    "text": "커리큘럼 예시\n\n\nWeek 1: 협업 도구와 저장소 구조 이해\nWeek 2: Markdown, Quarto, GitHub Pages 기초\nWeek 3: 데이터와 문서 정리 방식\nWeek 4: 미니 결과물 제작과 발표"
   },
   {
-    "objectID": "activity/it-onboarding.html#운영-방식",
-    "href": "activity/it-onboarding.html#운영-방식",
+    "objectID": "projects/it-onboarding.html#산출물",
+    "href": "projects/it-onboarding.html#산출물",
     "title": "IT 온보딩",
-    "section": "운영 방식",
-    "text": "운영 방식\n\n기간: 학기 중 약 8주\n진행: 격주 오프라인 세션 + 자율 실습\n수료 기준: 미니 프로젝트 발표 완료"
-  },
-  {
-    "objectID": "groups/active.html",
-    "href": "groups/active.html",
-    "title": "개설 중인 소모임",
-    "section": "",
-    "text": "Tip\n\n\n\n가입을 원하는 소모임이 있다면 해당 소모임 페이지의 안내에 따라 신청하거나, 문의 페이지로 연락주세요.\n\n\n현재 공개된 소모임 공고가 없습니다."
-  },
-  {
-    "objectID": "groups/intro.html",
-    "href": "groups/intro.html",
-    "title": "소모임 안내",
-    "section": "",
-    "text": "SHIFT의 소모임은 관심 주제가 비슷한 부원들끼리 자율적으로 만드는 작은 학습/프로젝트 그룹입니다. 정규 활동보다 유연하고 빠르게 움직일 수 있어, 새로운 주제를 시도해보기 좋습니다."
-  },
-  {
-    "objectID": "groups/intro.html#소모임이란",
-    "href": "groups/intro.html#소모임이란",
-    "title": "소모임 안내",
-    "section": "",
-    "text": "SHIFT의 소모임은 관심 주제가 비슷한 부원들끼리 자율적으로 만드는 작은 학습/프로젝트 그룹입니다. 정규 활동보다 유연하고 빠르게 움직일 수 있어, 새로운 주제를 시도해보기 좋습니다."
-  },
-  {
-    "objectID": "groups/intro.html#운영-원칙",
-    "href": "groups/intro.html#운영-원칙",
-    "title": "소모임 안내",
-    "section": "운영 원칙",
-    "text": "운영 원칙\n\n부원 누구나 소모임을 제안하고 개설할 수 있습니다.\n한 시즌 단위(보통 한 학기)로 운영하며, 종료 후에는 결과를 짧게 공유합니다.\n운영진은 회의실, 도서·자료 구입 등 운영 지원을 제공합니다."
-  },
-  {
-    "objectID": "groups/intro.html#개설-절차",
-    "href": "groups/intro.html#개설-절차",
-    "title": "소모임 안내",
-    "section": "개설 절차",
-    "text": "개설 절차\n\n주제와 일정을 간단히 정리한 소모임 제안서 제출\n운영진 검토 (보통 1주 이내)\n모집 공고 게시 → 인원 확정 → 활동 시작"
-  },
-  {
-    "objectID": "groups/intro.html#현재-상황",
-    "href": "groups/intro.html#현재-상황",
-    "title": "소모임 안내",
-    "section": "현재 상황",
-    "text": "현재 상황\n\n개설 중인 소모임: 목록 보기\n종료된 소모임: 아카이브 보기"
-  },
-  {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "뉴스",
-    "section": "",
-    "text": "아직 게시된 뉴스가 없습니다.\n새로운 활동 소식과 외부 소식은 준비되는 대로 이 페이지에 업데이트됩니다."
-  },
-  {
-    "objectID": "posts/notice/2026-05-07-website-launch/index.html",
-    "href": "posts/notice/2026-05-07-website-launch/index.html",
-    "title": "SHIFT 공식 웹사이트가 오픈되었습니다",
-    "section": "",
-    "text": "안녕하세요, SHIFT 부원과 SHIFT를 응원해주시는 여러분.\n오늘 SHIFT의 공식 웹사이트가 오픈되었습니다. 앞으로 모집공고, 세미나, 소모임, 산업지도 결과물 등 동아리의 모든 공식 자료가 이곳에 차곡차곡 쌓일 예정입니다.\n문의나 제안은 문의 페이지를 이용해주세요."
+    "section": "산출물",
+    "text": "산출물\n개인별 미니 페이지, 실습 기록, 팀 프로젝트 참여 전 체크리스트를 남깁니다."
   }
 ]

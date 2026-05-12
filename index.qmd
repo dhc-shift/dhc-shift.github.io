@@ -1,357 +1,212 @@
 ---
-pagetitle: "SHIFT | 공식 웹페이지"
-description: "대학교 학술 동아리 SHIFT 공식 웹페이지"
-lang: ko
+pagetitle: "SHIFT | 동아리 블로그"
+description: "디지털헬스케어 학술 커뮤니티 SHIFT의 공식 블로그"
 page-layout: full
-section-divs: false
 toc: false
-editor: source
-comments: false
-citation: false
 format:
   html:
-    number-sections: false
-    toc: false
     anchor-sections: false
 ---
 
-<div class="shift-page">
-  <div class="shift-shell">
-    <header class="shift-hero" id="hero">
-      <div class="shift-container">
-        <div class="hero-grid">
-          <div class="hero-main">
-            <p class="eyebrow">Academic Tech Community</p>
-            <h1 class="hero-title">shift</h1>
-            <p class="hero-copy">
-              <strong>[대학교명] [학과/전공명] 학술 동아리</strong> SHIFT는 데이터, AI, 서비스 기획, 디지털 프로젝트를 연결해 실제 문제를 탐구하는 실무형 커뮤니티입니다. 이 영역에는 동아리의 핵심 소개 문구가 들어갑니다.
-            </p>
-            <div class="hero-actions" aria-label="주요 이동 링크">
-              <a class="shift-btn primary" href="#recruitment">모집 안내 보기</a>
-              <a class="shift-btn ghost" href="#projects">프로젝트 둘러보기</a>
-            </div>
-          </div>
+::: {.shift-page}
+::: {.hero-section}
+::: {.hero-grid .shift-container}
+::: {.hero-copy}
+::: {.eyebrow}
+Digital Healthcare Academic Community
+:::
 
-          <aside class="hero-visual" aria-label="SHIFT 활동 요약 패널">
-            <div class="visual-topbar">
-              <div class="window-dots" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <span>SHIFT.SYSTEM / LIVE</span>
-            </div>
-            <div class="visual-body">
-              <div class="signal-row">
-                <div class="signal-card">
-                  <b>00</b>
-                  <span>정기 프로젝트<br>placeholder</span>
-                </div>
-                <div class="signal-card">
-                  <b>00</b>
-                  <span>스터디 트랙<br>placeholder</span>
-                </div>
-                <div class="signal-card">
-                  <b>00</b>
-                  <span>운영 세션<br>placeholder</span>
-                </div>
-              </div>
-              <div class="terminal-stack">
-                <div class="terminal-line">
-                  <span>&gt; initialize community</span>
-                  <span>ready</span>
-                </div>
-                <div class="terminal-line">
-                  <span>&gt; build project pipeline</span>
-                  <span>active</span>
-                </div>
-                <div class="terminal-line">
-                  <span>&gt; connect members</span>
-                  <span>online</span>
-                </div>
-              </div>
-            </div>
-          </aside>
-        </div>
+# SHIFT
 
-        <nav class="section-nav" aria-label="페이지 섹션">
-          <a href="#about">About</a>
-          <a href="#activities">Activities</a>
-          <a href="#curriculum">Curriculum</a>
-          <a href="#projects">Projects</a>
-          <a href="#recruitment">Recruitment</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+::: {.hero-lead}
+디지털헬스케어를 배우고, 실험하고, 실무형 프로젝트로 연결하는 테크 기반 학술 커뮤니티입니다.
+:::
 
-    <section class="shift-section" id="about">
-      <div class="shift-container">
-        <div class="section-head">
-          <div>
-            <p class="kicker">About</p>
-            <h2>문제를 정의하고, 작게 만들고, 함께 검증합니다.</h2>
-          </div>
-          <p class="section-note">
-            동아리 소개, 운영 철학, 대상 학과, 활동 방식 등 공식 홈페이지에 들어갈 핵심 문구를 이곳에 배치합니다.
-          </p>
-        </div>
+::: {.hero-actions}
+[프로젝트 보기](projects/index.qmd){.shift-btn .primary}
+[동아리 소개](about.qmd){.shift-btn .ghost}
+:::
+:::
 
-        <div class="split-layout">
-          <div class="lead-box">
-            <p>
-              SHIFT는 학술 탐구와 실무형 제작 사이의 간격을 줄이는 프로젝트 중심 학술 동아리입니다. 구성원은 관심 분야별 스터디와 팀 프로젝트를 통해 문제를 발견하고, 데이터를 수집하며, 프로토타입과 발표 자료로 결과물을 정리합니다.
-            </p>
-            <p>
-              이 문단은 placeholder입니다. 동아리의 실제 목표, 학과 연계성, 선발 기준, 정기 모임 요일, 운영진 메시지 등으로 교체해 사용할 수 있습니다.
-            </p>
-          </div>
+::: {.system-panel}
+::: {.panel-bar}
+SHIFT.SYSTEM
 
-          <div class="stat-grid" aria-label="동아리 핵심 가치">
-            <div class="stat-item">
-              <strong>Build</strong>
-              <span>아이디어를 문서, 코드, 데이터, 데모 형태로 빠르게 구체화합니다.</span>
-            </div>
-            <div class="stat-item">
-              <strong>Learn</strong>
-              <span>기초 온보딩부터 심화 트랙까지 함께 학습하는 구조를 만듭니다.</span>
-            </div>
-            <div class="stat-item">
-              <strong>Share</strong>
-              <span>세미나, 회고, 데모데이를 통해 결과와 시행착오를 공유합니다.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+::: {.status-dot}
+ONLINE
+:::
+:::
 
-    <section class="shift-section compact" id="activities">
-      <div class="shift-container">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Activities</p>
-            <h2>정기 활동</h2>
-          </div>
-          <p class="section-note">
-            학기 중 운영되는 대표 활동을 카드 형태로 소개합니다. 실제 운영 항목에 맞게 제목과 설명을 수정하세요.
-          </p>
-        </div>
+::: {.signal-stack}
+::: {.signal-row}
+::: {.signal-key}
+FOCUS
+:::
 
-        <div class="card-grid">
-          <article class="shift-card">
-            <span class="card-tag">Weekly Session</span>
-            <h3>정기 세미나</h3>
-            <p>관심 주제 발표, 논문/아티클 리뷰, 산업 동향 공유를 진행합니다. 발표자와 주제는 학기별 운영 계획에 맞춰 업데이트합니다.</p>
-          </article>
-          <article class="shift-card">
-            <span class="card-tag">Project Lab</span>
-            <h3>팀 프로젝트</h3>
-            <p>데이터 분석, 웹/앱 프로토타입, 서비스 기획 등 팀 단위 결과물을 만드는 활동입니다. 주제와 산출물 예시는 placeholder입니다.</p>
-          </article>
-          <article class="shift-card">
-            <span class="card-tag">Study Track</span>
-            <h3>스터디 트랙</h3>
-            <p>신입 부원을 위한 기초 온보딩과 관심 분야별 심화 스터디를 운영합니다. 난이도와 커리큘럼은 학기마다 조정됩니다.</p>
-          </article>
-          <article class="shift-card">
-            <span class="card-tag">Networking</span>
-            <h3>커뮤니티 밋업</h3>
-            <p>선배, 현업자, 타 전공 구성원과 연결되는 네트워킹 세션을 기획합니다. 게스트 정보와 일정은 추후 입력합니다.</p>
-          </article>
-          <article class="shift-card">
-            <span class="card-tag">Archive</span>
-            <h3>지식 아카이브</h3>
-            <p>스터디 노트, 발표 자료, 프로젝트 회고를 정리해 다음 기수도 이어서 사용할 수 있는 자료 구조를 만듭니다.</p>
-          </article>
-          <article class="shift-card">
-            <span class="card-tag">Demo Day</span>
-            <h3>결과 공유회</h3>
-            <p>학기 말 프로젝트 결과를 발표하고 피드백을 받는 자리입니다. 포스터, 깃허브, 발표 영상 링크를 연결할 수 있습니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+**Digital Health**
+:::
 
-    <section class="shift-section compact" id="curriculum">
-      <div class="shift-container">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Curriculum</p>
-            <h2>학기 운영 흐름</h2>
-          </div>
-          <p class="section-note">
-            신규 부원이 따라오기 쉬운 온보딩부터 프로젝트 발표까지의 흐름을 단계별로 보여줍니다.
-          </p>
-        </div>
+::: {.signal-row}
+::: {.signal-key}
+MODE
+:::
 
-        <div class="timeline">
-          <article class="timeline-item">
-            <div>
-              <h3>Orientation & Tool Setup</h3>
-              <p>동아리 소개, 협업 도구 세팅, Git/GitHub, 문서 작성 규칙 등 기본 환경을 맞춥니다.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div>
-              <h3>Core Study Sprint</h3>
-              <p>데이터 리터러시, Python/R, 웹 기초, AI 활용 등 공통 기초를 짧은 실습 단위로 학습합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div>
-              <h3>Problem Framing</h3>
-              <p>팀별 관심사를 바탕으로 문제 정의, 리서치, 데이터 탐색, 기능 범위를 정리합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div>
-              <h3>Prototype & Review</h3>
-              <p>분석 노트북, 대시보드, 웹 페이지, 발표 자료 등 실제로 보여줄 수 있는 산출물을 제작합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div>
-              <h3>Demo Day</h3>
-              <p>결과 발표와 회고를 통해 다음 학기 프로젝트, 스터디, 운영 개선 과제를 정리합니다.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+**Study + Project**
+:::
 
-    <section class="shift-section compact" id="projects">
-      <div class="shift-container">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Projects</p>
-            <h2>프로젝트 아카이브</h2>
-          </div>
-          <p class="section-note">
-            공개 가능한 프로젝트를 소개하는 영역입니다. 프로젝트명, 기간, 참여자, 링크, 한 줄 성과로 교체하면 됩니다.
-          </p>
-        </div>
+::: {.signal-row}
+::: {.signal-key}
+OUTPUT
+:::
 
-        <div class="project-grid">
-          <article class="project-card">
-            <div>
-              <h3>[Project 01] 데이터 기반 리서치</h3>
-              <p>공개 데이터 또는 설문 데이터를 활용해 특정 문제를 분석하고 인사이트를 정리한 프로젝트 소개 문구가 들어갑니다.</p>
-            </div>
-            <div class="project-meta">
-              <span>Data</span>
-              <span>Research</span>
-              <span>2026</span>
-            </div>
-          </article>
-          <article class="project-card">
-            <div>
-              <h3>[Project 02] 서비스 프로토타입</h3>
-              <p>사용자 시나리오, 기능 설계, 화면 구성, MVP 제작 과정을 담은 프로젝트 소개 문구가 들어갑니다.</p>
-            </div>
-            <div class="project-meta">
-              <span>Prototype</span>
-              <span>UX</span>
-              <span>Team</span>
-            </div>
-          </article>
-          <article class="project-card">
-            <div>
-              <h3>[Project 03] AI 활용 실험</h3>
-              <p>AI 모델, 자동화 도구, 프롬프트 워크플로 등을 활용해 실무 문제를 해결해 본 실험 내용을 소개합니다.</p>
-            </div>
-            <div class="project-meta">
-              <span>AI</span>
-              <span>Automation</span>
-              <span>Lab</span>
-            </div>
-          </article>
-          <article class="project-card">
-            <div>
-              <h3>[Project 04] 커뮤니티 리포트</h3>
-              <p>세미나, 인터뷰, 산업 지도, 학술 자료를 바탕으로 제작한 리포트나 아카이브를 연결할 수 있습니다.</p>
-            </div>
-            <div class="project-meta">
-              <span>Report</span>
-              <span>Archive</span>
-              <span>Open</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+**Portfolio Ready**
+:::
+:::
 
-    <section class="shift-section compact" id="recruitment">
-      <div class="shift-container">
-        <div class="recruit-panel">
-          <div>
-            <p class="kicker">Recruitment</p>
-            <h2>다음 기수 모집 안내</h2>
-            <p>
-              SHIFT는 함께 배우고 만들며 기록할 구성원을 모집합니다. 모집 기간, 지원 대상, 선발 절차, 지원 링크는 실제 공고가 확정된 뒤 교체하세요.
-            </p>
-            <ul class="recruit-list">
-              <li>모집 기간: [YYYY.MM.DD] - [YYYY.MM.DD]</li>
-              <li>지원 대상: [학교/학과/학년/전공 제한 여부 입력]</li>
-              <li>활동 기간: [학기 또는 연간 운영 기간 입력]</li>
-              <li>우대 사항: 꾸준히 배우고 팀으로 결과물을 만들고 싶은 사람</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="shift-btn primary" href="recruit.html">지원 공고 보기</a>
-              <a class="shift-btn ghost" href="#contact">문의하기</a>
-            </div>
-          </div>
+::: {.mini-map}
+::: {.mini-cell}
+:::
 
-          <aside class="recruit-side" aria-label="모집 절차 요약">
-            <div class="mini-panel">
-              <strong>01. 지원서 제출</strong>
-              <span>관심 분야, 참여 가능 시간, 만들고 싶은 프로젝트를 작성합니다.</span>
-            </div>
-            <div class="mini-panel">
-              <strong>02. 간단한 미팅</strong>
-              <span>지원 동기와 활동 방향을 확인하는 캐주얼 미팅을 진행합니다.</span>
-            </div>
-            <div class="mini-panel">
-              <strong>03. 온보딩 합류</strong>
-              <span>협업 도구 세팅 후 정기 세션과 스터디 트랙에 참여합니다.</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+::: {.mini-cell}
+:::
 
-    <section class="shift-section compact" id="contact">
-      <div class="shift-container">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Contact</p>
-            <h2>연락처</h2>
-          </div>
-          <p class="section-note">
-            공식 문의 채널, 소셜 링크, 활동 장소를 입력하는 영역입니다. 공개 가능한 정보만 남겨주세요.
-          </p>
-        </div>
+::: {.mini-cell}
+:::
 
-        <div class="contact-grid">
-          <div class="contact-item">
-            <strong>Email</strong>
-            <a href="mailto:placeholder@example.com">placeholder@example.com</a>
-          </div>
-          <div class="contact-item">
-            <strong>Instagram</strong>
-            <a href="#" aria-label="인스타그램 링크 placeholder">@shift_placeholder</a>
-          </div>
-          <div class="contact-item">
-            <strong>Location</strong>
-            <span>[캠퍼스명] [건물명] [동아리방/활동 장소]</span>
-          </div>
-        </div>
-      </div>
-    </section>
+::: {.mini-cell}
+:::
+:::
+:::
+:::
+:::
 
-    <footer class="shift-footer">
-      <div class="shift-container footer-row">
-        <span>© SHIFT. [대학교명] 학술 동아리 공식 웹페이지.</span>
-        <a href="#hero">Back to top</a>
-      </div>
-    </footer>
-  </div>
-</div>
-```
+::: {.shift-section}
+::: {.shift-container}
+::: {.section-head}
+::: {.kicker}
+Blog Structure
+:::
+
+## 핵심 정보로 바로 들어가는 블로그 구조
+
+공지, 소개, 활동, 프로젝트, 소모임, 자료실을 중심으로 운영합니다. 카드형 UI와 얇은 라인, cyan/lime 포인트를 유지해 깔끔한 테크 커뮤니티 무드를 잡았습니다.
+:::
+
+::: {.card-grid .feature-grid}
+::: {.shift-card}
+::: {.card-label}
+01 / Notice
+:::
+
+### [공지](notice.qmd)
+
+모집, 일정, 운영 변경 사항을 가장 빠르게 확인하는 공간입니다.
+:::
+
+::: {.shift-card}
+::: {.card-label}
+02 / About
+:::
+
+### [소개](about.qmd)
+
+SHIFT의 방향성, 운영 방식, 함께 만드는 학습 문화를 정리합니다.
+:::
+
+::: {.shift-card}
+::: {.card-label}
+03 / Activities
+:::
+
+### [활동](activities.qmd)
+
+정기 세션, 세미나, 워크숍, 데모데이 등 학기 활동을 모읍니다.
+:::
+
+::: {.shift-card .accent-cyan}
+::: {.card-label}
+04 / Projects
+:::
+
+### [프로젝트](projects/index.qmd)
+
+IT 온보딩과 디지털헬스케어 직무 로드맵을 중심으로 결과물을 축적합니다.
+:::
+
+::: {.shift-card}
+::: {.card-label}
+05 / Groups
+:::
+
+### [소모임](groups.qmd)
+
+관심 분야별 스터디와 작은 실험팀을 운영하는 공간입니다.
+:::
+
+::: {.shift-card .accent-lime}
+::: {.card-label}
+06 / Resources
+:::
+
+### [자료실](resources.qmd)
+
+발표 자료, 학습 노트, 템플릿, 추천 링크를 정리합니다.
+:::
+:::
+:::
+:::
+
+::: {.shift-section .tight}
+::: {.shift-container}
+::: {.section-head}
+::: {.kicker}
+Project System
+:::
+
+## 처음부터 포트폴리오까지 이어지는 프로젝트 흐름
+:::
+
+::: {.process-line}
+::: {}
+::: {.step-num}
+01
+:::
+
+### Onboard
+
+협업 도구, 개발 환경, 데이터/문서 작성 기초를 맞춥니다.
+:::
+
+::: {}
+::: {.step-num}
+02
+:::
+
+### Explore
+
+직무, 기술, 산업 문제를 탐색하고 팀별 주제를 구체화합니다.
+:::
+
+::: {}
+::: {.step-num}
+03
+:::
+
+### Build
+
+분석, 프로토타입, 발표 자료처럼 보여줄 수 있는 산출물을 만듭니다.
+:::
+
+::: {}
+::: {.step-num}
+04
+:::
+
+### Share
+
+회고와 아카이브로 다음 기수가 이어받을 수 있게 정리합니다.
+:::
+:::
+:::
+:::
+:::
