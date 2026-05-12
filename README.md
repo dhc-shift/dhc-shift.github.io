@@ -18,10 +18,10 @@ quarto render
 
 ## 배포
 
-`main` 브랜치에 push하면 GitHub Pages가 `/docs` 폴더를 자동으로 게시합니다.
+`main` 브랜치에 push하면 GitHub Actions가 자동으로 사이트를 렌더링하고 GitHub Pages로 배포합니다.
+GitHub Pages 설정에서 Source가 `GitHub Actions`인지 확인하세요.
 
 ```bash
-quarto render
 git add -A
 git commit -m "Update site"
 git push origin main
