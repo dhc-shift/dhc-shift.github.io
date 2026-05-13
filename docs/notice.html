@@ -115,10 +115,25 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./results.html"> 
 <span class="menu-text">결과</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./apply.html"> 
-<span class="menu-text">지원 방법</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">지원 방법</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="./apply.html">
+ <span class="dropdown-text">지원 방법</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./apply-simple.html">
+ <span class="dropdown-text">간편형 지원</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./apply-deep.html">
+ <span class="dropdown-text">심층형 지원</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -187,6 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <li>심층형: 본부 지망, 역할, 경험, 관심 분야, 팀 활동 질문을 더 자세히 작성합니다.</li>
 </ul>
 <p><a href="./apply.html">지원 방법 보기</a></p>
+<p><a href="./apply-simple.html" class="shift-btn primary">간편형 지원</a> <a href="./apply-deep.html" class="shift-btn ghost">심층형 지원</a></p>
 </section>
 </div>
 <section id="문의" class="level2">

@@ -44,6 +44,9 @@ SHIFT 신입 부원 추가 모집 안내입니다. 활동 프로그램과 지원
 - 심층형: 본부 지망, 역할, 경험, 관심 분야, 팀 활동 질문을 더 자세히 작성합니다.
 
 [지원 방법 보기](apply.qmd)
+
+[간편형 지원](apply-simple.qmd){.shift-btn .primary}
+[심층형 지원](apply-deep.qmd){.shift-btn .ghost}
 :::
 :::
 

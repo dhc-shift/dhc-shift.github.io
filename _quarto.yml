@@ -36,7 +36,13 @@ website:
       - text: "결과"
         href: results.qmd
       - text: "지원 방법"
-        href: apply.qmd
+        menu:
+          - text: "지원 방법"
+            href: apply.qmd
+          - text: "간편형 지원"
+            href: apply-simple.qmd
+          - text: "심층형 지원"
+            href: apply-deep.qmd
     right:
       - icon: github
         href: https://github.com/dhc-shift
