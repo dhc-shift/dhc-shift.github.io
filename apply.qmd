@@ -93,8 +93,8 @@ VS Code, Git, Notion, 생성형 AI 활용법을 주제로 진행자와 참여자
 
 ## 지원 방식
 
-::: {.card-grid}
-::: {.shift-card .accent-cyan}
+::: {.application-method-grid}
+::: {.shift-card .method-card .method-card-simple .accent-cyan}
 ### 간편형
 
 SHIFT 활동을 먼저 경험해보고 싶은 지원자를 위한 방식입니다. 기본 인적사항, 관심 프로그램, 참여해보고 싶은 활동을 중심으로 간단히 작성합니다.
@@ -104,7 +104,7 @@ SHIFT 활동을 먼저 경험해보고 싶은 지원자를 위한 방식입니�
 [간편형 지원 안내](apply-simple.qmd){.shift-btn .primary}
 :::
 
-::: {.shift-card .accent-lime}
+::: {.shift-card .method-card .method-card-deep .accent-lime}
 ### 심층형
 
 본부 활동이나 프로젝트 참여 의지가 뚜렷한 지원자를 위한 방식입니다. 지원 본부 1·2지망, 맡고 싶은 역할, 경력사항과 얻은 점, 관심 분야, 팀 활동 관련 질문을 더 자세히 작성합니다.

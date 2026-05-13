@@ -451,6 +451,13 @@ main.content {
   gap: 16px;
 }
 
+.application-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
 .project-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -482,6 +489,30 @@ main.content {
 .feature-grid .shift-card:nth-child(even)::after {
   background: linear-gradient(90deg, var(--shift-lime), var(--shift-cyan));
   box-shadow: 0 0 22px rgba(184, 255, 44, 0.36);
+}
+
+.card-grid .shift-card:nth-child(odd):not(.accent-cyan):not(.accent-lime),
+.notice-list .notice-item:nth-child(odd):not(.accent-cyan):not(.accent-lime) {
+  border-color: rgba(24, 240, 255, 0.42);
+  background:
+    linear-gradient(135deg, rgba(24, 240, 255, 0.085), transparent 48%),
+    linear-gradient(315deg, rgba(184, 255, 44, 0.035), transparent 54%),
+    linear-gradient(180deg, rgba(8, 20, 21, 0.96), rgba(4, 10, 10, 0.94));
+}
+
+.card-grid .shift-card:nth-child(even):not(.accent-cyan):not(.accent-lime),
+.notice-list .notice-item:nth-child(even):not(.accent-cyan):not(.accent-lime) {
+  border-color: rgba(184, 255, 44, 0.4);
+  background:
+    linear-gradient(135deg, rgba(184, 255, 44, 0.075), transparent 48%),
+    linear-gradient(315deg, rgba(24, 240, 255, 0.035), transparent 54%),
+    linear-gradient(180deg, rgba(8, 20, 21, 0.96), rgba(4, 10, 10, 0.94));
+}
+
+.card-grid .shift-card:nth-child(even):not(.accent-cyan):not(.accent-lime)::after,
+.notice-list .notice-item:nth-child(even):not(.accent-cyan):not(.accent-lime)::after {
+  background: linear-gradient(90deg, var(--shift-lime), var(--shift-cyan));
+  box-shadow: 0 0 22px rgba(184, 255, 44, 0.32);
 }
 
 .shift-card:hover,
@@ -543,6 +574,44 @@ main.content {
   background:
     linear-gradient(135deg, rgba(184, 255, 44, 0.13), transparent 48%),
     linear-gradient(180deg, rgba(8, 20, 21, 0.96), rgba(4, 10, 10, 0.94));
+}
+
+.method-card {
+  display: flex;
+  min-height: 380px;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.method-card h3 {
+  font-size: clamp(1.55rem, 2vw, 2rem);
+}
+
+.method-card p + p {
+  margin-top: 16px;
+}
+
+.method-card > p:last-child {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.method-card .shift-btn {
+  min-width: 190px;
+}
+
+.method-card-simple {
+  background:
+    linear-gradient(135deg, rgba(24, 240, 255, 0.18), transparent 48%),
+    linear-gradient(315deg, rgba(184, 255, 44, 0.035), transparent 58%),
+    linear-gradient(180deg, rgba(9, 24, 26, 0.97), rgba(4, 10, 10, 0.95));
+}
+
+.method-card-deep {
+  background:
+    linear-gradient(135deg, rgba(184, 255, 44, 0.15), transparent 48%),
+    linear-gradient(315deg, rgba(24, 240, 255, 0.04), transparent 58%),
+    linear-gradient(180deg, rgba(12, 22, 14, 0.97), rgba(4, 10, 10, 0.95));
 }
 
 .process-line {
@@ -719,6 +788,7 @@ hr {
 @media (max-width: 991px) {
   .hero-grid,
   .card-grid,
+  .application-method-grid,
   .project-grid,
   .process-line {
     grid-template-columns: 1fr;
@@ -735,6 +805,10 @@ hr {
 
   .shift-card,
   .project-card {
+    min-height: auto;
+  }
+
+  .method-card {
     min-height: auto;
   }
 }
