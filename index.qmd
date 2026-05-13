@@ -1,5 +1,6 @@
 ---
-pagetitle: "SHIFT | 동아리 블로그"
+pagetitle: "SHIFT | 디지털헬스케어학부 동아리"
+title-prefix: ""
 description: "디지털헬스케어 학술 동아리 SHIFT 모집 안내"
 page-layout: full
 toc: false
@@ -23,7 +24,14 @@ Recruiting Blog
 </div>
 
 ::: {.hero-lead}
-디지털헬스케어학부 학술 동아리 SHIFT에서 신입 부원을 추가 모집합니다. 모집 마감은 2026년 5월 17일 (일) 23:59입니다.
+<p class="hero-lead-main">
+  디지털헬스케어학부 학술 동아리 <strong>SHIFT</strong>가
+  함께 배우고, 만들고, 실험할 <span class="hero-lead-highlight">신입 부원</span>을 찾습니다.
+</p>
+<p class="hero-lead-deadline">
+  <span>모집 마감</span>
+  <strong>2026년 5월 17일 (일) 23:59</strong>
+</p>
 :::
 
 ::: {.hero-actions}
@@ -120,7 +128,7 @@ Main Message
 
 ## SHIFT는 디지털헬스케어를 공부하고 실습하는 학술 동아리입니다
 
-이 페이지에서는 SHIFT의 활동 방식, 커리큘럼, 지원 절차를 확인할 수 있습니다. 데이터, 개발, 기획, 마케팅, 운영 중 관심 있는 분야가 있다면 현재 수준과 관계없이 지원할 수 있습니다.
+SHIFT의 활동 방식, 커리큘럼, 지원 절차를 확인할 수 있습니다. 데이터, 개발, 기획, 마케팅, 운영 중 관심 있는 분야가 있다면 현재 수준과 관계없이 지원할 수 있습니다.
 :::
 
 ::: {.card-grid .feature-grid}
@@ -141,7 +149,7 @@ SHIFT가 어떤 활동을 하는지, 어떤 학생에게 잘 맞는지 확인합
 
 ### [무엇을 하는 곳인가](what-we-do.qmd)
 
-코딩 멘토링, 자율 스터디, IT 온보딩, 디지털헬스케어 산업지도 프로젝트를 소개합니다.
+코딩 멘토링, 소모임, 디지털헬스케어 산업지도 프로젝트를 소개합니다.
 :::
 
 ::: {.shift-card}
