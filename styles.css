@@ -749,7 +749,7 @@ main.content {
 }
 
 .process-line.curriculum-path {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .process-line > div {
@@ -762,7 +762,7 @@ main.content {
 }
 
 .process-line.curriculum-path > div {
-  min-height: 220px;
+  min-height: 200px;
 }
 
 .process-line > div:nth-child(even) {
