@@ -13,6 +13,16 @@ What We Do
 SHIFT는 디지털헬스케어라는 큰 주제를 공부, 실습, 프로젝트, 기록으로 나누어 다룹니다. 단순히 정보를 듣는 동아리가 아니라, 함께 읽고 만들고 공유하는 학습 커뮤니티입니다.
 :::
 
+## 모집 홍보 자료
+
+::: {.line-panel .pdf-preview}
+### SHIFT 신입 부원 모집 홍보용 PDF
+
+<iframe src="SHITF_신입_부원_모집_홍보용.pdf" title="SHIFT 신입 부원 모집 홍보용 PDF 미리보기"></iframe>
+
+<a class="shift-btn primary" href="SHITF_신입_부원_모집_홍보용.pdf" download>PDF 다운로드</a>
+:::
+
 ## 주요 활동
 
 ::: {.card-grid}
