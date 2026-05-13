@@ -454,7 +454,7 @@ main.content {
 .application-method-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 30px;
   align-items: stretch;
 }
 
@@ -580,7 +580,7 @@ main.content {
   display: flex;
   min-height: 380px;
   flex-direction: column;
-  padding: 28px;
+  padding: 30px;
 }
 
 .method-card h3 {
@@ -588,16 +588,20 @@ main.content {
 }
 
 .method-card p + p {
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 .method-card > p:last-child {
   margin-top: auto;
-  padding-top: 28px;
+  padding-top: 42px;
 }
 
 .method-card .shift-btn {
   min-width: 190px;
+}
+
+.application-method-grid .method-card + .method-card {
+  margin-top: 0;
 }
 
 .method-card-simple {
@@ -810,6 +814,18 @@ hr {
 
   .method-card {
     min-height: auto;
+  }
+
+  .application-method-grid {
+    gap: 34px;
+  }
+
+  .application-method-grid .method-card + .method-card {
+    margin-top: 10px;
+  }
+
+  .method-card > p:last-child {
+    padding-top: 36px;
   }
 }
 
