@@ -18,9 +18,14 @@ SHIFT는 디지털헬스케어라는 큰 주제를 공부, 실습, 프로젝트,
 ::: {.line-panel .pdf-preview}
 ### SHIFT 신입 부원 모집 홍보용 PDF
 
-<iframe src="SHITF_신입_부원_모집_홍보용.pdf" title="SHIFT 신입 부원 모집 홍보용 PDF 미리보기"></iframe>
+<iframe src="SHITF_신입_부원_모집_홍보용.pdf" title="SHIFT 신입 부원 모집 홍보용 PDF 미리보기" loading="lazy"></iframe>
 
-<a class="shift-btn primary" href="SHITF_신입_부원_모집_홍보용.pdf" download>PDF 다운로드</a>
+<p class="pdf-mobile-note">모바일에서는 PDF 미리보기가 안정적으로 표시되지 않을 수 있어 새 탭 열기를 권장합니다.</p>
+
+<div class="pdf-actions">
+  <a class="shift-btn primary" href="SHITF_신입_부원_모집_홍보용.pdf" target="_blank" rel="noopener">새 탭에서 열기</a>
+  <a class="shift-btn ghost" href="SHITF_신입_부원_모집_홍보용.pdf" download>PDF 다운로드</a>
+</div>
 :::
 
 ## 주요 활동

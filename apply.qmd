@@ -29,7 +29,7 @@ Apply
 ::: {.line-panel .form-preview}
 ### 구글폼 제출
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVqBFMy1rIdewTGZfMFN-NLma2kHZp6L4XZ1uMelsm0JpsCg/viewform?embedded=true" title="SHIFT 신입 부원 추가 모집 구글폼"></iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVqBFMy1rIdewTGZfMFN-NLma2kHZp6L4XZ1uMelsm0JpsCg/viewform?embedded=true" title="SHIFT 신입 부원 추가 모집 구글폼" loading="lazy"></iframe>
 :::
 
 ## 이력서 양식
@@ -55,7 +55,14 @@ Apply
 ::: {.line-panel .pdf-preview}
 ### 예시 이력서 미리보기
 
-<iframe src="예시_SHIFT 동아리 지원 이력서.pdf" title="예시 SHIFT 동아리 지원 이력서 PDF 미리보기"></iframe>
+<iframe src="예시_SHIFT 동아리 지원 이력서.pdf" title="예시 SHIFT 동아리 지원 이력서 PDF 미리보기" loading="lazy"></iframe>
+
+<p class="pdf-mobile-note">모바일에서는 PDF 미리보기가 안정적으로 표시되지 않을 수 있어 새 탭 열기를 권장합니다.</p>
+
+<div class="pdf-actions">
+  <a class="shift-btn primary" href="예시_SHIFT 동아리 지원 이력서.pdf" target="_blank" rel="noopener">새 탭에서 열기</a>
+  <a class="shift-btn ghost" href="예시_SHIFT 동아리 지원 이력서.pdf" download>PDF 다운로드</a>
+</div>
 :::
 
 ## 지원 안내

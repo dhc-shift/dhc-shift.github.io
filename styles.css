@@ -624,6 +624,28 @@ main.content {
   min-height: 780px;
 }
 
+.pdf-mobile-note {
+  display: none;
+  margin: 14px 0 0;
+  color: var(--shift-muted);
+  font-size: 0.96rem;
+}
+
+.pdf-actions {
+  margin-top: 16px;
+}
+
+.pdf-actions p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+}
+
+.pdf-actions .shift-btn {
+  min-height: 44px;
+}
+
 .line-panel ul,
 .line-panel ol {
   margin-bottom: 0;
@@ -721,6 +743,22 @@ hr {
 
   .shift-btn {
     width: 100%;
+  }
+
+  .pdf-preview iframe {
+    display: none;
+  }
+
+  .pdf-mobile-note {
+    display: block;
+  }
+
+  .pdf-actions p {
+    flex-direction: column;
+  }
+
+  .form-preview iframe {
+    min-height: 72vh;
   }
 
   .page-hero {
