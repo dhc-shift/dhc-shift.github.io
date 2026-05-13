@@ -394,28 +394,29 @@ main.content {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 26px;
+  gap: 14px;
+  margin-top: 38px;
 }
 
 .resource-card {
   position: relative;
   min-height: 116px;
-  padding: 12px;
-  border: 1px solid rgba(24, 240, 255, 0.35);
+  padding: 18px 14px 14px;
+  border: 1px solid rgba(184, 255, 44, 0.48);
   border-radius: var(--shift-radius);
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(24, 240, 255, 0.11), rgba(184, 255, 44, 0.055)),
-    repeating-linear-gradient(90deg, rgba(118, 248, 255, 0.08) 0 1px, transparent 1px 18px),
-    repeating-linear-gradient(0deg, rgba(184, 255, 44, 0.07) 0 1px, transparent 1px 18px),
-    rgba(4, 12, 12, 0.82);
-  box-shadow: inset 0 0 28px rgba(24, 240, 255, 0.06);
+    linear-gradient(180deg, rgba(5, 13, 8, 0.94), rgba(1, 7, 4, 0.97)),
+    repeating-linear-gradient(90deg, rgba(184, 255, 44, 0.2) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(0deg, rgba(184, 255, 44, 0.16) 0 1px, transparent 1px 20px);
+  box-shadow:
+    inset 0 0 24px rgba(184, 255, 44, 0.08),
+    0 0 18px rgba(184, 255, 44, 0.07);
 }
 
 .resource-card:nth-child(2),
 .resource-card:nth-child(3) {
-  border-color: rgba(184, 255, 44, 0.42);
+  border-color: rgba(24, 240, 255, 0.46);
 }
 
 .resource-card::after {
@@ -423,7 +424,7 @@ main.content {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 0%, rgba(184, 255, 44, 0.07) 52%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(184, 255, 44, 0.1) 52%, transparent 100%);
   opacity: 0.55;
   animation: monitorScan 4.8s linear infinite;
 }
@@ -435,10 +436,12 @@ main.content {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  color: var(--shift-muted-2);
+  margin-bottom: 12px;
+  color: rgba(214, 255, 194, 0.76);
   font-size: 0.68rem;
   font-weight: 850;
   letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .resource-meta p {
@@ -457,12 +460,19 @@ main.content {
   display: block;
   width: 100%;
   height: 74px;
-  margin-top: 10px;
+  margin-top: 0;
+  background:
+    repeating-linear-gradient(90deg, rgba(184, 255, 44, 0.22) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(184, 255, 44, 0.16) 0 1px, transparent 1px 18px),
+    rgba(0, 8, 2, 0.82);
+  border: 1px solid rgba(184, 255, 44, 0.18);
+  border-radius: 8px;
   overflow: visible;
 }
 
 .resource-line {
   fill: none;
+  stroke: var(--shift-lime);
   stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -472,13 +482,13 @@ main.content {
 }
 
 .resource-line.cyan {
-  stroke: var(--shift-cyan-soft);
-  filter: drop-shadow(0 0 7px rgba(24, 240, 255, 0.72));
+  stroke: var(--shift-lime);
+  filter: drop-shadow(0 0 8px rgba(184, 255, 44, 0.78));
 }
 
 .resource-line.lime {
   stroke: var(--shift-lime);
-  filter: drop-shadow(0 0 7px rgba(184, 255, 44, 0.72));
+  filter: drop-shadow(0 0 8px rgba(184, 255, 44, 0.78));
 }
 
 .resource-card:nth-child(2) .resource-line {
