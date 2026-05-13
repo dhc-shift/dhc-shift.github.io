@@ -67,19 +67,46 @@ OUTPUT
 :::
 :::
 
-::: {.mini-map}
-::: {.mini-cell}
-:::
-
-::: {.mini-cell}
-:::
-
-::: {.mini-cell}
-:::
-
-::: {.mini-cell}
-:::
-:::
+```{=html}
+<div class="resource-monitor" aria-label="SHIFT activity resource monitor">
+  <div class="resource-card">
+    <div class="resource-meta">
+      <span>LEARNING</span>
+      <strong>68%</strong>
+    </div>
+    <svg viewBox="0 0 220 74" role="img" aria-label="Learning activity graph">
+      <polyline class="resource-line cyan" points="0,58 18,52 36,55 54,42 72,45 90,28 108,34 126,24 144,30 162,18 180,22 198,14 220,20" />
+    </svg>
+  </div>
+  <div class="resource-card">
+    <div class="resource-meta">
+      <span>PROJECT</span>
+      <strong>42%</strong>
+    </div>
+    <svg viewBox="0 0 220 74" role="img" aria-label="Project activity graph">
+      <polyline class="resource-line lime" points="0,48 18,46 36,50 54,44 72,40 90,42 108,36 126,30 144,33 162,26 180,31 198,24 220,28" />
+    </svg>
+  </div>
+  <div class="resource-card">
+    <div class="resource-meta">
+      <span>COMMUNITY</span>
+      <strong>84%</strong>
+    </div>
+    <svg viewBox="0 0 220 74" role="img" aria-label="Community activity graph">
+      <polyline class="resource-line lime" points="0,62 18,56 36,42 54,48 72,32 90,36 108,20 126,28 144,16 162,22 180,12 198,18 220,10" />
+    </svg>
+  </div>
+  <div class="resource-card">
+    <div class="resource-meta">
+      <span>ONBOARD</span>
+      <strong>56%</strong>
+    </div>
+    <svg viewBox="0 0 220 74" role="img" aria-label="Onboarding activity graph">
+      <polyline class="resource-line cyan" points="0,54 18,50 36,44 54,46 72,38 90,42 108,34 126,38 144,28 162,32 180,24 198,26 220,20" />
+    </svg>
+  </div>
+</div>
+```
 :::
 :::
 :::
