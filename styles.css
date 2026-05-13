@@ -521,6 +521,10 @@ main.content {
   gap: 14px;
 }
 
+.process-line.apply-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .process-line > div {
   position: relative;
   min-height: 190px;
@@ -541,6 +545,10 @@ main.content {
   color: var(--shift-lime);
   font-size: 0.82rem;
   font-weight: 850;
+}
+
+.process-line code {
+  white-space: nowrap;
 }
 
 .page-hero {
