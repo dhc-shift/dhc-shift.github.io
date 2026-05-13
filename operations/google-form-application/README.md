@@ -22,8 +22,6 @@ SHIFT 동아리 지원서 템플릿
 
 `template.txt`의 본문을 Google Docs에 붙여넣습니다. 디자인은 자유롭게 다듬어도 되지만, `{{이름}}`, `{{지원동기}}` 같은 placeholder는 정확히 유지해야 합니다.
 
-간단 테스트용으로 `{{name}}`, `{{birth}}`, `{{q1}}` 같은 영문 placeholder를 써도 치환됩니다. 최종 운영용 템플릿은 `template.txt`의 한국어 placeholder를 기준으로 맞추는 것을 권장합니다.
-
 문서 URL에서 `/d/`와 `/edit` 사이의 값을 복사해 `Code.gs`의 `TEMPLATE_DOC_ID`에 넣습니다.
 
 ## 3. Google Form 질문 만들기
@@ -76,43 +74,19 @@ TEMPLATE_DOC_ID: 'GOOGLE_DOCS_TEMPLATE_ID',
 OUTPUT_FOLDER_ID: 'GOOGLE_DRIVE_OUTPUT_FOLDER_ID',
 ```
 
-응답 Sheet 탭 이름이 `Form Responses 1`이 아니라면 아래 값도 실제 탭 이름으로 바꿉니다.
-
-```javascript
-RESPONSE_SHEET_NAME: 'Form Responses 1',
-```
-
 운영진 알림 메일을 바꾸려면 아래 값도 수정합니다.
 
 ```javascript
 ADMIN_EMAIL: 'shiftysdh@gmail.com',
 ```
 
-## 6. 수동 테스트
-
-Apps Script 편집기에서 함수 선택을 `generateDocs`로 바꾸고 한 번 실행합니다.
-
-`generateDocs`는 응답 Sheet의 모든 행을 확인한 뒤, `처리 상태`가 `DONE`이 아닌 행만 지원서로 생성합니다. 실행 후 아래 열이 자동으로 생깁니다.
-
-- 생성 문서 링크
-- 생성 PDF 링크
-- 처리 시각
-- 처리 상태
-- 오류 메시지
-
-수동 실행에서는 기본적으로 메일을 보내지 않습니다. 수동 실행에서도 메일을 보내고 싶으면 아래 값을 `true`로 바꿉니다.
-
-```javascript
-SEND_MAIL_ON_MANUAL_RUN: false,
-```
-
-## 7. 트리거 설정
+## 6. 트리거 설정
 
 Apps Script 편집기에서 함수 선택을 `setupTrigger`로 바꾸고 한 번 실행합니다.
 
 권한 승인 창이 뜨면 승인합니다. 이후 Form이 제출될 때마다 `onFormSubmit`이 자동 실행됩니다.
 
-## 8. 자동 제출 테스트
+## 7. 테스트
 
 Google Form에서 테스트 응답을 1개 제출합니다.
 
@@ -124,7 +98,7 @@ Google Form에서 테스트 응답을 1개 제출합니다.
 - 운영진 이메일로 제출 알림 발송
 - 지원자 이메일로 접수 완료 메일 발송
 
-## 9. 홈페이지 반영
+## 8. 홈페이지 반영
 
 Google Form의 `보내기 > <>`에서 iframe 코드를 복사합니다.
 
