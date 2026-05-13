@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dhc-shift.github.io/what-we-do.html</loc>
+    <lastmod>2026-05-13T07:54:38.042Z</lastmod>
+  </url>
+  <url>
     <loc>https://dhc-shift.github.io/resources.html</loc>
     <lastmod>2026-05-12T08:54:42.890Z</lastmod>
   </url>
@@ -10,23 +14,31 @@
   </url>
   <url>
     <loc>https://dhc-shift.github.io/notice.html</loc>
-    <lastmod>2026-05-12T08:54:42.851Z</lastmod>
+    <lastmod>2026-05-13T07:48:21.898Z</lastmod>
   </url>
   <url>
     <loc>https://dhc-shift.github.io/groups.html</loc>
     <lastmod>2026-05-12T08:54:42.843Z</lastmod>
   </url>
   <url>
+    <loc>https://dhc-shift.github.io/apply.html</loc>
+    <lastmod>2026-05-13T07:57:24.963Z</lastmod>
+  </url>
+  <url>
     <loc>https://dhc-shift.github.io/about.html</loc>
-    <lastmod>2026-05-12T08:54:42.814Z</lastmod>
+    <lastmod>2026-05-13T07:40:04.861Z</lastmod>
   </url>
   <url>
     <loc>https://dhc-shift.github.io/activities.html</loc>
     <lastmod>2026-05-12T09:03:36.618Z</lastmod>
   </url>
   <url>
+    <loc>https://dhc-shift.github.io/curriculum.html</loc>
+    <lastmod>2026-05-13T07:54:38.059Z</lastmod>
+  </url>
+  <url>
     <loc>https://dhc-shift.github.io/index.html</loc>
-    <lastmod>2026-05-12T08:51:52.744Z</lastmod>
+    <lastmod>2026-05-13T07:48:21.800Z</lastmod>
   </url>
   <url>
     <loc>https://dhc-shift.github.io/projects/digital-healthcare-roadmap.html</loc>
@@ -35,5 +47,9 @@
   <url>
     <loc>https://dhc-shift.github.io/projects/it-onboarding.html</loc>
     <lastmod>2026-05-12T08:54:42.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dhc-shift.github.io/results.html</loc>
+    <lastmod>2026-05-13T07:40:04.919Z</lastmod>
   </url>
 </urlset>

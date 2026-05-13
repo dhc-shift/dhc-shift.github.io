@@ -3,10 +3,12 @@ project:
   output-dir: docs
   resources:
     - "SHIFT 로고.svg"
+    - "SHIFT 동아리 지원 이력서.hwpx"
+    - "예시_SHIFT 동아리 지원 이력서.pdf"
 
 website:
   title: "SHIFT"
-  description: "디지털헬스케어 학술 커뮤니티 SHIFT"
+  description: "디지털헬스케어 학술 커뮤니티 SHIFT 모집 블로그"
   site-url: "https://dhc-shift.github.io"
   favicon: "SHIFT 로고.svg"
   search:
@@ -24,24 +26,18 @@ website:
     title: false
     collapse-below: lg
     left:
-      - text: "공지"
-        href: notice.qmd
+      - text: "메인"
+        href: index.qmd
       - text: "소개"
         href: about.qmd
-      - text: "활동"
-        href: activities.qmd
-      - text: "프로젝트"
-        menu:
-          - text: "프로젝트 홈"
-            href: projects/index.qmd
-          - text: "IT 온보딩"
-            href: projects/it-onboarding.qmd
-          - text: "디지털헬스케어 직무 로드맵"
-            href: projects/digital-healthcare-roadmap.qmd
-      - text: "소모임"
-        href: groups.qmd
-      - text: "자료실"
-        href: resources.qmd
+      - text: "무엇을 하나요"
+        href: what-we-do.qmd
+      - text: "커리큘럼"
+        href: curriculum.qmd
+      - text: "결과"
+        href: results.qmd
+      - text: "지원 방법"
+        href: apply.qmd
     right:
       - icon: github
         href: https://github.com/dhc-shift
