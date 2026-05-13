@@ -138,6 +138,10 @@ main.content {
 .hero-section {
   position: relative;
   padding: clamp(58px, 8vw, 108px) 0 clamp(42px, 6vw, 72px);
+  background:
+    radial-gradient(circle at 52% 18%, rgba(238, 247, 244, 0.14), transparent 22rem),
+    radial-gradient(circle at 18% 48%, rgba(24, 240, 255, 0.08), transparent 34rem),
+    linear-gradient(180deg, rgba(7, 17, 18, 0.28), transparent 78%);
 }
 
 .hero-section::before {
@@ -149,6 +153,8 @@ main.content {
   background:
     linear-gradient(135deg, rgba(24, 240, 255, 0.08), transparent 42%),
     linear-gradient(315deg, rgba(184, 255, 44, 0.06), transparent 48%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, #000 46%, transparent 78%);
+  mask-image: radial-gradient(ellipse at center, #000 0%, #000 46%, transparent 78%);
 }
 
 .hero-grid {
@@ -915,14 +921,39 @@ hr {
   border-left-color: var(--shift-lime) !important;
 }
 
+.footer,
+.nav-footer,
 .page-footer {
-  background: rgba(5, 7, 8, 0.92);
+  background: var(--shift-bg) !important;
   border-top: 1px solid rgba(24, 240, 255, 0.16);
+  color: var(--shift-muted) !important;
+}
+
+.footer a,
+.nav-footer a,
+.footer p,
+.nav-footer p {
+  color: var(--shift-muted) !important;
+}
+
+.footer a:hover,
+.nav-footer a:hover {
+  color: var(--shift-lime-soft) !important;
 }
 
 @media (max-width: 1200px) {
   .process-line.curriculum-path {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section::before {
+    inset-inline: calc(50% - 50vw);
+  }
+
+  .hero-grid.shift-container {
+    width: min(100% - 72px, 1340px);
   }
 }
 
