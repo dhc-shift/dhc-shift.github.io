@@ -20,7 +20,7 @@ SHIFT 신입 부원 지원서 접수_2026
 SHIFT 동아리 지원서 템플릿
 ```
 
-`template.txt`의 본문을 Google Docs에 붙여넣습니다. 디자인은 자유롭게 다듬어도 되지만, `{{이름}}`, `{{지원동기}}` 같은 placeholder는 정확히 유지해야 합니다.
+`template.md`의 본문을 Google Docs에 붙여넣습니다. 디자인은 자유롭게 다듬어도 되지만, `{{이름}}`, `{{지원동기}}` 같은 placeholder는 정확히 유지해야 합니다.
 
 문서 URL에서 `/d/`와 `/edit` 사이의 값을 복사해 `Code.gs`의 `TEMPLATE_DOC_ID`에 넣습니다.
 
