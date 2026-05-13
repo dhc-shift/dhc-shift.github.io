@@ -89,22 +89,22 @@ a:hover {
 }
 
 .navbar-brand-logo {
-  width: 96px;
-  height: 38px;
-  overflow: hidden;
+  width: 58px;
+  height: 58px;
+  overflow: visible;
 }
 
 .navbar-logo {
-  width: 96px;
-  height: 38px;
+  width: 58px;
+  height: 58px;
   max-height: none;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   filter:
     brightness(0) invert(1)
     drop-shadow(0 0 10px rgba(24, 240, 255, 0.42))
     drop-shadow(0 0 16px rgba(184, 255, 44, 0.22));
-  transform: scale(1.7);
+  transform: none;
 }
 
 #quarto-content,
@@ -207,7 +207,37 @@ main.content {
   box-shadow: 0 0 18px rgba(184, 255, 44, 0.9);
 }
 
-.hero-copy h1 {
+.hero-title-fallback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.hero-logo-wrap {
+  width: clamp(240px, 34vw, 380px);
+  margin: 22px 0 0;
+}
+
+.hero-logo-wrap p {
+  margin: 0;
+}
+
+.hero-logo-mark {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  filter:
+    brightness(0) invert(1)
+    drop-shadow(0 0 22px rgba(24, 240, 255, 0.24))
+    drop-shadow(0 0 34px rgba(184, 255, 44, 0.13));
+}
+
+.hero-copy h1:not(.hero-title-fallback) {
   margin: 0;
   color: var(--shift-cyan-soft);
   background: linear-gradient(100deg, var(--shift-cyan-soft) 0%, #f4fffb 38%, var(--shift-lime-soft) 78%);
@@ -679,6 +709,10 @@ hr {
 
   .hero-copy h1 {
     font-size: clamp(3.4rem, 19vw, 4.9rem);
+  }
+
+  .hero-logo-wrap {
+    width: min(100%, 280px);
   }
 
   .hero-actions {

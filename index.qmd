@@ -16,7 +16,11 @@ format:
 Recruiting Blog
 :::
 
-# SHIFT
+<h1 class="hero-title-fallback">SHIFT</h1>
+
+<div class="hero-logo-wrap">
+  <img class="hero-logo-mark" src="SHIFT 로고.svg" alt="SHIFT">
+</div>
 
 ::: {.hero-lead}
 디지털헬스케어학부 학술 동아리 SHIFT에서 함께 성장할 신입 부원을 추가 모집합니다. 모집 마감은 2026년 5월 17일 (일) 23:59입니다.
