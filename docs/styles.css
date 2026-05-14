@@ -560,6 +560,8 @@ main.content {
 .resource-card {
   --monitor-accent-rgb: var(--shift-lime-rgb);
   --monitor-accent-color: var(--shift-lime);
+  --trace-delay: 0s;
+  --flicker-delay: 0s;
   position: relative;
   min-height: 116px;
   padding: 18px 14px 14px;
@@ -578,16 +580,22 @@ main.content {
 .resource-card:nth-child(2) {
   --monitor-accent-rgb: var(--shift-cyan-rgb);
   --monitor-accent-color: var(--shift-cyan-soft);
+  --trace-delay: -0.45s;
+  --flicker-delay: 0.35s;
 }
 
 .resource-card:nth-child(3) {
   --monitor-accent-rgb: var(--shift-amber-rgb);
   --monitor-accent-color: var(--shift-amber);
+  --trace-delay: -0.9s;
+  --flicker-delay: 0.7s;
 }
 
 .resource-card:nth-child(4) {
   --monitor-accent-rgb: var(--shift-mint-rgb);
   --monitor-accent-color: var(--shift-mint);
+  --trace-delay: -1.35s;
+  --flicker-delay: 1.05s;
 }
 
 .resource-card::after {
@@ -633,62 +641,64 @@ main.content {
   height: 74px;
   margin-top: 0;
   background:
-    repeating-linear-gradient(90deg, rgba(var(--monitor-accent-rgb), 0.22) 0 1px, transparent 1px 22px),
-    repeating-linear-gradient(0deg, rgba(var(--monitor-accent-rgb), 0.16) 0 1px, transparent 1px 18px),
-    rgba(0, 8, 2, 0.82);
+    radial-gradient(circle at 18% 44%, rgba(var(--monitor-accent-rgb), 0.12), transparent 28%),
+    repeating-linear-gradient(90deg, rgba(var(--monitor-accent-rgb), 0.2) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(var(--monitor-accent-rgb), 0.14) 0 1px, transparent 1px 18px),
+    rgba(0, 8, 2, 0.86);
   border: 1px solid rgba(var(--monitor-accent-rgb), 0.18);
   border-radius: 8px;
-  overflow: visible;
+  overflow: hidden;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  animation: monitorGridDrift 3.8s linear infinite;
+}
+
+.resource-baseline {
+  fill: none;
+  stroke: rgba(var(--monitor-accent-rgb), 0.28);
+  stroke-width: 1;
+  stroke-dasharray: 4 9;
+  vector-effect: non-scaling-stroke;
 }
 
 .resource-line {
   fill: none;
   stroke: var(--monitor-accent-color);
-  stroke-width: 4;
+  stroke-width: 3.2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 340;
-  stroke-dashoffset: 680;
-  animation: drawMonitorLine 4.5s ease-in-out infinite;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 9px rgba(var(--monitor-accent-rgb), 0.78));
 }
 
-.resource-line.cyan {
-  stroke: var(--monitor-accent-color);
-  filter: drop-shadow(0 0 8px rgba(var(--monitor-accent-rgb), 0.78));
+.resource-line.biosignal {
+  stroke-width: 3.4;
 }
 
-.resource-line.lime {
-  stroke: var(--monitor-accent-color);
-  filter: drop-shadow(0 0 8px rgba(var(--monitor-accent-rgb), 0.78));
+.signal-base {
+  opacity: 0.48;
+  animation: pulseMonitorLine 2.8s ease-in-out infinite;
+  animation-delay: var(--flicker-delay);
 }
 
-.resource-card:nth-child(2) .resource-line {
-  animation-delay: 0.35s;
+.signal-sweep {
+  opacity: 1;
+  stroke-width: 4.1;
+  stroke-dasharray: 18 42 5 35;
+  stroke-dashoffset: 100;
+  animation: traceMonitorLine 1.9s linear infinite;
+  animation-delay: var(--trace-delay);
+  filter:
+    drop-shadow(0 0 6px rgba(var(--monitor-accent-rgb), 0.95))
+    drop-shadow(0 0 15px rgba(var(--monitor-accent-rgb), 0.66));
 }
 
-.resource-card:nth-child(3) .resource-line {
-  animation-delay: 0.7s;
-}
-
-.resource-card:nth-child(4) .resource-line {
-  animation-delay: 1.05s;
-}
-
-@keyframes drawMonitorLine {
+@keyframes pulseMonitorLine {
   0%,
-  12% {
-    stroke-dashoffset: 680;
-    opacity: 0.5;
-  }
-
-  45%,
-  78% {
-    stroke-dashoffset: 340;
-    opacity: 1;
-  }
-
   100% {
-    stroke-dashoffset: 0;
+    opacity: 0.42;
+  }
+
+  48% {
     opacity: 0.72;
   }
 }
@@ -700,6 +710,44 @@ main.content {
 
   100% {
     transform: translateY(100%);
+  }
+}
+
+@keyframes traceMonitorLine {
+  0% {
+    stroke-dashoffset: 100;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes monitorGridDrift {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, 22px 0, 0 18px, 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resource-card::after,
+  .resource-card svg,
+  .signal-base,
+  .signal-sweep {
+    animation: none;
+  }
+
+  .signal-base {
+    opacity: 0.6;
+  }
+
+  .signal-sweep {
+    opacity: 0.84;
+    stroke-dasharray: none;
   }
 }
 
