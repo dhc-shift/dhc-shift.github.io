@@ -102,7 +102,7 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
         <article>
           <h4>학술기획 본부</h4>
           <div class="org-roles">
-            <span>본부장</span>
+            <span>본부장 박찬영(21)</span>
             <span>팀원</span>
           </div>
         </article>
@@ -110,7 +110,7 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
         <article>
           <h4>브랜드&amp;마케팅 본부</h4>
           <div class="org-roles">
-            <span>본부장</span>
+            <span>본부장 김지섭(21)</span>
             <span>팀원</span>
           </div>
         </article>
@@ -118,7 +118,7 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
         <article>
           <h4>인사&amp;시스템 본부</h4>
           <div class="org-roles">
-            <span>본부장</span>
+            <span>본부장 이형재(21)</span>
             <span>팀원</span>
           </div>
         </article>
