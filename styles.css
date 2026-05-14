@@ -1026,6 +1026,8 @@ main.content {
 .org-root {
   --panel-accent-rgb: var(--shift-cyan-rgb);
   --panel-accent-2-rgb: var(--shift-lime-rgb);
+  position: relative;
+  z-index: 2;
   width: min(100%, 360px);
   margin: 0 auto;
   padding: 16px 20px;
@@ -1060,20 +1062,23 @@ main.content {
   top: -28px;
   right: calc(16.666% - 8px);
   left: calc(16.666% - 8px);
-  height: 1px;
+  z-index: 0;
+  height: 2px;
   background: linear-gradient(90deg, transparent, var(--shift-line), rgba(184, 255, 44, 0.42), var(--shift-line), transparent);
   box-shadow: 0 0 18px rgba(24, 240, 255, 0.2);
 }
 
-.org-chart::after {
+.org-branches::after {
   content: "";
   position: absolute;
-  top: 54px;
+  top: -54px;
   left: 50%;
-  width: 1px;
-  height: 36px;
+  z-index: 0;
+  width: 2px;
+  height: 27px;
   background: linear-gradient(180deg, rgba(24, 240, 255, 0.64), rgba(184, 255, 44, 0.38));
   box-shadow: 0 0 16px rgba(24, 240, 255, 0.22);
+  transform: translateX(-50%);
 }
 
 .org-unit,
@@ -1083,6 +1088,7 @@ main.content {
   --panel-accent-color: var(--shift-cyan-soft);
   --panel-accent-2-color: var(--shift-lime);
   position: relative;
+  z-index: 1;
   min-height: 178px;
   padding: 20px;
   border: 1px solid rgba(var(--panel-accent-rgb), 0.36);
@@ -1108,12 +1114,13 @@ main.content {
 .org-unit::after {
   content: "";
   position: absolute;
-  top: -27px;
+  top: -28px;
   left: 50%;
-  width: 1px;
-  height: 27px;
+  width: 2px;
+  height: 28px;
   background: rgba(var(--panel-accent-rgb), 0.44);
   box-shadow: 0 0 14px rgba(var(--panel-accent-rgb), 0.28);
+  transform: translateX(-50%);
 }
 
 .org-unit h3,
@@ -1795,23 +1802,23 @@ hr {
     margin-bottom: 34px;
   }
 
-  .org-chart::after {
-    top: 56px;
-    height: 34px;
-  }
-
   .org-branches {
     gap: 14px;
     margin-top: 42px;
   }
 
   .org-branches::before {
-    top: -20px;
-    right: 50%;
-    left: auto;
-    width: 1px;
-    height: 20px;
+    top: -42px;
+    right: auto;
+    left: 50%;
+    width: 2px;
+    height: 42px;
     background: linear-gradient(180deg, rgba(24, 240, 255, 0.58), rgba(184, 255, 44, 0.34));
+    transform: translateX(-50%);
+  }
+
+  .org-branches::after {
+    display: none;
   }
 
   .org-unit::after {
