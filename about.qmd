@@ -45,10 +45,10 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
 
   <div class="org-branches">
     <section class="org-unit accent-cyan">
-      <h3>회장단</h3>
+      <h3>1대 회장단</h3>
       <div class="org-roles">
-        <span>회장</span>
-        <span>부회장</span>
+        <span>회장 유민준</span>
+        <span>부회장 최유진</span>
       </div>
     </section>
 
