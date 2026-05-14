@@ -232,8 +232,13 @@ main.content {
 }
 
 .hero-logo-wrap {
-  width: clamp(240px, 34vw, 380px);
-  margin: 22px 0 0;
+  width: clamp(300px, 40vw, 520px);
+  height: clamp(170px, 18vw, 260px);
+  margin: 24px 0 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-logo-wrap p {
@@ -245,7 +250,9 @@ main.content {
   width: 100%;
   height: auto;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
+  transform: scale(1.45);
+  transform-origin: center;
   filter:
     brightness(0) invert(1)
     drop-shadow(0 0 22px rgba(24, 240, 255, 0.24))
@@ -1808,7 +1815,9 @@ hr {
   }
 
   .hero-logo-wrap {
-    width: min(100%, 280px);
+    width: min(100%, 340px);
+    height: 150px;
+    margin-bottom: 12px;
   }
 
   .hero-lead-deadline {
