@@ -46,20 +46,53 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
   <div class="org-branches">
     <section class="org-unit accent-cyan">
       <h3>1대 회장단</h3>
-      <div class="org-roles">
-        <span>회장 유민준(22)</span>
-        <span>부회장 최유진(24)</span>
+      <div class="org-roles org-roles-ident">
+        <article class="org-person role-direct">
+          <span class="org-person-role">회장</span>
+          <strong>유민준(22)</strong>
+          <span class="org-person-ident">Direction</span>
+        </article>
+
+        <article class="org-person role-sync">
+          <span class="org-person-role">부회장</span>
+          <strong>최유진(24)</strong>
+          <span class="org-person-ident">Sync</span>
+        </article>
       </div>
     </section>
 
     <section class="org-unit accent-lime">
       <h3>운영진</h3>
-      <div class="org-roles">
-        <span>기획실장</span>
-        <span>대외협력</span>
-        <span>복지부장</span>
-        <span>IT/운영</span>
-        <span>서기</span>
+      <div class="org-roles org-roles-ident org-ops-grid">
+        <article class="org-person role-blueprint">
+          <span class="org-person-role">기획실장</span>
+          <strong>Blueprint</strong>
+          <span class="org-person-ident">프로그램 설계</span>
+        </article>
+
+        <article class="org-person role-bridge">
+          <span class="org-person-role">대외협력</span>
+          <strong>Bridge</strong>
+          <span class="org-person-ident">외부 연결</span>
+        </article>
+
+        <article class="org-person role-care">
+          <span class="org-person-role">복지부장</span>
+          <strong>Care</strong>
+          <span class="org-person-ident">구성원 경험</span>
+        </article>
+
+        <article class="org-person role-ops">
+          <span class="org-person-role">IT/운영</span>
+          <strong>Ops</strong>
+          <span class="org-person-ident">시스템 관리</span>
+        </article>
+
+        <article class="org-person role-archive">
+          <span class="org-person-role">서기</span>
+          <strong>Archive</strong>
+          <span class="org-person-ident">기록 정리</span>
+        </article>
       </div>
     </section>
 
