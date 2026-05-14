@@ -28,10 +28,20 @@ Recruiting Blog
   디지털헬스케어학부 학술 동아리 <strong>SHIFT</strong>가
   함께 배우고, 만들고, 실험할 <span class="hero-lead-highlight">신입 부원</span>을 찾습니다.
 </p>
-<p class="hero-lead-deadline">
-  <span>모집 마감</span>
-  <strong>2026년 5월 17일 (일) 23:59</strong>
-</p>
+```{=html}
+<div class="hero-lead-deadline" data-countdown data-deadline="2026-05-17T23:59:00+09:00" aria-label="SHIFT 신입 부원 모집 마감까지 남은 시간">
+  <div class="countdown-head">
+    <span class="countdown-label" data-countdown-status>모집 마감</span>
+    <strong class="countdown-date" data-countdown-date>2026년 5월 17일 (일) 23:59</strong>
+  </div>
+  <div class="countdown-clock">
+    <span class="countdown-dday" data-countdown-dday>D-00</span>
+    <span class="countdown-unit"><strong data-countdown-hours>00</strong><span>시간</span></span>
+    <span class="countdown-unit"><strong data-countdown-minutes>00</strong><span>분</span></span>
+    <span class="countdown-unit"><strong data-countdown-seconds>00</strong><span>초</span></span>
+  </div>
+</div>
+```
 :::
 
 ::: {.hero-actions}
@@ -184,4 +194,62 @@ IT 온보딩과 디지털헬스케어 산업지도처럼 실제로 진행할 프
 :::
 :::
 :::
+
+```{=html}
+<script>
+(() => {
+  const countdown = document.querySelector("[data-countdown]");
+  if (!countdown) return;
+
+  const deadline = new Date(countdown.dataset.deadline);
+  if (Number.isNaN(deadline.getTime())) return;
+
+  const status = countdown.querySelector("[data-countdown-status]");
+  const date = countdown.querySelector("[data-countdown-date]");
+  const dday = countdown.querySelector("[data-countdown-dday]");
+  const hours = countdown.querySelector("[data-countdown-hours]");
+  const minutes = countdown.querySelector("[data-countdown-minutes]");
+  const seconds = countdown.querySelector("[data-countdown-seconds]");
+  const pad = (value) => String(value).padStart(2, "0");
+  let timerId;
+
+  const setText = (node, value) => {
+    if (node) node.textContent = value;
+  };
+
+  const updateCountdown = () => {
+    const remaining = deadline.getTime() - Date.now();
+
+    if (remaining <= 0) {
+      countdown.dataset.state = "closed";
+      countdown.setAttribute("aria-label", "SHIFT 신입 부원 모집이 종료되었습니다.");
+      setText(status, "모집 종료");
+      setText(date, "마감되었습니다");
+      setText(dday, "D-0");
+      setText(hours, "00");
+      setText(minutes, "00");
+      setText(seconds, "00");
+      window.clearInterval(timerId);
+      return;
+    }
+
+    const totalSeconds = Math.floor(remaining / 1000);
+    const dayCount = Math.floor(totalSeconds / 86400);
+    const hourCount = Math.floor(totalSeconds / 3600) % 24;
+    const minuteCount = Math.floor(totalSeconds / 60) % 60;
+    const secondCount = totalSeconds % 60;
+
+    countdown.dataset.state = "open";
+    setText(status, dayCount === 0 ? "오늘 마감" : "모집 마감");
+    setText(dday, dayCount === 0 ? "D-DAY" : `D-${dayCount}`);
+    setText(hours, pad(hourCount));
+    setText(minutes, pad(minuteCount));
+    setText(seconds, pad(secondCount));
+  };
+
+  updateCountdown();
+  timerId = window.setInterval(updateCountdown, 1000);
+})();
+</script>
+```
 :::
