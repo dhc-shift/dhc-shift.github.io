@@ -215,6 +215,41 @@ ul.task-list li input[type="checkbox"] {
 <p>동아리 웹사이트와 프로젝트 페이지를 함께 다듬으며 실제로 공개할 수 있는 화면을 만듭니다.</p>
 </section>
 </div>
+<section class="cardnews-section" aria-labelledby="cardnews-title">
+  <div class="section-head cardnews-head">
+    <div class="kicker">Card News</div>
+    <h2 id="cardnews-title" class="anchored">SHIFT 카드뉴스</h2>
+    <p>신입 구성원이 SHIFT의 활동 흐름을 한눈에 볼 수 있도록 정리했습니다.</p>
+  </div>
+
+  <div class="cardnews-carousel" data-cardnews-carousel="">
+    <button class="cardnews-button cardnews-button-prev" type="button" aria-label="이전 카드뉴스" data-cardnews-prev="">&lt;</button>
+
+    <div class="cardnews-track" data-cardnews-track="" tabindex="0" aria-label="SHIFT 카드뉴스">
+      <figure class="cardnews-slide figure">
+        <img src="YPT/1.png" alt="SHIFT 카드뉴스 1번" class="figure-img">
+      </figure>
+      <figure class="cardnews-slide figure">
+        <img src="YPT/2.png" alt="SHIFT 카드뉴스 2번" class="figure-img">
+      </figure>
+      <figure class="cardnews-slide figure">
+        <img src="YPT/3.png" alt="SHIFT 카드뉴스 3번" class="figure-img">
+      </figure>
+      <figure class="cardnews-slide figure">
+        <img src="YPT/4.png" alt="SHIFT 카드뉴스 4번" class="figure-img">
+      </figure>
+    </div>
+
+    <button class="cardnews-button cardnews-button-next" type="button" aria-label="다음 카드뉴스" data-cardnews-next="">&gt;</button>
+
+    <div class="cardnews-dots" aria-label="카드뉴스 순서">
+      <button type="button" aria-label="1번 카드뉴스 보기" aria-current="true" data-cardnews-dot=""></button>
+      <button type="button" aria-label="2번 카드뉴스 보기" data-cardnews-dot=""></button>
+      <button type="button" aria-label="3번 카드뉴스 보기" data-cardnews-dot=""></button>
+      <button type="button" aria-label="4번 카드뉴스 보기" data-cardnews-dot=""></button>
+    </div>
+  </div>
+</section>
 </section>
 <section id="다루는-주제-예시" class="level2">
 <h2 class="anchored" data-anchor-id="다루는-주제-예시">다루는 주제 예시</h2>
@@ -227,6 +262,56 @@ ul.task-list li input[type="checkbox"] {
 <li>직무군, 필요 역량, 전공 과목 연결</li>
 </ul>
 </div>
+<script>
+(() => {
+  const carousel = document.querySelector("[data-cardnews-carousel]");
+  if (!carousel) return;
+
+  const track = carousel.querySelector("[data-cardnews-track]");
+  const slides = Array.from(carousel.querySelectorAll(".cardnews-slide"));
+  const dots = Array.from(carousel.querySelectorAll("[data-cardnews-dot]"));
+  const prev = carousel.querySelector("[data-cardnews-prev]");
+  const next = carousel.querySelector("[data-cardnews-next]");
+  if (!track || slides.length === 0) return;
+
+  let activeIndex = 0;
+
+  const clampIndex = (index) => (index + slides.length) % slides.length;
+
+  const setActive = (index, shouldScroll = true) => {
+    activeIndex = clampIndex(index);
+    dots.forEach((dot, dotIndex) => {
+      dot.setAttribute("aria-current", dotIndex === activeIndex ? "true" : "false");
+    });
+
+    if (shouldScroll) {
+      slides[activeIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center"
+      });
+    }
+  };
+
+  const updateFromScroll = () => {
+    const trackRect = track.getBoundingClientRect();
+    const center = trackRect.left + trackRect.width / 2;
+    const closest = slides.reduce((best, slide, index) => {
+      const rect = slide.getBoundingClientRect();
+      const distance = Math.abs(rect.left + rect.width / 2 - center);
+      return distance < best.distance ? { index, distance } : best;
+    }, { index: activeIndex, distance: Infinity });
+
+    setActive(closest.index, false);
+  };
+
+  prev?.addEventListener("click", () => setActive(activeIndex - 1));
+  next?.addEventListener("click", () => setActive(activeIndex + 1));
+  dots.forEach((dot, index) => dot.addEventListener("click", () => setActive(index)));
+  track.addEventListener("scroll", () => window.requestAnimationFrame(updateFromScroll), { passive: true });
+  setActive(0, false);
+})();
+</script>
 
 
 </section>

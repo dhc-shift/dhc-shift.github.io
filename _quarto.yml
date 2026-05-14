@@ -4,6 +4,7 @@ project:
   resources:
     - "SHIFT 로고.svg"
     - "SHITF_신입_부원_모집_홍보용.pdf"
+    - "YPT/*.png"
 
 website:
   title: "SHIFT"
