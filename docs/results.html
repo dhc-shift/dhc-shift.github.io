@@ -21,7 +21,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -96,51 +96,51 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">메인</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">소개</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./what-we-do.html">
+    <a class="nav-link" href="./what-we-do.html"> 
 <span class="menu-text">무엇을 하나요</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./curriculum.html">
+    <a class="nav-link" href="./curriculum.html"> 
 <span class="menu-text">커리큘럼</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html">
+    <a class="nav-link" href="./projects/index.html"> 
 <span class="menu-text">프로젝트</span></a>
-  </li>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">지원 방법</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
         <li>
     <a class="dropdown-item" href="./apply.html">
  <span class="dropdown-text">지원 방법</span></a>
-  </li>
+  </li>  
         <li>
     <a class="dropdown-item" href="./apply-simple.html">
  <span class="dropdown-text">간편형 지원</span></a>
-  </li>
+  </li>  
         <li>
     <a class="dropdown-item" href="./apply-deep.html">
  <span class="dropdown-text">심층형 지원</span></a>
-  </li>
+  </li>  
     </ul>
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/dhc-shift"> <i class="bi bi-github" role="img">
-</i>
+</i> 
 <span class="menu-text"></span></a>
-  </li>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
-
+   
   <ul>
   <li><a href="#프로젝트-산출물-예시" id="toc-프로젝트-산출물-예시" class="nav-link active" data-scroll-target="#프로젝트-산출물-예시">프로젝트 산출물 예시</a></li>
   <li><a href="#현재-진행-중인-프로젝트" id="toc-현재-진행-중인-프로젝트" class="nav-link" data-scroll-target="#현재-진행-중인-프로젝트">현재 진행 중인 프로젝트</a></li>
@@ -235,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -255,11 +255,11 @@ ul.task-list li input[type="checkbox"] {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "복사완료!");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -336,7 +336,7 @@ ul.task-list li input[type="checkbox"] {
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -411,7 +411,7 @@ ul.task-list li input[type="checkbox"] {
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -439,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -463,7 +463,7 @@ ul.task-list li input[type="checkbox"] {
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -503,7 +503,7 @@ ul.task-list li input[type="checkbox"] {
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -629,7 +629,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© SHIFT. Digital Healthcare Academic Community.</p>
-</div>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
@@ -638,9 +638,9 @@ ul.task-list li input[type="checkbox"] {
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/dhc-shift">
       <i class="bi bi-github" role="img">
-</i>
+</i> 
     </a>
-  </li>
+  </li>  
 </ul>
     </div>
   </div>
