@@ -1,102 +1,21 @@
 ---
-pagetitle: "심층형 지원"
-description: "SHIFT 심층형 지원 안내와 제출 절차"
+pagetitle: "지원 안내"
+description: "SHIFT 지원 방식이 하나로 통합되었습니다"
+format:
+  html:
+    include-in-header:
+      - text: |
+          <meta http-equiv="refresh" content="0; url=apply.html">
 ---
 
 ::: {.page-hero}
 ::: {.page-kicker}
-Deep Apply
+Apply
 :::
 
-# 심층형 지원
+# 지원 방식이 하나로 통합되었습니다
 
-본부 활동이나 프로젝트 참여 의지가 뚜렷한 지원자를 위한 방식입니다. 지원 본부, 맡고 싶은 역할, 지금까지의 경험과 배우고 싶은 내용을 더 구체적으로 작성해주세요.
-:::
+간편형/심층형 구분 없이 지원서 하나로 지원합니다. 잠시 후 지원 방법 페이지로 이동합니다.
 
-::: {.notice-list}
-::: {.notice-item .accent-lime}
-### 추천 대상
-
-- 관심 본부나 프로그램이 분명한 학생
-- 맡고 싶은 역할이나 배우고 싶은 역량을 구체적으로 설명하고 싶은 학생
-- 팀 활동 경험, 문제 해결 방식, 일정 관리 기준을 함께 보여주고 싶은 학생
-:::
-:::
-
-## 지원 절차
-
-::: {.process-line .apply-steps}
-::: {}
-::: {.step-num}
-01
-:::
-
-### 본부 선택
-
-학술 기획본부, 브랜드&마케팅 본부, 인사&시스템 본부 중 1지망과 2지망을 정합니다.
-:::
-
-::: {}
-::: {.step-num}
-02
-:::
-
-### 내용 작성
-
-맡고 싶은 역할, 경험과 배운 점, 관심 분야, 팀 활동 질문을 작성합니다.
-:::
-
-::: {}
-::: {.step-num}
-03
-:::
-
-### 제출
-
-전체 답변을 확인한 뒤 심층형 구글폼을 제출합니다.
-:::
-:::
-
-## 작성 내용
-
-::: {.card-grid}
-::: {.shift-card .accent-lime}
-### 지원 본부
-
-1지망과 2지망 본부를 선택합니다. 신입생은 1년 간 수습 인턴으로 각 본부를 돌아가며 체험합니다.
-:::
-
-::: {.shift-card}
-### 역할과 성장 방향
-
-해당 본부에서 맡고 싶은 역할 혹은 배우고 싶은 것을 작성합니다.
-:::
-
-::: {.shift-card .accent-cyan}
-### 경험과 관심 분야
-
-지금까지 해본 활동에서 배운 점, 앞으로 얻고 싶은 경험, 관심 분야를 작성합니다.
-:::
-
-::: {.shift-card}
-### 팀 활동 질문
-
-팀 프로젝트에서 어려웠던 상황을 해결한 경험과 일정이 겹칠 때의 우선순위 판단 기준을 작성합니다.
-:::
-:::
-
-## 제출하기
-
-::: {.line-panel}
-심층형 지원은 아래 버튼을 통해 제출합니다. 답변 분량이 길어질 수 있으니, 긴 문항은 미리 메모장에 작성한 뒤 옮겨도 좋습니다.
-
-<a class="shift-btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfiZy-zUTPfh7qdOFOsThhkuQYESfOYgruEjAdlJLPNZQFFXQ/viewform?usp=dialog" target="_blank" rel="noopener">심층형 구글폼 열기</a>
-:::
-
-## 제출 전 확인할 점
-
-::: {.line-panel}
-- 모집 마감은 2026년 5월 17일 (일) 23:59입니다.
-- 제출 전 본부 1지망과 2지망, 연락처, 연세메일을 확인해주세요.
-- 간단히 지원하고 싶다면 [간편형 지원](apply-simple.qmd)을 선택해도 됩니다.
+[지원 방법 보기](apply.qmd){.shift-btn .primary}
 :::

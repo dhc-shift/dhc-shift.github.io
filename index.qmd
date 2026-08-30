@@ -29,10 +29,10 @@ Recruiting Blog
   함께 배우고, 만들고, 실험할 <span class="hero-lead-highlight">신입 부원</span>을 찾습니다.
 </p>
 ```{=html}
-<div class="hero-lead-deadline" data-countdown data-deadline="2026-05-17T23:59:00+09:00" aria-label="SHIFT 신입 부원 모집 마감까지 남은 시간">
+<div class="hero-lead-deadline" data-countdown data-deadline="2026-09-07T23:59:00+09:00" aria-label="SHIFT 신입 부원 모집 마감까지 남은 시간">
   <div class="countdown-head">
     <span class="countdown-label" data-countdown-status>모집 마감</span>
-    <strong class="countdown-date" data-countdown-date>2026년 5월 17일 (일) 23:59</strong>
+    <strong class="countdown-date" data-countdown-date>2026년 9월 7일 (월) 23:59</strong>
   </div>
   <div class="countdown-clock">
     <span class="countdown-dday" data-countdown-dday>D-00</span>
@@ -167,7 +167,7 @@ SHIFT가 어떤 활동을 하는지, 어떤 학생에게 잘 맞는지 확인합
 
 ### [무엇을 하는 곳인가](what-we-do.qmd)
 
-코딩 멘토링, 소모임, 디지털헬스케어 산업지도 프로젝트를 소개합니다.
+1학기에 진행한 활동과 2학기 확정 프로그램을 소개합니다.
 :::
 
 ::: {.shift-card}
@@ -187,7 +187,7 @@ IT 기초 학습, 프로젝트 실습, 디지털헬스케어 사례 적용 흐�
 
 ### [프로젝트](projects/index.qmd)
 
-IT 온보딩과 디지털헬스케어 산업지도처럼 실제로 진행할 프로젝트를 확인합니다.
+IT 온보딩, 공식 웹사이트처럼 실제로 진행한 프로젝트와 2학기 TF 프로젝트를 확인합니다.
 :::
 
 ::: {.shift-card .accent-lime}
@@ -197,7 +197,7 @@ IT 온보딩과 디지털헬스케어 산업지도처럼 실제로 진행할 프
 
 ### [지원 방법](apply.qmd)
 
-간편형과 심층형으로 나뉜 지원 방식을 확인합니다.
+지원서 하나로 지원하는 통합 지원 방식을 확인합니다.
 :::
 :::
 :::
