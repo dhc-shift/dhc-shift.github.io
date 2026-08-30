@@ -43,56 +43,40 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
     <span>SHIFT 전체 조직도</span>
   </div>
 
-  <div class="org-tiers">
-    <section class="org-tier org-unit accent-cyan">
-      <h3>회장단</h3>
-      <div class="org-roles">
-        <span>회장 유민준(22)</span>
-        <span>부회장 최유진(24)</span>
+  <div class="org-tree">
+    <div class="org-tree-node">
+      <small>Leader</small>
+      <b>회장 유민준</b>
+    </div>
+    <div class="org-tree-line"></div>
+    <div class="org-tree-node">
+      <small>Vice Leader</small>
+      <b>부회장 최유진</b>
+    </div>
+    <div class="org-tree-line"></div>
+    <div class="org-tree-branches">
+      <div class="org-tree-branch">
+        <div class="org-tree-node division">
+          <small>Division</small>
+          <b>학술기획 본부</b>
+        </div>
+        <div class="org-tree-members">
+          <span>김대희</span>
+          <span>김지원</span>
+        </div>
       </div>
-    </section>
-
-    <section class="org-tier org-unit accent-amber">
-      <h3>운영진 · 2본부</h3>
-      <div class="org-subunits org-subunits-2col">
-        <article>
-          <h4>학술기획 본부</h4>
-          <div class="org-roles">
-            <span>김대희(22)</span>
-            <span>김지원(25)</span>
-          </div>
-          <div class="org-roles">
-            <span class="org-duty">TF</span>
-            <span class="org-duty">정기 행사</span>
-            <span class="org-duty">커피챗</span>
-            <span class="org-duty">튜터링</span>
-          </div>
-        </article>
-
-        <article>
-          <h4>인사시스템 본부</h4>
-          <div class="org-roles">
-            <span>김남훈(22)</span>
-            <span>김시연(24)</span>
-            <span>이남주(23)</span>
-          </div>
-          <div class="org-roles">
-            <span class="org-duty">마일리지</span>
-            <span class="org-duty">재정</span>
-            <span class="org-duty">회칙</span>
-            <span class="org-duty">뉴스레터</span>
-          </div>
-        </article>
+      <div class="org-tree-branch">
+        <div class="org-tree-node division">
+          <small>Division</small>
+          <b>인사시스템 본부</b>
+        </div>
+        <div class="org-tree-members">
+          <span>김남훈</span>
+          <span>김시연</span>
+          <span>이남주</span>
+        </div>
       </div>
-    </section>
-
-    <section class="org-tier org-unit accent-lime">
-      <h3>부원</h3>
-      <div class="org-roles">
-        <span>일반 부원</span>
-        <span>코어 부원</span>
-      </div>
-    </section>
+    </div>
   </div>
 </div>
 ```
