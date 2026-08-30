@@ -46,19 +46,9 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
   <div class="org-tiers">
     <section class="org-tier org-unit accent-cyan">
       <h3>회장단</h3>
-      <p class="org-unit-desc">회의를 주도하고 동아리 전체 운영 방향을 결정합니다.</p>
-      <div class="org-roles org-roles-ident org-roles-2col">
-        <article class="org-person role-direct">
-          <span class="org-person-role">회장</span>
-          <strong>유민준(22)</strong>
-          <span class="org-person-ident">Direction · 운영 방향 결정</span>
-        </article>
-
-        <article class="org-person role-sync">
-          <span class="org-person-role">부회장</span>
-          <strong>최유진(24)</strong>
-          <span class="org-person-ident">Sync · 회의 주도</span>
-        </article>
+      <div class="org-roles">
+        <span>회장 유민준(22)</span>
+        <span>부회장 최유진(24)</span>
       </div>
     </section>
 
@@ -67,20 +57,30 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
       <div class="org-subunits org-subunits-2col">
         <article>
           <h4>학술기획 본부</h4>
-          <p class="org-unit-desc">TF 활동, 정기 행사, 커피챗, 튜터링을 기획하고 운영합니다.</p>
           <div class="org-roles">
             <span>김대희(22)</span>
             <span>김지원(25)</span>
+          </div>
+          <div class="org-roles">
+            <span class="org-duty">TF</span>
+            <span class="org-duty">정기 행사</span>
+            <span class="org-duty">커피챗</span>
+            <span class="org-duty">튜터링</span>
           </div>
         </article>
 
         <article>
           <h4>인사시스템 본부</h4>
-          <p class="org-unit-desc">마일리지, 회칙, 서류, 내부 커뮤니케이션, 재정, 뉴스레터를 관리합니다.</p>
           <div class="org-roles">
             <span>김남훈(22)</span>
             <span>김시연(24)</span>
             <span>이남주(23)</span>
+          </div>
+          <div class="org-roles">
+            <span class="org-duty">마일리지</span>
+            <span class="org-duty">재정</span>
+            <span class="org-duty">회칙</span>
+            <span class="org-duty">뉴스레터</span>
           </div>
         </article>
       </div>
@@ -88,21 +88,16 @@ SHIFT는 디지털헬스케어학부 학생들이 IT 기초, 데이터, 기획, 
 
     <section class="org-tier org-unit accent-lime">
       <h3>부원</h3>
-      <div class="org-subunits org-subunits-2col">
-        <article>
-          <h4>일반 부원</h4>
-          <p class="org-unit-desc">프로그램과 소모임에 자유롭게 참여하며 활동하는 기본 구성원입니다.</p>
-        </article>
-
-        <article>
-          <h4>코어 부원</h4>
-          <p class="org-unit-desc">적극적으로 참여하는 부원입니다. TF장을 맡거나 로드맵 설계에 참여할 수 있고, 정원이 제한된 프로그램의 우선 참여권을 받습니다.</p>
-        </article>
+      <div class="org-roles">
+        <span>일반 부원</span>
+        <span>코어 부원</span>
       </div>
     </section>
   </div>
 </div>
 ```
+
+**코어 부원**은 적극적으로 참여하는 부원입니다. TF장을 맡거나 로드맵 설계에 참여할 수 있고, 정원이 제한된 프로그램의 우선 참여권을 받습니다. 선정 기준은 실력이 아니라 참여 의지입니다.
 
 ## 이런 사람에게 잘 맞습니다
 

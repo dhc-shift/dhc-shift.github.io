@@ -2021,26 +2021,29 @@ hr {
   display: none;
 }
 
-.org-roles-2col {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .org-subunits-2col {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.org-unit-desc {
-  position: relative;
-  z-index: 1;
-  margin: 10px 0 0;
-  color: var(--shift-muted);
-  font-size: 0.9rem;
-  line-height: 1.55;
+.org-tiers .org-roles > span {
+  min-height: 0;
+  height: auto;
+  white-space: normal;
+  overflow: visible;
+  text-align: center;
+  line-height: 1.4;
   word-break: keep-all;
 }
 
+.org-tiers .org-roles > span.org-duty {
+  border-style: dashed;
+  border-color: rgba(var(--panel-accent-rgb), 0.2);
+  background: transparent;
+  color: var(--shift-muted-2);
+  font-size: 0.82rem;
+}
+
 @media (max-width: 767px) {
-  .org-roles-2col,
   .org-subunits-2col {
     grid-template-columns: 1fr;
   }
