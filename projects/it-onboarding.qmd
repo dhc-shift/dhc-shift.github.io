@@ -19,9 +19,7 @@ Project 01
 ::: {.shift-card .accent-cyan}
 ### 1차 — 디지털헬스케어 동향과 취업 트렌드
 
-디지털헬스케어 기술·산업 동향과 취업 트렌드를 다뤘습니다. 발표 자료는 아래에서 볼 수 있습니다.
-
-<a class="shift-btn primary" href="https://skywork.live/share/v2/ppt/2050497824892456960?pid=2049443678168350720&sid=gen_ppt-TCXozif1V&t=gen_ppt&mode=102" target="_blank" rel="noopener">1차 발표 자료 보기</a>
+디지털헬스케어 기술·산업 동향과 취업 트렌드를 다뤘습니다. 헬스케어와 IT의 교차점에서 어떤 기회가 열리고 있는지 함께 살펴봤습니다.
 :::
 
 ::: {.shift-card .accent-lime}
