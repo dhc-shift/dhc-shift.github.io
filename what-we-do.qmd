@@ -1,4 +1,4 @@
----
+﻿---
 pagetitle: "무엇을 하는 곳인가"
 description: "SHIFT의 주요 활동과 학습 방식"
 ---
@@ -98,29 +98,37 @@ SHIFT는 디지털헬스케어를 주제로 기초 학습, 스터디, 프로젝�
 :::
 :::
 
+::: {.notice-list}
+::: {.notice-item .accent-lime}
+### 이게 전부가 아닙니다 — 로드맵은 부원과 함께 만듭니다
+
+SHIFT의 2학기 로드맵은 수요조사와 커피챗으로 부원들의 니즈를 직접 듣고 구성합니다. 위 확정 프로그램은 뼈대일 뿐이고, 아직 수요조사 전이라 확정되지 않은 예정 프로그램이 훨씬 많습니다. 해보고 싶은 활동이 있다면 여러분이 직접 제안할 수 있고, 그 의견이 실제 로드맵이 됩니다.
+:::
+:::
+
 ```{=html}
 <section class="cardnews-section" aria-labelledby="cardnews-title">
   <div class="section-head cardnews-head">
-    <div class="kicker">Card News</div>
-    <h2 id="cardnews-title">SHIFT 카드뉴스</h2>
-    <p>신입 구성원이 SHIFT의 활동 흐름을 한눈에 볼 수 있도록 정리했습니다.</p>
+    <div class="kicker">Study With Me</div>
+    <h2 id="cardnews-title">열품타 스터디 기록</h2>
+    <p>부원들이 열품타(열정품은타이머)로 함께 공부 시간을 기록하며 진행한 스터디 모습입니다.</p>
   </div>
 
   <div class="cardnews-carousel" data-cardnews-carousel>
     <button class="cardnews-button cardnews-button-prev" type="button" aria-label="이전 카드뉴스" data-cardnews-prev>&lt;</button>
 
-    <div class="cardnews-track" data-cardnews-track tabindex="0" aria-label="SHIFT 카드뉴스">
+    <div class="cardnews-track" data-cardnews-track tabindex="0" aria-label="열품타 스터디 기록">
       <figure class="cardnews-slide">
-        <img src="YPT/1.png" alt="SHIFT 카드뉴스 1번">
+        <img src="YPT/1.png" alt="열품타 스터디 기록 1번">
       </figure>
       <figure class="cardnews-slide">
-        <img src="YPT/2.png" alt="SHIFT 카드뉴스 2번">
+        <img src="YPT/2.png" alt="열품타 스터디 기록 2번">
       </figure>
       <figure class="cardnews-slide">
-        <img src="YPT/3.png" alt="SHIFT 카드뉴스 3번">
+        <img src="YPT/3.png" alt="열품타 스터디 기록 3번">
       </figure>
       <figure class="cardnews-slide">
-        <img src="YPT/4.png" alt="SHIFT 카드뉴스 4번">
+        <img src="YPT/4.png" alt="열품타 스터디 기록 4번">
       </figure>
     </div>
 

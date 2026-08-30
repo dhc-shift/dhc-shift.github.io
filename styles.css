@@ -1984,3 +1984,64 @@ hr {
     padding: 12px;
   }
 }
+
+/* ── Org chart v2: vertical tiers (about.qmd) ─────────────────── */
+
+.org-tiers {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin-top: 34px;
+}
+
+.org-tier {
+  position: relative;
+}
+
+.org-tier::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  z-index: 0;
+  width: 2px;
+  height: 34px;
+  background: linear-gradient(180deg, rgba(24, 240, 255, 0.5), rgba(184, 255, 44, 0.3));
+  box-shadow: 0 0 14px rgba(24, 240, 255, 0.22);
+  transform: translateX(-50%);
+}
+
+.org-tiers .org-unit {
+  min-height: auto;
+}
+
+.org-tiers .org-unit::after {
+  display: none;
+}
+
+.org-roles-2col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.org-subunits-2col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.org-unit-desc {
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 0;
+  color: var(--shift-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+@media (max-width: 767px) {
+  .org-roles-2col,
+  .org-subunits-2col {
+    grid-template-columns: 1fr;
+  }
+}
