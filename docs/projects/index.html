@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-dee00106c8ec5a2981d6cf4bf2bb0c35.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-19ea347c6d452625620c4be3408d5bfe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,25 +118,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
 <span class="menu-text">프로젝트</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">지원 방법</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
-        <li>
-    <a class="dropdown-item" href="../apply.html">
- <span class="dropdown-text">지원 방법</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../apply.html"> 
+<span class="menu-text">지원 방법</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../apply-simple.html">
- <span class="dropdown-text">간편형 지원</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../apply-deep.html">
- <span class="dropdown-text">심층형 지원</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -173,19 +161,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="프로젝트" class="level1">
 <h1>프로젝트</h1>
-<p>SHIFT 프로젝트 페이지는 학습과 조사를 실제 산출물로 연결하는 공간입니다. 지금은 <code>IT 온보딩</code>과 <code>디지털헬스케어 산업지도</code>를 중심으로 구성합니다.</p>
+<p>SHIFT 프로젝트 페이지는 학습과 조사를 실제 산출물로 연결하는 공간입니다. 1학기에 진행한 프로젝트와 2학기에 확정된 프로젝트 운영 방식을 소개합니다.</p>
 </section>
 </div>
 <div class="project-grid">
-<section id="it-온보딩" class="level3 project-card accent-cyan">
-<h3 class="anchored" data-anchor-id="it-온보딩">IT 온보딩</h3>
-<p>신입 구성원이 협업 도구, 개발 환경, 문서 작성 기초를 익히는 온보딩 프로젝트입니다.</p>
+<section id="it-온보딩-1학기-진행" class="level3 project-card accent-cyan">
+<h3 class="anchored" data-anchor-id="it-온보딩-1학기-진행">IT 온보딩 (1학기 진행)</h3>
+<p>디지털헬스케어 동향·취업 트렌드(1차), 슬랙 사용법(2차)을 다룬 비대면 세션입니다. 두 차례 진행했으며 녹화본으로 다시 볼 수 있습니다.</p>
 <p><a href="../projects/it-onboarding.html">프로젝트 보기</a></p>
 </section>
-<section id="디지털헬스케어-산업지도" class="level3 project-card accent-lime">
-<h3 class="anchored" data-anchor-id="디지털헬스케어-산업지도">디지털헬스케어 산업지도</h3>
-<p>디지털헬스케어 분야의 산업군, 직무군, 필요 역량, 전공 연결성을 정리하는 프로젝트입니다.</p>
-<p><a href="../projects/digital-healthcare-roadmap.html">프로젝트 보기</a></p>
+<section id="공식-웹사이트-1학기-진행" class="level3 project-card accent-lime">
+<h3 class="anchored" data-anchor-id="공식-웹사이트-1학기-진행">공식 웹사이트 (1학기 진행)</h3>
+<p>동아리 공식 웹사이트를 부원들이 직접 개발해 오픈했습니다. 마일리지 조회 등 부원 전용 기능도 담고 있습니다.</p>
+<p><a class="shift-btn primary" href="https://shiftysdh.com" target="_blank" rel="noopener">shiftysdh.com 보기</a></p>
+</section>
+<section id="tf-프로젝트-2학기-확정" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="tf-프로젝트-2학기-확정">TF 프로젝트 (2학기 확정)</h3>
+<p>2학기부터는 주제별 TF(태스크포스)를 구성해 프로젝트를 진행합니다. 원하는 부원은 TF장을 맡아 기획서를 쓰고 직접 이끌 수 있습니다.</p>
 </section>
 </div>
 <section id="운영-방식" class="level2">

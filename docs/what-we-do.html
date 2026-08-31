@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="SHIFT의 주요 활동과 학습 방식">
 
-<title>무엇을 하는 곳인가 – SHIFT</title>
+<title>what-we-do – SHIFT</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dee00106c8ec5a2981d6cf4bf2bb0c35.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-19ea347c6d452625620c4be3408d5bfe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,25 +118,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./projects/index.html"> 
 <span class="menu-text">프로젝트</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">지원 방법</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
-        <li>
-    <a class="dropdown-item" href="./apply.html">
- <span class="dropdown-text">지원 방법</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./apply.html"> 
+<span class="menu-text">지원 방법</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./apply-simple.html">
- <span class="dropdown-text">간편형 지원</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./apply-deep.html">
- <span class="dropdown-text">심층형 지원</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -157,7 +145,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#주요-활동" id="toc-주요-활동" class="nav-link active" data-scroll-target="#주요-활동">주요 활동</a></li>
+  <li><a href="#학기에-진행한-활동" id="toc-학기에-진행한-활동" class="nav-link active" data-scroll-target="#학기에-진행한-활동">1학기에 진행한 활동</a></li>
+  <li><a href="#학기-확정-프로그램" id="toc-학기-확정-프로그램" class="nav-link" data-scroll-target="#학기-확정-프로그램">2학기 확정 프로그램</a>
+  <ul class="collapse">
+  <li><a href="#이게-전부가-아닙니다-로드맵은-부원과-함께-만듭니다" id="toc-이게-전부가-아닙니다-로드맵은-부원과-함께-만듭니다" class="nav-link" data-scroll-target="#이게-전부가-아닙니다-로드맵은-부원과-함께-만듭니다">이게 전부가 아닙니다 — 로드맵은 부원과 함께 만듭니다</a></li>
+  </ul></li>
   <li><a href="#다루는-주제-예시" id="toc-다루는-주제-예시" class="nav-link" data-scroll-target="#다루는-주제-예시">다루는 주제 예시</a></li>
   </ul>
 </nav>
@@ -174,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="무엇을-하는-곳인가" class="level1">
 <h1>무엇을 하는 곳인가</h1>
-<p>SHIFT는 디지털헬스케어를 주제로 기초 학습, 스터디, 프로젝트 활동을 운영합니다. 활동은 코딩 멘토링, 자율 스터디, IT 온보딩, 디지털헬스케어 산업지도 프로젝트를 중심으로 진행됩니다.</p>
+<p>SHIFT는 디지털헬스케어를 주제로 기초 학습, 스터디, 프로젝트 활동을 운영합니다. 1학기에는 IT 온보딩 세션, 소모임, 커피챗을 진행하고 공식 웹사이트를 직접 개발해 오픈했으며, 2학기에는 TF 프로젝트와 마일리지 제도를 중심으로 운영합니다.</p>
 </section>
 </div>
 <div class="line-panel pdf-preview compact-pdf">
@@ -184,59 +176,90 @@ ul.task-list li input[type="checkbox"] {
 모바일에서는 아래 새 창 보기 버튼으로 자료를 확인하는 것을 권장합니다.
 </p>
 <div class="pdf-actions">
-<p><a class="shift-btn primary" href="https://skywork.live/share/v2/ppt/2050497824892456960?pid=2049443678168350720&amp;sid=gen_ppt-TCXozif1V&amp;t=gen_ppt&amp;mode=102" target="_blank" rel="noopener">새 창으로 보기</a> <a class="shift-btn ghost" href="SHITF_신입_부원_모집_홍보용.pdf" download="">PDF 다운로드</a></p>
+<p><a class="shift-btn primary" href="SHITF_신입_부원_모집_홍보용.pdf" target="_blank" rel="noopener">새 창으로 보기</a> <a class="shift-btn ghost" href="SHITF_신입_부원_모집_홍보용.pdf" download="">PDF 다운로드</a></p>
 </div>
 </div>
-<section id="주요-활동" class="level2">
-<h2 class="anchored" data-anchor-id="주요-활동">주요 활동</h2>
+<section id="학기에-진행한-활동" class="level2">
+<h2 class="anchored" data-anchor-id="학기에-진행한-활동">1학기에 진행한 활동</h2>
 <div class="card-grid">
-<section id="코딩-과목-멘토링" class="level3 shift-card accent-cyan">
-<h3 class="anchored" data-anchor-id="코딩-과목-멘토링">코딩 과목 멘토링</h3>
-<p>코딩 과목을 함께 복습하고, 과제 풀이 방향과 실습 중 막히는 부분을 점검합니다.</p>
-</section>
-<section id="자율-스터디" class="level3 shift-card">
-<h3 class="anchored" data-anchor-id="자율-스터디">자율 스터디</h3>
-<p>기초 코딩, 어학, 논문 읽기 같은 핵심 소모임을 중심으로 운영하며, 구성원의 관심에 따라 자유주제 소모임도 개설할 수 있습니다.</p>
-</section>
 <section id="it-온보딩-세션" class="level3 shift-card accent-lime">
 <h3 class="anchored" data-anchor-id="it-온보딩-세션">IT 온보딩 세션</h3>
-<p>협업 도구, 문서화, 발표 준비, 프로젝트 운영에 필요한 기본 절차를 다룹니다. 구성원은 발표자 또는 참여자로 참여할 수 있습니다.</p>
+<p>디지털헬스케어 동향·취업 트렌드(1차), 슬랙 사용법(2차) 세션을 진행했습니다. 녹화본으로 다시 볼 수 있습니다.</p>
 </section>
-<section id="디지털헬스케어-산업지도" class="level3 shift-card">
-<h3 class="anchored" data-anchor-id="디지털헬스케어-산업지도">디지털헬스케어 산업지도</h3>
-<p>산업군, 직무군, 필요 역량, 전공 과목의 연결성을 조사해 진로 탐색 자료로 만듭니다.</p>
+<section id="소모임" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="소모임">소모임</h3>
+<p>대외활동(공모전), 영어 공부, 코딩 공부 세 개의 소모임을 운영했습니다.</p>
 </section>
-<section id="프로젝트-리뷰" class="level3 shift-card">
-<h3 class="anchored" data-anchor-id="프로젝트-리뷰">프로젝트 리뷰</h3>
-<p>기획안, 자료 구조, 발표 내용, 문서 완성도를 서로 점검합니다.</p>
+<section id="커피챗" class="level3 shift-card accent-cyan">
+<h3 class="anchored" data-anchor-id="커피챗">커피챗</h3>
+<p>부원들의 관심사와 수요를 파악하는 커피챗을 진행했습니다.</p>
 </section>
-<section id="웹-프로젝트" class="level3 shift-card">
-<h3 class="anchored" data-anchor-id="웹-프로젝트">웹 프로젝트</h3>
-<p>동아리 웹사이트와 프로젝트 페이지를 함께 다듬으며 실제로 공개할 수 있는 화면을 만듭니다.</p>
+<section id="공식-웹사이트-오픈" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="공식-웹사이트-오픈">공식 웹사이트 오픈</h3>
+<p>동아리 공식 웹사이트 <a href="https://shiftysdh.com" target="_blank" rel="noopener">shiftysdh.com</a>을 직접 개발해 오픈했습니다.</p>
+</section>
+<section id="뉴스레터" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="뉴스레터">뉴스레터</h3>
+<p>동아리 소식과 학부 관련 콘텐츠를 담은 뉴스레터를 발행했습니다.</p>
+</section>
+</div>
+</section>
+<section id="학기-확정-프로그램" class="level2">
+<h2 class="anchored" data-anchor-id="학기-확정-프로그램">2학기 확정 프로그램</h2>
+<div class="card-grid">
+<section id="tf-프로젝트" class="level3 shift-card accent-cyan">
+<h3 class="anchored" data-anchor-id="tf-프로젝트">TF 프로젝트</h3>
+<p>주제별 TF(태스크포스)를 구성해 프로젝트를 진행합니다. 원하는 부원은 TF장을 맡아 직접 기획하고 이끌 수 있습니다.</p>
+</section>
+<section id="커피챗-정식-운영" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="커피챗-정식-운영">커피챗 정식 운영</h3>
+<p>신입 부원 커피챗을 시작으로, 운영진·부원 간 소규모 커피챗을 정식 프로그램으로 운영합니다.</p>
+</section>
+<section id="마일리지-티어-제도" class="level3 shift-card accent-lime">
+<h3 class="anchored" data-anchor-id="마일리지-티어-제도">마일리지 · 티어 제도</h3>
+<p>활동을 기록해 마일리지를 쌓고, 학기당 최대 Lv.10까지 티어가 올라갑니다. 공식 웹사이트에서 내 마일리지를 확인할 수 있습니다.</p>
+</section>
+<section id="코어-부원-제도" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="코어-부원-제도">코어 부원 제도</h3>
+<p>적극적으로 참여하는 부원은 코어 부원으로서 로드맵 설계 참여, TF장 자격, 정원 제한 프로그램 우선권 등의 혜택을 받습니다.</p>
+</section>
+<section id="튜터링-정기-행사" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="튜터링-정기-행사">튜터링 · 정기 행사</h3>
+<p>학년 간 튜터링과 정기 행사를 학술기획 본부가 기획해 운영합니다.</p>
+</section>
+<section id="로드맵-수요조사" class="level3 shift-card">
+<h3 class="anchored" data-anchor-id="로드맵-수요조사">로드맵 수요조사</h3>
+<p>부원들의 의견을 수요조사로 모아 2학기 세부 로드맵을 함께 구체화합니다.</p>
+</section>
+</div>
+<div class="notice-list">
+<section id="이게-전부가-아닙니다-로드맵은-부원과-함께-만듭니다" class="level3 notice-item accent-lime">
+<h3 class="anchored" data-anchor-id="이게-전부가-아닙니다-로드맵은-부원과-함께-만듭니다">이게 전부가 아닙니다 — 로드맵은 부원과 함께 만듭니다</h3>
+<p>SHIFT의 2학기 로드맵은 수요조사와 커피챗으로 부원들의 니즈를 직접 듣고 구성합니다. 위 확정 프로그램은 뼈대일 뿐이고, 아직 수요조사 전이라 확정되지 않은 예정 프로그램이 훨씬 많습니다. 해보고 싶은 활동이 있다면 여러분이 직접 제안할 수 있고, 그 의견이 실제 로드맵이 됩니다.</p>
 </section>
 </div>
 <section class="cardnews-section" aria-labelledby="cardnews-title">
   <div class="section-head cardnews-head">
-    <div class="kicker">Card News</div>
-    <h2 id="cardnews-title" class="anchored">SHIFT 카드뉴스</h2>
-    <p>신입 구성원이 SHIFT의 활동 흐름을 한눈에 볼 수 있도록 정리했습니다.</p>
+    <div class="kicker">Study With Me</div>
+    <h2 id="cardnews-title" class="anchored">열품타 스터디 기록</h2>
+    <p>부원들이 열품타(열정품은타이머)로 함께 공부 시간을 기록하며 진행한 스터디 모습입니다.</p>
   </div>
 
   <div class="cardnews-carousel" data-cardnews-carousel="">
     <button class="cardnews-button cardnews-button-prev" type="button" aria-label="이전 카드뉴스" data-cardnews-prev="">&lt;</button>
 
-    <div class="cardnews-track" data-cardnews-track="" tabindex="0" aria-label="SHIFT 카드뉴스">
+    <div class="cardnews-track" data-cardnews-track="" tabindex="0" aria-label="열품타 스터디 기록">
       <figure class="cardnews-slide figure">
-        <img src="YPT/1.png" alt="SHIFT 카드뉴스 1번" class="figure-img">
+        <img src="YPT/1.png" alt="열품타 스터디 기록 1번" class="figure-img">
       </figure>
       <figure class="cardnews-slide figure">
-        <img src="YPT/2.png" alt="SHIFT 카드뉴스 2번" class="figure-img">
+        <img src="YPT/2.png" alt="열품타 스터디 기록 2번" class="figure-img">
       </figure>
       <figure class="cardnews-slide figure">
-        <img src="YPT/3.png" alt="SHIFT 카드뉴스 3번" class="figure-img">
+        <img src="YPT/3.png" alt="열품타 스터디 기록 3번" class="figure-img">
       </figure>
       <figure class="cardnews-slide figure">
-        <img src="YPT/4.png" alt="SHIFT 카드뉴스 4번" class="figure-img">
+        <img src="YPT/4.png" alt="열품타 스터디 기록 4번" class="figure-img">
       </figure>
     </div>
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dee00106c8ec5a2981d6cf4bf2bb0c35.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-19ea347c6d452625620c4be3408d5bfe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,25 +118,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./projects/index.html"> 
 <span class="menu-text">프로젝트</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">지원 방법</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
-        <li>
-    <a class="dropdown-item" href="./apply.html">
- <span class="dropdown-text">지원 방법</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./apply.html"> 
+<span class="menu-text">지원 방법</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./apply-simple.html">
- <span class="dropdown-text">간편형 지원</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./apply-deep.html">
- <span class="dropdown-text">심층형 지원</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -203,89 +191,43 @@ ul.task-list li input[type="checkbox"] {
     <span>SHIFT 전체 조직도</span>
   </div>
 
-  <div class="org-branches">
-    <section class="org-unit accent-cyan">
-      <h3 class="anchored">1대 회장단</h3>
-      <div class="org-roles org-roles-ident">
-        <article class="org-person role-direct">
-          <span class="org-person-role">회장</span>
-          <strong>유민준(22)</strong>
-          <span class="org-person-ident">Direction</span>
-        </article>
-
-        <article class="org-person role-sync">
-          <span class="org-person-role">부회장</span>
-          <strong>최유진(24)</strong>
-          <span class="org-person-ident">Sync</span>
-        </article>
+  <div class="org-tree">
+    <div class="org-tree-node">
+      <small>Leader</small>
+      <b>회장 유민준</b>
+    </div>
+    <div class="org-tree-line"></div>
+    <div class="org-tree-node">
+      <small>Vice Leader</small>
+      <b>부회장 최유진</b>
+    </div>
+    <div class="org-tree-line"></div>
+    <div class="org-tree-branches">
+      <div class="org-tree-branch">
+        <div class="org-tree-node division">
+          <small>Division</small>
+          <b>학술기획 본부</b>
+        </div>
+        <div class="org-tree-members">
+          <span>김대희</span>
+          <span>김지원</span>
+        </div>
       </div>
-    </section>
-
-    <section class="org-unit accent-lime">
-      <h3 class="anchored">운영진</h3>
-      <div class="org-roles org-roles-ident org-ops-grid">
-        <article class="org-person role-blueprint">
-          <span class="org-person-role">기획실장</span>
-          <strong>김남훈(22)</strong>
-          <span class="org-person-ident">Blueprint · 프로그램 설계</span>
-        </article>
-
-        <article class="org-person role-bridge">
-          <span class="org-person-role">대외협력</span>
-          <strong>이남주(23)</strong>
-          <span class="org-person-ident">Bridge · 외부 연결</span>
-        </article>
-
-        <article class="org-person role-care">
-          <span class="org-person-role">복지부장</span>
-          <strong>김시연(24)</strong>
-          <span class="org-person-ident">Care · 구성원 경험</span>
-        </article>
-
-        <article class="org-person role-ops">
-          <span class="org-person-role">IT/운영</span>
-          <strong>김대희(22)</strong>
-          <span class="org-person-ident">Ops · 시스템 관리</span>
-        </article>
-
-        <article class="org-person role-archive">
-          <span class="org-person-role">서기</span>
-          <strong>김지원(25)</strong>
-          <span class="org-person-ident">Archive · 기록 정리</span>
-        </article>
+      <div class="org-tree-branch">
+        <div class="org-tree-node division">
+          <small>Division</small>
+          <b>인사시스템 본부</b>
+        </div>
+        <div class="org-tree-members">
+          <span>김남훈</span>
+          <span>김시연</span>
+          <span>이남주</span>
+        </div>
       </div>
-    </section>
-
-    <section class="org-unit accent-amber org-unit-wide">
-      <h3 class="anchored">본부</h3>
-      <div class="org-subunits">
-        <article>
-          <h4 class="anchored">학술기획 본부</h4>
-          <div class="org-roles">
-            <span>본부장 박찬영(21)</span>
-            <span>팀원</span>
-          </div>
-        </article>
-
-        <article>
-          <h4 class="anchored">브랜드&amp;마케팅 본부</h4>
-          <div class="org-roles">
-            <span>본부장 김지섭(21)</span>
-            <span>팀원</span>
-          </div>
-        </article>
-
-        <article>
-          <h4 class="anchored">인사&amp;시스템 본부</h4>
-          <div class="org-roles">
-            <span>본부장 이형재(21)</span>
-            <span>팀원</span>
-          </div>
-        </article>
-      </div>
-    </section>
+    </div>
   </div>
 </div>
+<p><strong>코어 부원</strong>은 적극적으로 참여하는 부원입니다. TF장을 맡거나 로드맵 설계에 참여할 수 있고, 정원이 제한된 프로그램의 우선 참여권을 받습니다. 선정 기준은 실력이 아니라 참여 의지입니다.</p>
 </section>
 <section id="이런-사람에게-잘-맞습니다" class="level2">
 <h2 class="anchored" data-anchor-id="이런-사람에게-잘-맞습니다">이런 사람에게 잘 맞습니다</h2>
