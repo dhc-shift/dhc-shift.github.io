@@ -29,10 +29,10 @@ Recruiting Blog
   함께 배우고, 만들고, 실험할 <span class="hero-lead-highlight">신입 부원</span>을 찾습니다.
 </p>
 ```{=html}
-<div class="hero-lead-deadline" data-countdown data-deadline="2026-09-07T23:59:00+09:00" aria-label="SHIFT 신입 부원 모집 마감까지 남은 시간">
+<div class="hero-lead-deadline" data-countdown data-deadline="2026-09-05T23:59:00+09:00" aria-label="SHIFT 신입 부원 모집 마감까지 남은 시간">
   <div class="countdown-head">
     <span class="countdown-label" data-countdown-status>모집 마감</span>
-    <strong class="countdown-date" data-countdown-date>2026년 9월 7일 (월) 23:59</strong>
+    <strong class="countdown-date" data-countdown-date>2026년 9월 5일 (토) 23:59</strong>
   </div>
   <div class="countdown-clock">
     <span class="countdown-dday" data-countdown-dday>D-00</span>
